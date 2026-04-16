@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teknik Materyaller — Kimyasallar & Motorlar | {{FIRMA_ADI}}</title>
+  <meta name="description" content="Yüzme havuzu kimyasalları (klor, pH, algisit, şok), pompa, filtre ve ekipman tipleri, teknik özellikler ve kullanım dozajları hakkında kapsamlı rehber.">
+  <meta property="og:title" content="Havuz Kimyasalları ve Ekipman Rehberi">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="teknik-materyaller.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .tab-nav { display: flex; gap: 0.5rem; margin-bottom: 3rem; flex-wrap: wrap; }
+    .tab-btn {
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: var(--surface-2);
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .tab-btn.active, .tab-btn:hover { background: var(--gold-dim); color: var(--gold); border-color: var(--gold-ring); }
+    .chem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+  </style>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <nav class="navbar__nav" id="nav-menu">
+      <a href="index.html" class="nav-link">Ana Sayfa</a>
+      <a href="havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
+      <a href="yapim-sureci.html" class="nav-link">Yapım Süreci</a>
+      <a href="teknik-materyaller.html" class="nav-link">Teknik</a>
+      <a href="galeri.html" class="nav-link">Galeri</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+    </nav>
+    <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero hero--inner">
+  <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=1920&q=85&fit=crop')"></div>
+  <div class="hero__overlay"></div>
+  <div class="container">
+    <div class="hero__content">
+      <nav class="breadcrumb">
+        <a href="index.html">Ana Sayfa</a>
+        <span>›</span>
+        <span class="current">Teknik Materyaller</span>
+      </nav>
+      <h1>Kimyasallar &amp;<br><span style="color:var(--gold)">Ekipman Rehberi</span></h1>
+      <p>Havuzunuzun kristal berraklığını koruyan kimyasallar, güvenilir pompalar ve filtreleme sistemleri hakkında teknik bilgiler.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ÖNEMLİ NOT -->
+<section class="section--dark" style="padding-block:2.5rem;">
+  <div class="container">
+    <div style="background:var(--surface-2); border:1px solid var(--gold-ring); border-radius:var(--radius); padding:1.5rem; max-width:800px; margin-inline:auto; display:flex; gap:1rem; align-items:flex-start;">
+      <span style="color:var(--gold); font-size:1.4rem; flex-shrink:0;">⚠</span>
+      <div>
+        <strong style="color:var(--text);">Güvenlik Uyarısı:</strong>
+        <p style="margin:0; font-size:0.9rem;">Havuz kimyasalları; deri, göz ve solunum yolu tahriş edici olabilir. Kişisel koruyucu ekipman (gözlük, eldiven) kullanın, kimyasalları asla doğrudan birbirine karıştırmayın, serinlikte kuru yerde saklayın. Çocukların erişiminden uzak tutun.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KİMYASALLAR -->
+<section id="kimyasallar">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="overline">Bölüm A</span>
+      <h2>Havuz Kimyasalları</h2>
+      <p>Sağlıklı ve güvenli bir yüzme suyu için gerekli kimyasal bileşenler, kullanım dozajları ve dikkat edilmesi gereken noktalar.</p>
+    </div>
+
+    <!-- Hedef Değerler Tablosu -->
+    <div class="table-wrap fade-in" style="margin-bottom:3rem;">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Parametre</th>
+            <th>İdeal Aralık</th>
+            <th>Minimum</th>
+            <th>Maksimum</th>
+            <th>Ölçüm Yöntemi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>pH</strong></td><td class="highlight">7.2 – 7.6</td><td>7.0</td><td>7.8</td><td>Test kiti / dijital metre</td></tr>
+          <tr><td><strong>Serbest Klor (FC)</strong></td><td class="highlight">1.0 – 3.0 ppm</td><td>0.5 ppm</td><td>5.0 ppm</td><td>DPD test kiti</td></tr>
+          <tr><td><strong>Kombine Klor (CC)</strong></td><td class="highlight">0 – 0.2 ppm</td><td>—</td><td>0.5 ppm</td><td>DPD test kiti</td></tr>
+          <tr><td><strong>Total Alkalinite (TA)</strong></td><td class="highlight">80 – 120 ppm</td><td>60 ppm</td><td>180 ppm</td><td>Titrasyon</td></tr>
+          <tr><td><strong>Kalsiyum Sertliği</strong></td><td class="highlight">200 – 400 ppm</td><td>150 ppm</td><td>500 ppm</td><td>Titrasyon</td></tr>
+          <tr><td><strong>Siyanürik Asit</strong></td><td class="highlight">30 – 50 ppm</td><td>20 ppm</td><td>100 ppm</td><td>Test şeridi</td></tr>
+          <tr><td><strong>TDS</strong></td><td class="highlight">&lt; 1500 ppm</td><td>—</td><td>2000 ppm</td><td>TDS metre</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Kimyasal Kartlar -->
+    <div class="chem-grid">
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Kalsiyum Hipoklorit (Granül Klor)</div>
+        <div class="chem-card__formula">Ca(OCl)₂ — %65–70 aktif klor</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Dezenfeksiyon, bakteri öldürme</span></div>
+        <div class="chem-card__row"><span>Günlük doz</span><span>10 m³ başına ~10 g</span></div>
+        <div class="chem-card__row"><span>Uygulama</span><span>Akşam, filtre çalışırken</span></div>
+        <div class="chem-card__row"><span>pH etkisi</span><span>pH'ı yükseltir (+0.1–0.2)</span></div>
+        <div class="chem-warn">pH 7.2–7.6 aralığında tutun; aksi hâlde etkinliği %40'a düşer.</div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Trikloroizosiyanurik Asit (Tablet Klor)</div>
+        <div class="chem-card__formula">C₃Cl₃N₃O₃ — %90 aktif klor</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Yavaş salınımlı sürekli klor</span></div>
+        <div class="chem-card__row"><span>Uygulama</span><span>Yüzer tabletlik veya otomatik dozaj</span></div>
+        <div class="chem-card__row"><span>pH etkisi</span><span>pH'ı düşürür (–0.2–0.4)</span></div>
+        <div class="chem-card__row"><span>Stabilize edici</span><span>Yerleşik siyanürik asit içerir</span></div>
+        <div class="chem-warn">Uzun vadede siyanürik asit birikimini izleyin (&gt;100 ppm zararlı).</div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Sodyum Karbonat (pH Yükseltici)</div>
+        <div class="chem-card__formula">Na₂CO₃ — Soda Külü</div>
+        <div class="chem-card__row"><span>Amaç</span><span>pH'ı yükseltmek</span></div>
+        <div class="chem-card__row"><span>Doz</span><span>pH 0.1 arttırmak için: ~15 g/10 m³</span></div>
+        <div class="chem-card__row"><span>Uygulama</span><span>Önceden suda eritilerek ekle</span></div>
+        <div class="chem-card__row"><span>Bekleme</span><span>Eklendikten 4 saat sonra ölç</span></div>
+        <div class="chem-warn">Fazla ekleme kireçlenmeye ve bulanıklığa yol açar.</div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Hidroklorik Asit (pH Düşürücü)</div>
+        <div class="chem-card__formula">HCl — %31–33 konsantrasyon</div>
+        <div class="chem-card__row"><span>Amaç</span><span>pH'ı düşürmek, alkalilik azaltmak</span></div>
+        <div class="chem-card__row"><span>Doz</span><span>pH 0.2 düşürmek: ~50 ml/10 m³</span></div>
+        <div class="chem-card__row"><span>Uygulama</span><span>Derin uçta, filtre açıkken</span></div>
+        <div class="chem-card__row"><span>Güvenlik</span><span>Yüz maskesi + eldiven zorunlu</span></div>
+        <div class="chem-warn">Konsantre forma hiçbir şey eklemeyin; suya asit ekleyin, asit suya değil.</div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Sodyum Bisülfat (Kuru pH Düşürücü)</div>
+        <div class="chem-card__formula">NaHSO₄ — Granül form</div>
+        <div class="chem-card__row"><span>Amaç</span><span>pH'ı düşürmek (daha güvenli alternatif)</span></div>
+        <div class="chem-card__row"><span>Doz</span><span>pH 0.2 düşürmek: ~80 g/10 m³</span></div>
+        <div class="chem-card__row"><span>Avantaj</span><span>HCl'e göre taşıması daha güvenli</span></div>
+        <div class="chem-card__row"><span>TA etkisi</span><span>Zayıf düşürme etkisi</span></div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Sodyum Bikarbonat (Alkalinite Yükseltici)</div>
+        <div class="chem-card__formula">NaHCO₃ — Kabartma Tozu</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Total alkaliniteyi artırmak</span></div>
+        <div class="chem-card__row"><span>Doz</span><span>TA 10 ppm arttırmak: ~150 g/10 m³</span></div>
+        <div class="chem-card__row"><span>pH etkisi</span><span>Minimal (&lt;0.1 artış)</span></div>
+        <div class="chem-card__row"><span>Sıklık</span><span>Gerektikçe (ayda 1–2 kez)</span></div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Algisit (Yosun Önleyici)</div>
+        <div class="chem-card__formula">Polimer bazlı veya kuaterner amonyum</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Yosun büyümesini önlemek</span></div>
+        <div class="chem-card__row"><span>Başlangıç dozu</span><span>500 ml / 50 m³</span></div>
+        <div class="chem-card__row"><span>Bakım dozu</span><span>Haftalık 100–150 ml / 50 m³</span></div>
+        <div class="chem-card__row"><span>Dikkat</span><span>Klorsuz uygulamak köpük yapar</span></div>
+        <div class="chem-warn">Köpük yapan algisite dikkat — havuzda kullanımcı varken uygulama.</div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Şok Klor (Süper Klorlama)</div>
+        <div class="chem-card__formula">Ca(OCl)₂ — %68+ aktif klor, granül</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Kloraminleri yok etmek, berraklaştırmak</span></div>
+        <div class="chem-card__row"><span>Doz</span><span>200–400 g / 50 m³</span></div>
+        <div class="chem-card__row"><span>Sıklık</span><span>Haftada 1 kez (gece)</span></div>
+        <div class="chem-card__row"><span>Sonrası</span><span>FC &lt;5 ppm düşmeden yüzme yok</span></div>
+        <div class="chem-warn">Yüksek UV ortamda (yaz) sıklığı artırın; yoğun kullanım sonrası mutlaka uygulayın.</div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Siyanürik Asit (Stabilizör)</div>
+        <div class="chem-card__formula">C₃H₃N₃O₃</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Klorun UV ışınlarıyla bozunmasını yavaşlatmak</span></div>
+        <div class="chem-card__row"><span>Hedef</span><span>30–50 ppm</span></div>
+        <div class="chem-card__row"><span>Dikkat</span><span>&gt;100 ppm kloru etkisizleştirir</span></div>
+        <div class="chem-card__row"><span>Düşürme</span><span>Sadece kısmi su değişimi</span></div>
+        <div class="chem-warn">Kapalı (iç mekan) havuzlarda siyanürik asit kullanmayın.</div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Flokülant / Pıhtılaştırıcı</div>
+        <div class="chem-card__formula">Polialüminyum klorür (PAC)</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Askıdaki partikülleri pıhtılaştırarak çökertmek</span></div>
+        <div class="chem-card__row"><span>Doz</span><span>200–500 ml / 50 m³</span></div>
+        <div class="chem-card__row"><span>Uygulama</span><span>Akşam, filtreyi BYPASS'ta bırak</span></div>
+        <div class="chem-card__row"><span>Sonrası</span><span>Çöken tabakayı elektrik süpürgesiyle al</span></div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Kalsiyum Klorür (Sertlik Artırıcı)</div>
+        <div class="chem-card__formula">CaCl₂</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Kalsiyum sertliğini artırmak</span></div>
+        <div class="chem-card__row"><span>Doz</span><span>Sertlik 10 ppm artırmak: ~120 g/10 m³</span></div>
+        <div class="chem-card__row"><span>Neden önemli</span><span>Düşük sertlik beton/çimento aşındırır</span></div>
+        <div class="chem-card__row"><span>Hedef</span><span>200–400 ppm</span></div>
+      </div>
+
+      <div class="chem-card fade-in">
+        <div class="chem-card__name">Metal Tutucular (Çelatör)</div>
+        <div class="chem-card__formula">EDTA / Fosfokarboksilik asit</div>
+        <div class="chem-card__row"><span>Amaç</span><span>Demir, bakır gibi metalleri bağlamak</span></div>
+        <div class="chem-card__row"><span>Neden</span><span>Paslanma, leke, yeşilimsi renk önleme</span></div>
+        <div class="chem-card__row"><span>Uygulama</span><span>Su dolumundan sonra önce ekle</span></div>
+        <div class="chem-card__row"><span>Sıklık</span><span>Başlangıç dozu + aylık bakım</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MOTORLAR & EKİPMAN -->
+<section class="section--dark" id="ekipman">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="overline">Bölüm B</span>
+      <h2>Motorlar ve Ekipman</h2>
+      <p>Havuzun kalbi: pompa, filtre, ısıtıcı ve otomasyon sistemleri hakkında teknik karşılaştırma rehberi.</p>
+    </div>
+
+    <!-- POMPALAR -->
+    <h3 class="fade-in" style="color:var(--gold-soft); margin-bottom:1.5rem; font-size:1.3rem;">Pompa Tipleri</h3>
+    <div class="table-wrap fade-in" style="margin-bottom:3rem;">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Tip</th>
+            <th>Hız Seçeneği</th>
+            <th>Güç Aralığı</th>
+            <th>Yıllık Enerji</th>
+            <th>Ses Seviyesi</th>
+            <th>Uygun Havuz</th>
+            <th>Maliyet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tek Hızlı Pompa</strong></td>
+            <td>Sabit (1 hız)</td>
+            <td>0.75 – 2.2 kW</td>
+            <td>Yüksek</td>
+            <td>Orta (~60 dB)</td>
+            <td>Küçük / bütçe</td>
+            <td>Düşük</td>
+          </tr>
+          <tr>
+            <td><strong>İki Hızlı Pompa</strong></td>
+            <td>Düşük / Yüksek</td>
+            <td>0.37 – 1.5 kW</td>
+            <td>Orta</td>
+            <td>Düşük – Orta</td>
+            <td>Orta boy</td>
+            <td>Orta</td>
+          </tr>
+          <tr>
+            <td><strong class="highlight">Değişken Hız (VSP)</strong></td>
+            <td>Sonsuz (0.5–3000 RPM)</td>
+            <td>0.2 – 3.0 kW</td>
+            <td>En düşük (%80 tasarruf)</td>
+            <td>Çok sessiz (&lt;45 dB)</td>
+            <td>Tüm boyutlar</td>
+            <td>Yüksek (amorti 2–3 yıl)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FİLTRE TİPLERİ -->
+    <h3 class="fade-in" style="color:var(--gold-soft); margin-bottom:1.5rem; font-size:1.3rem;">Filtre Tipleri</h3>
+    <div class="grid-4" style="margin-bottom:3rem;">
+
+      <div class="spec-card fade-in">
+        <div class="spec-card__header">
+          <h3>Kum Filtresi</h3>
+          <p>En yaygın kullanılan</p>
+        </div>
+        <div class="spec-card__body">
+          <div class="spec-row"><span class="spec-key">Filtreleme</span><span class="spec-val">20–25 µm</span></div>
+          <div class="spec-row"><span class="spec-key">Dolgu</span><span class="spec-val">Silika kumu</span></div>
+          <div class="spec-row"><span class="spec-key">Geri yıkama</span><span class="spec-val">Haftalık</span></div>
+          <div class="spec-row"><span class="spec-key">Yenileme</span><span class="spec-val">5–7 yılda bir</span></div>
+          <div class="spec-row"><span class="spec-key">Maliyet</span><span class="spec-val">Düşük</span></div>
+        </div>
+      </div>
+
+      <div class="spec-card fade-in">
+        <div class="spec-card__header">
+          <h3>Cam Filtresi</h3>
+          <p>Gelişmiş versiyon</p>
+        </div>
+        <div class="spec-card__body">
+          <div class="spec-row"><span class="spec-key">Filtreleme</span><span class="spec-val">8–10 µm</span></div>
+          <div class="spec-row"><span class="spec-key">Dolgu</span><span class="spec-val">Geri dönüştürülmüş cam</span></div>
+          <div class="spec-row"><span class="spec-key">Geri yıkama</span><span class="spec-val">2 haftada 1</span></div>
+          <div class="spec-row"><span class="spec-key">Yenileme</span><span class="spec-val">10+ yıl</span></div>
+          <div class="spec-row"><span class="spec-key">Maliyet</span><span class="spec-val">Orta</span></div>
+        </div>
+      </div>
+
+      <div class="spec-card fade-in">
+        <div class="spec-card__header">
+          <h3>Kartuş Filtresi</h3>
+          <p>Düşük debili sistemler</p>
+        </div>
+        <div class="spec-card__body">
+          <div class="spec-row"><span class="spec-key">Filtreleme</span><span class="spec-val">10–15 µm</span></div>
+          <div class="spec-row"><span class="spec-key">Dolgu</span><span class="spec-val">Polyester kartuş</span></div>
+          <div class="spec-row"><span class="spec-key">Temizlik</span><span class="spec-val">Yıkama / değiştirme</span></div>
+          <div class="spec-row"><span class="spec-key">Su tasarrufu</span><span class="spec-val">Geri yıkama yok</span></div>
+          <div class="spec-row"><span class="spec-key">Maliyet</span><span class="spec-val">Düşük – Orta</span></div>
+        </div>
+      </div>
+
+      <div class="spec-card fade-in">
+        <div class="spec-card__header">
+          <h3>DE Filtre</h3>
+          <p>En ince filtreleme</p>
+        </div>
+        <div class="spec-card__body">
+          <div class="spec-row"><span class="spec-key">Filtreleme</span><span class="spec-val">3–5 µm</span></div>
+          <div class="spec-row"><span class="spec-key">Dolgu</span><span class="spec-val">Diyatome tozu (DE)</span></div>
+          <div class="spec-row"><span class="spec-key">Bakım</span><span class="spec-val">Karmaşık</span></div>
+          <div class="spec-row"><span class="spec-key">Su kalitesi</span><span class="spec-val">Kristal berrak</span></div>
+          <div class="spec-row"><span class="spec-key">Maliyet</span><span class="spec-val">Yüksek</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISI POMPASI -->
+    <h3 class="fade-in" style="color:var(--gold-soft); margin-bottom:1.5rem; font-size:1.3rem;">Isı Pompası</h3>
+    <div class="table-wrap fade-in" style="margin-bottom:3rem;">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Kapasite</th>
+            <th>Güç Tüketimi</th>
+            <th>COP Değeri</th>
+            <th>Uygun Hacim</th>
+            <th>Isıtma Süresi (10°C→28°C)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8 kW</td>
+            <td>2.0 kW</td>
+            <td>COP 4.0</td>
+            <td>20–35 m³</td>
+            <td>24–36 saat</td>
+          </tr>
+          <tr>
+            <td>14 kW</td>
+            <td>3.2 kW</td>
+            <td>COP 4.4</td>
+            <td>40–60 m³</td>
+            <td>24–30 saat</td>
+          </tr>
+          <tr>
+            <td>21 kW</td>
+            <td>4.5 kW</td>
+            <td>COP 4.6</td>
+            <td>60–90 m³</td>
+            <td>20–28 saat</td>
+          </tr>
+          <tr>
+            <td>28 kW (İnverter)</td>
+            <td>4.8 kW</td>
+            <td>COP 5.8+</td>
+            <td>80–120 m³</td>
+            <td>18–24 saat</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DİĞER EKİPMAN -->
+    <h3 class="fade-in" style="color:var(--gold-soft); margin-bottom:1.5rem; font-size:1.3rem;">Diğer Ekipman</h3>
+    <div class="grid-3">
+      <div class="feature-card fade-in">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Otomatik Dozaj Sistemi</h3>
+        <p>pH ve ORP (redoks potansiyeli) sensörleri suyu sürekli izler. Peristaltik pompalar gerektiğinde asit veya hipoklorit dozlar. Akıllı kontrol paneli ile eşikler ayarlanır. Kimyasal tüketimi %30–50 azalır.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <h3>LED Aydınlatma Sistemi</h3>
+        <p>IP68 su altı LED armatürler. RGB renk değiştirme, animasyon modları. Güç: 12–35W. Ömür: 30.000+ saat. Enerji tasarrufu: halojen'e göre %85.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Robot Havuz Temizleyici</h3>
+        <p>Zemin, duvar ve su çizgisini otomatik temizler. Akıllı navigasyon: çift fırça, ince ve kaba filtre. Haftalık 2–3 saat çalışmayla mükemmel hijyen. Pompa filtresi üzerindeki yükü azaltır.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Akıllı Otomasyon Paneli</h3>
+        <p>Pompa, filtre, ısıtma, aydınlatma ve su özelliklerini tek panelden veya akıllı telefon uygulamasından kontrol edin. Program ayarlama, uzaktan erişim, arıza bildirimi.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <h3>Skimmer ve Süzgeçler</h3>
+        <p>Su yüzeyindeki pislikleri sürekli toplayan skimmer sistemi. Havuz boyutuna göre 1–4 adet skimmer hesaplanır. Dip süzgeçler (main drain) ile komple sirkülasyon sağlanır.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3>UV ve Tuzlu Su Jeneratörü</h3>
+        <p>UV sterilizatörler klorsuz alternatif dezenfeksiyon sağlar. Tuz elektroliz (SWG) sistemleri kloru otomatik üretir; su yumuşak ve göze yakıcı olmaz. Uzun vadede kimyasal maliyeti azalır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta-banner fade-in">
+      <span class="overline">Teknik Destek</span>
+      <h2>Hangi Ekipman Size Uygun?</h2>
+      <p>Havuz büyüklüğünüze, kullanım şeklinize ve bütçenize göre en uygun ekipman setini birlikte belirleyelim.</p>
+      <div class="btns">
+        <a href="iletisim.html" class="btn btn--gold btn--lg">Ücretsiz Danışmanlık</a>
+        <a href="yapim-sureci.html" class="btn btn--outline btn--lg">Yapım Sürecini İncele</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <p class="footer__logo">{{FIRMA_ADI}}</p>
+      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+    </div>
+    <div>
+      <h4>Sayfalar</h4>
+      <ul>
+        <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
+        <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
+        <li><a href="teknik-materyaller.html">Teknik</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kaynaklar</h4>
+      <ul>
+        <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
+        <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
+        <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehber</a></li>
+      </ul>
+    </div>
+    <div class="footer__contact">
+      <h4>İletişim</h4>
+      <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
+      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+    </div>
+  </div>
+  <div class="footer__bottom container">
+    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+    <p><a href="index.html">Ana Sayfa</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
