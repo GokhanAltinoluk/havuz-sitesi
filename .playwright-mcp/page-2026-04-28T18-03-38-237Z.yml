@@ -1,0 +1,529 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - 'link "{{FIRMA_ADI}}" [ref=e4] [cursor=pointer]':
+        - /url: index.html
+      - navigation [ref=e5]:
+        - link "Ana Sayfa" [ref=e6] [cursor=pointer]:
+          - /url: index.html
+        - link "Havuz Tipleri" [ref=e7] [cursor=pointer]:
+          - /url: havuz-tipleri.html
+        - link "Yapım Süreci" [ref=e8] [cursor=pointer]:
+          - /url: yapim-sureci.html
+        - link "Teknik" [ref=e9] [cursor=pointer]:
+          - /url: teknik-materyaller.html
+        - link "Galeri" [ref=e10] [cursor=pointer]:
+          - /url: galeri.html
+        - link "Blog" [ref=e11] [cursor=pointer]:
+          - /url: blog.html
+        - link "İletişim" [ref=e12] [cursor=pointer]:
+          - /url: iletisim.html
+  - generic [ref=e17]:
+    - navigation [ref=e18]:
+      - link "Ana Sayfa" [ref=e19] [cursor=pointer]:
+        - /url: index.html
+      - generic [ref=e20]: ›
+      - generic [ref=e21]: Teknik Materyaller
+    - heading "Kimyasallar & Ekipman Rehberi" [level=1] [ref=e22]:
+      - text: Kimyasallar &
+      - text: Ekipman Rehberi
+    - paragraph [ref=e23]: Havuzunuzun kristal berraklığını koruyan kimyasallar, güvenilir pompalar ve filtreleme sistemleri hakkında teknik bilgiler.
+  - generic [ref=e26]:
+    - generic [ref=e27]: ⚠
+    - generic [ref=e28]:
+      - strong [ref=e29]: "Güvenlik Uyarısı:"
+      - paragraph [ref=e30]: Havuz kimyasalları; deri, göz ve solunum yolu tahriş edici olabilir. Kişisel koruyucu ekipman (gözlük, eldiven) kullanın, kimyasalları asla doğrudan birbirine karıştırmayın, serinlikte kuru yerde saklayın. Çocukların erişiminden uzak tutun.
+  - generic [ref=e32]:
+    - generic [ref=e33]:
+      - generic [ref=e34]: Bölüm A
+      - heading "Havuz Kimyasalları" [level=2] [ref=e35]
+      - paragraph [ref=e36]: Sağlıklı ve güvenli bir yüzme suyu için gerekli kimyasal bileşenler, kullanım dozajları ve dikkat edilmesi gereken noktalar.
+    - table [ref=e38]:
+      - rowgroup [ref=e39]:
+        - row "Parametre İdeal Aralık Minimum Maksimum Ölçüm Yöntemi" [ref=e40]:
+          - columnheader "Parametre" [ref=e41]
+          - columnheader "İdeal Aralık" [ref=e42]
+          - columnheader "Minimum" [ref=e43]
+          - columnheader "Maksimum" [ref=e44]
+          - columnheader "Ölçüm Yöntemi" [ref=e45]
+      - rowgroup [ref=e46]:
+        - row "pH 7.2 – 7.6 7.0 7.8 Test kiti / dijital metre" [ref=e47]:
+          - cell "pH" [ref=e48]:
+            - strong [ref=e49]: pH
+          - cell "7.2 – 7.6" [ref=e50]
+          - cell "7.0" [ref=e51]
+          - cell "7.8" [ref=e52]
+          - cell "Test kiti / dijital metre" [ref=e53]
+        - row "Serbest Klor (FC) 1.0 – 3.0 ppm 0.5 ppm 5.0 ppm DPD test kiti" [ref=e54]:
+          - cell "Serbest Klor (FC)" [ref=e55]:
+            - strong [ref=e56]: Serbest Klor (FC)
+          - cell "1.0 – 3.0 ppm" [ref=e57]
+          - cell "0.5 ppm" [ref=e58]
+          - cell "5.0 ppm" [ref=e59]
+          - cell "DPD test kiti" [ref=e60]
+        - row "Kombine Klor (CC) 0 – 0.2 ppm — 0.5 ppm DPD test kiti" [ref=e61]:
+          - cell "Kombine Klor (CC)" [ref=e62]:
+            - strong [ref=e63]: Kombine Klor (CC)
+          - cell "0 – 0.2 ppm" [ref=e64]
+          - cell "—" [ref=e65]
+          - cell "0.5 ppm" [ref=e66]
+          - cell "DPD test kiti" [ref=e67]
+        - row "Total Alkalinite (TA) 80 – 120 ppm 60 ppm 180 ppm Titrasyon" [ref=e68]:
+          - cell "Total Alkalinite (TA)" [ref=e69]:
+            - strong [ref=e70]: Total Alkalinite (TA)
+          - cell "80 – 120 ppm" [ref=e71]
+          - cell "60 ppm" [ref=e72]
+          - cell "180 ppm" [ref=e73]
+          - cell "Titrasyon" [ref=e74]
+        - row "Kalsiyum Sertliği 200 – 400 ppm 150 ppm 500 ppm Titrasyon" [ref=e75]:
+          - cell "Kalsiyum Sertliği" [ref=e76]:
+            - strong [ref=e77]: Kalsiyum Sertliği
+          - cell "200 – 400 ppm" [ref=e78]
+          - cell "150 ppm" [ref=e79]
+          - cell "500 ppm" [ref=e80]
+          - cell "Titrasyon" [ref=e81]
+        - row "Siyanürik Asit 30 – 50 ppm 20 ppm 100 ppm Test şeridi" [ref=e82]:
+          - cell "Siyanürik Asit" [ref=e83]:
+            - strong [ref=e84]: Siyanürik Asit
+          - cell "30 – 50 ppm" [ref=e85]
+          - cell "20 ppm" [ref=e86]
+          - cell "100 ppm" [ref=e87]
+          - cell "Test şeridi" [ref=e88]
+        - row "TDS < 1500 ppm — 2000 ppm TDS metre" [ref=e89]:
+          - cell "TDS" [ref=e90]:
+            - strong [ref=e91]: TDS
+          - cell "< 1500 ppm" [ref=e92]
+          - cell "—" [ref=e93]
+          - cell "2000 ppm" [ref=e94]
+          - cell "TDS metre" [ref=e95]
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - generic [ref=e98]: Kalsiyum Hipoklorit (Granül Klor)
+        - generic [ref=e99]: Ca(OCl)₂ — %65–70 aktif klor
+        - generic [ref=e100]:
+          - generic [ref=e101]: Amaç
+          - generic [ref=e102]: Dezenfeksiyon, bakteri öldürme
+        - generic [ref=e103]:
+          - generic [ref=e104]: Günlük doz
+          - generic [ref=e105]: 10 m³ başına ~10 g
+        - generic [ref=e106]:
+          - generic [ref=e107]: Uygulama
+          - generic [ref=e108]: Akşam, filtre çalışırken
+        - generic [ref=e109]:
+          - generic [ref=e110]: pH etkisi
+          - generic [ref=e111]: pH'ı yükseltir (+0.1–0.2)
+        - generic [ref=e112]: pH 7.2–7.6 aralığında tutun; aksi hâlde etkinliği %40'a düşer.
+      - generic [ref=e113]:
+        - generic [ref=e114]: Trikloroizosiyanurik Asit (Tablet Klor)
+        - generic [ref=e115]: C₃Cl₃N₃O₃ — %90 aktif klor
+        - generic [ref=e116]:
+          - generic [ref=e117]: Amaç
+          - generic [ref=e118]: Yavaş salınımlı sürekli klor
+        - generic [ref=e119]:
+          - generic [ref=e120]: Uygulama
+          - generic [ref=e121]: Yüzer tabletlik veya otomatik dozaj
+        - generic [ref=e122]:
+          - generic [ref=e123]: pH etkisi
+          - generic [ref=e124]: pH'ı düşürür (–0.2–0.4)
+        - generic [ref=e125]:
+          - generic [ref=e126]: Stabilize edici
+          - generic [ref=e127]: Yerleşik siyanürik asit içerir
+        - generic [ref=e128]: Uzun vadede siyanürik asit birikimini izleyin (>100 ppm zararlı).
+      - generic [ref=e129]:
+        - generic [ref=e130]: Sodyum Karbonat (pH Yükseltici)
+        - generic [ref=e131]: Na₂CO₃ — Soda Külü
+        - generic [ref=e132]:
+          - generic [ref=e133]: Amaç
+          - generic [ref=e134]: pH'ı yükseltmek
+        - generic [ref=e135]:
+          - generic [ref=e136]: Doz
+          - generic [ref=e137]: "pH 0.1 arttırmak için: ~15 g/10 m³"
+        - generic [ref=e138]:
+          - generic [ref=e139]: Uygulama
+          - generic [ref=e140]: Önceden suda eritilerek ekle
+        - generic [ref=e141]:
+          - generic [ref=e142]: Bekleme
+          - generic [ref=e143]: Eklendikten 4 saat sonra ölç
+        - generic [ref=e144]: Fazla ekleme kireçlenmeye ve bulanıklığa yol açar.
+      - generic [ref=e145]:
+        - generic [ref=e146]: Hidroklorik Asit (pH Düşürücü)
+        - generic [ref=e147]: HCl — %31–33 konsantrasyon
+        - generic [ref=e148]:
+          - generic [ref=e149]: Amaç
+          - generic [ref=e150]: pH'ı düşürmek, alkalilik azaltmak
+        - generic [ref=e151]:
+          - generic [ref=e152]: Doz
+          - generic [ref=e153]: "pH 0.2 düşürmek: ~50 ml/10 m³"
+        - generic [ref=e154]:
+          - generic [ref=e155]: Uygulama
+          - generic [ref=e156]: Derin uçta, filtre açıkken
+        - generic [ref=e157]:
+          - generic [ref=e158]: Güvenlik
+          - generic [ref=e159]: Yüz maskesi + eldiven zorunlu
+        - generic [ref=e160]: Konsantre forma hiçbir şey eklemeyin; suya asit ekleyin, asit suya değil.
+      - generic [ref=e161]:
+        - generic [ref=e162]: Sodyum Bisülfat (Kuru pH Düşürücü)
+        - generic [ref=e163]: NaHSO₄ — Granül form
+        - generic [ref=e164]:
+          - generic [ref=e165]: Amaç
+          - generic [ref=e166]: pH'ı düşürmek (daha güvenli alternatif)
+        - generic [ref=e167]:
+          - generic [ref=e168]: Doz
+          - generic [ref=e169]: "pH 0.2 düşürmek: ~80 g/10 m³"
+        - generic [ref=e170]:
+          - generic [ref=e171]: Avantaj
+          - generic [ref=e172]: HCl'e göre taşıması daha güvenli
+        - generic [ref=e173]:
+          - generic [ref=e174]: TA etkisi
+          - generic [ref=e175]: Zayıf düşürme etkisi
+      - generic [ref=e176]:
+        - generic [ref=e177]: Sodyum Bikarbonat (Alkalinite Yükseltici)
+        - generic [ref=e178]: NaHCO₃ — Kabartma Tozu
+        - generic [ref=e179]:
+          - generic [ref=e180]: Amaç
+          - generic [ref=e181]: Total alkaliniteyi artırmak
+        - generic [ref=e182]:
+          - generic [ref=e183]: Doz
+          - generic [ref=e184]: "TA 10 ppm arttırmak: ~150 g/10 m³"
+        - generic [ref=e185]:
+          - generic [ref=e186]: pH etkisi
+          - generic [ref=e187]: Minimal (<0.1 artış)
+        - generic [ref=e188]:
+          - generic [ref=e189]: Sıklık
+          - generic [ref=e190]: Gerektikçe (ayda 1–2 kez)
+      - generic [ref=e191]:
+        - generic [ref=e192]: Algisit (Yosun Önleyici)
+        - generic [ref=e193]: Polimer bazlı veya kuaterner amonyum
+        - generic [ref=e194]:
+          - generic [ref=e195]: Amaç
+          - generic [ref=e196]: Yosun büyümesini önlemek
+        - generic [ref=e197]:
+          - generic [ref=e198]: Başlangıç dozu
+          - generic [ref=e199]: 500 ml / 50 m³
+        - generic [ref=e200]:
+          - generic [ref=e201]: Bakım dozu
+          - generic [ref=e202]: Haftalık 100–150 ml / 50 m³
+        - generic [ref=e203]:
+          - generic [ref=e204]: Dikkat
+          - generic [ref=e205]: Klorsuz uygulamak köpük yapar
+        - generic [ref=e206]: Köpük yapan algisite dikkat — havuzda kullanımcı varken uygulama.
+      - generic [ref=e207]:
+        - generic [ref=e208]: Şok Klor (Süper Klorlama)
+        - generic [ref=e209]: Ca(OCl)₂ — %68+ aktif klor, granül
+        - generic [ref=e210]:
+          - generic [ref=e211]: Amaç
+          - generic [ref=e212]: Kloraminleri yok etmek, berraklaştırmak
+        - generic [ref=e213]:
+          - generic [ref=e214]: Doz
+          - generic [ref=e215]: 200–400 g / 50 m³
+        - generic [ref=e216]:
+          - generic [ref=e217]: Sıklık
+          - generic [ref=e218]: Haftada 1 kez (gece)
+        - generic [ref=e219]:
+          - generic [ref=e220]: Sonrası
+          - generic [ref=e221]: FC <5 ppm düşmeden yüzme yok
+        - generic [ref=e222]: Yüksek UV ortamda (yaz) sıklığı artırın; yoğun kullanım sonrası mutlaka uygulayın.
+      - generic [ref=e223]:
+        - generic [ref=e224]: Siyanürik Asit (Stabilizör)
+        - generic [ref=e225]: C₃H₃N₃O₃
+        - generic [ref=e226]:
+          - generic [ref=e227]: Amaç
+          - generic [ref=e228]: Klorun UV ışınlarıyla bozunmasını yavaşlatmak
+        - generic [ref=e229]:
+          - generic [ref=e230]: Hedef
+          - generic [ref=e231]: 30–50 ppm
+        - generic [ref=e232]:
+          - generic [ref=e233]: Dikkat
+          - generic [ref=e234]: ">100 ppm kloru etkisizleştirir"
+        - generic [ref=e235]:
+          - generic [ref=e236]: Düşürme
+          - generic [ref=e237]: Sadece kısmi su değişimi
+        - generic [ref=e238]: Kapalı (iç mekan) havuzlarda siyanürik asit kullanmayın.
+      - generic [ref=e239]:
+        - generic [ref=e240]: Flokülant / Pıhtılaştırıcı
+        - generic [ref=e241]: Polialüminyum klorür (PAC)
+        - generic [ref=e242]:
+          - generic [ref=e243]: Amaç
+          - generic [ref=e244]: Askıdaki partikülleri pıhtılaştırarak çökertmek
+        - generic [ref=e245]:
+          - generic [ref=e246]: Doz
+          - generic [ref=e247]: 200–500 ml / 50 m³
+        - generic [ref=e248]:
+          - generic [ref=e249]: Uygulama
+          - generic [ref=e250]: Akşam, filtreyi BYPASS'ta bırak
+        - generic [ref=e251]:
+          - generic [ref=e252]: Sonrası
+          - generic [ref=e253]: Çöken tabakayı elektrik süpürgesiyle al
+      - generic [ref=e254]:
+        - generic [ref=e255]: Kalsiyum Klorür (Sertlik Artırıcı)
+        - generic [ref=e256]: CaCl₂
+        - generic [ref=e257]:
+          - generic [ref=e258]: Amaç
+          - generic [ref=e259]: Kalsiyum sertliğini artırmak
+        - generic [ref=e260]:
+          - generic [ref=e261]: Doz
+          - generic [ref=e262]: "Sertlik 10 ppm artırmak: ~120 g/10 m³"
+        - generic [ref=e263]:
+          - generic [ref=e264]: Neden önemli
+          - generic [ref=e265]: Düşük sertlik beton/çimento aşındırır
+        - generic [ref=e266]:
+          - generic [ref=e267]: Hedef
+          - generic [ref=e268]: 200–400 ppm
+      - generic [ref=e269]:
+        - generic [ref=e270]: Metal Tutucular (Çelatör)
+        - generic [ref=e271]: EDTA / Fosfokarboksilik asit
+        - generic [ref=e272]:
+          - generic [ref=e273]: Amaç
+          - generic [ref=e274]: Demir, bakır gibi metalleri bağlamak
+        - generic [ref=e275]:
+          - generic [ref=e276]: Neden
+          - generic [ref=e277]: Paslanma, leke, yeşilimsi renk önleme
+        - generic [ref=e278]:
+          - generic [ref=e279]: Uygulama
+          - generic [ref=e280]: Su dolumundan sonra önce ekle
+        - generic [ref=e281]:
+          - generic [ref=e282]: Sıklık
+          - generic [ref=e283]: Başlangıç dozu + aylık bakım
+  - generic [ref=e285]:
+    - generic [ref=e286]:
+      - generic [ref=e287]: Bölüm B
+      - heading "Motorlar ve Ekipman" [level=2] [ref=e288]
+      - paragraph [ref=e289]: "Havuzun kalbi: pompa, filtre, ısıtıcı ve otomasyon sistemleri hakkında teknik karşılaştırma rehberi."
+    - heading "Pompa Tipleri" [level=3] [ref=e290]
+    - table [ref=e292]:
+      - rowgroup [ref=e293]:
+        - row "Tip Hız Seçeneği Güç Aralığı Yıllık Enerji Ses Seviyesi Uygun Havuz Maliyet" [ref=e294]:
+          - columnheader "Tip" [ref=e295]
+          - columnheader "Hız Seçeneği" [ref=e296]
+          - columnheader "Güç Aralığı" [ref=e297]
+          - columnheader "Yıllık Enerji" [ref=e298]
+          - columnheader "Ses Seviyesi" [ref=e299]
+          - columnheader "Uygun Havuz" [ref=e300]
+          - columnheader "Maliyet" [ref=e301]
+      - rowgroup [ref=e302]:
+        - row "Tek Hızlı Pompa Sabit (1 hız) 0.75 – 2.2 kW Yüksek Orta (~60 dB) Küçük / bütçe Düşük" [ref=e303]:
+          - cell "Tek Hızlı Pompa" [ref=e304]:
+            - strong [ref=e305]: Tek Hızlı Pompa
+          - cell "Sabit (1 hız)" [ref=e306]
+          - cell "0.75 – 2.2 kW" [ref=e307]
+          - cell "Yüksek" [ref=e308]
+          - cell "Orta (~60 dB)" [ref=e309]
+          - cell "Küçük / bütçe" [ref=e310]
+          - cell "Düşük" [ref=e311]
+        - row "İki Hızlı Pompa Düşük / Yüksek 0.37 – 1.5 kW Orta Düşük – Orta Orta boy Orta" [ref=e312]:
+          - cell "İki Hızlı Pompa" [ref=e313]:
+            - strong [ref=e314]: İki Hızlı Pompa
+          - cell "Düşük / Yüksek" [ref=e315]
+          - cell "0.37 – 1.5 kW" [ref=e316]
+          - cell "Orta" [ref=e317]
+          - cell "Düşük – Orta" [ref=e318]
+          - cell "Orta boy" [ref=e319]
+          - cell "Orta" [ref=e320]
+        - row "Değişken Hız (VSP) Sonsuz (0.5–3000 RPM) 0.2 – 3.0 kW En düşük (%80 tasarruf) Çok sessiz (<45 dB) Tüm boyutlar Yüksek (amorti 2–3 yıl)" [ref=e321]:
+          - cell "Değişken Hız (VSP)" [ref=e322]:
+            - strong [ref=e323]: Değişken Hız (VSP)
+          - cell "Sonsuz (0.5–3000 RPM)" [ref=e324]
+          - cell "0.2 – 3.0 kW" [ref=e325]
+          - cell "En düşük (%80 tasarruf)" [ref=e326]
+          - cell "Çok sessiz (<45 dB)" [ref=e327]
+          - cell "Tüm boyutlar" [ref=e328]
+          - cell "Yüksek (amorti 2–3 yıl)" [ref=e329]
+    - heading "Filtre Tipleri" [level=3] [ref=e330]
+    - generic [ref=e331]:
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - heading "Kum Filtresi" [level=3] [ref=e334]
+          - paragraph [ref=e335]: En yaygın kullanılan
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - generic [ref=e338]: Filtreleme
+            - generic [ref=e339]: 20–25 µm
+          - generic [ref=e340]:
+            - generic [ref=e341]: Dolgu
+            - generic [ref=e342]: Silika kumu
+          - generic [ref=e343]:
+            - generic [ref=e344]: Geri yıkama
+            - generic [ref=e345]: Haftalık
+          - generic [ref=e346]:
+            - generic [ref=e347]: Yenileme
+            - generic [ref=e348]: 5–7 yılda bir
+          - generic [ref=e349]:
+            - generic [ref=e350]: Maliyet
+            - generic [ref=e351]: Düşük
+      - generic [ref=e352]:
+        - generic [ref=e353]:
+          - heading "Cam Filtresi" [level=3] [ref=e354]
+          - paragraph [ref=e355]: Gelişmiş versiyon
+        - generic [ref=e356]:
+          - generic [ref=e357]:
+            - generic [ref=e358]: Filtreleme
+            - generic [ref=e359]: 8–10 µm
+          - generic [ref=e360]:
+            - generic [ref=e361]: Dolgu
+            - generic [ref=e362]: Geri dönüştürülmüş cam
+          - generic [ref=e363]:
+            - generic [ref=e364]: Geri yıkama
+            - generic [ref=e365]: 2 haftada 1
+          - generic [ref=e366]:
+            - generic [ref=e367]: Yenileme
+            - generic [ref=e368]: 10+ yıl
+          - generic [ref=e369]:
+            - generic [ref=e370]: Maliyet
+            - generic [ref=e371]: Orta
+      - generic [ref=e372]:
+        - generic [ref=e373]:
+          - heading "Kartuş Filtresi" [level=3] [ref=e374]
+          - paragraph [ref=e375]: Düşük debili sistemler
+        - generic [ref=e376]:
+          - generic [ref=e377]:
+            - generic [ref=e378]: Filtreleme
+            - generic [ref=e379]: 10–15 µm
+          - generic [ref=e380]:
+            - generic [ref=e381]: Dolgu
+            - generic [ref=e382]: Polyester kartuş
+          - generic [ref=e383]:
+            - generic [ref=e384]: Temizlik
+            - generic [ref=e385]: Yıkama / değiştirme
+          - generic [ref=e386]:
+            - generic [ref=e387]: Su tasarrufu
+            - generic [ref=e388]: Geri yıkama yok
+          - generic [ref=e389]:
+            - generic [ref=e390]: Maliyet
+            - generic [ref=e391]: Düşük – Orta
+      - generic [ref=e392]:
+        - generic [ref=e393]:
+          - heading "DE Filtre" [level=3] [ref=e394]
+          - paragraph [ref=e395]: En ince filtreleme
+        - generic [ref=e396]:
+          - generic [ref=e397]:
+            - generic [ref=e398]: Filtreleme
+            - generic [ref=e399]: 3–5 µm
+          - generic [ref=e400]:
+            - generic [ref=e401]: Dolgu
+            - generic [ref=e402]: Diyatome tozu (DE)
+          - generic [ref=e403]:
+            - generic [ref=e404]: Bakım
+            - generic [ref=e405]: Karmaşık
+          - generic [ref=e406]:
+            - generic [ref=e407]: Su kalitesi
+            - generic [ref=e408]: Kristal berrak
+          - generic [ref=e409]:
+            - generic [ref=e410]: Maliyet
+            - generic [ref=e411]: Yüksek
+    - heading "Isı Pompası" [level=3] [ref=e412]
+    - table [ref=e414]:
+      - rowgroup [ref=e415]:
+        - row "Kapasite Güç Tüketimi COP Değeri Uygun Hacim Isıtma Süresi (10°C→28°C)" [ref=e416]:
+          - columnheader "Kapasite" [ref=e417]
+          - columnheader "Güç Tüketimi" [ref=e418]
+          - columnheader "COP Değeri" [ref=e419]
+          - columnheader "Uygun Hacim" [ref=e420]
+          - columnheader "Isıtma Süresi (10°C→28°C)" [ref=e421]
+      - rowgroup [ref=e422]:
+        - row "8 kW 2.0 kW COP 4.0 20–35 m³ 24–36 saat" [ref=e423]:
+          - cell "8 kW" [ref=e424]
+          - cell "2.0 kW" [ref=e425]
+          - cell "COP 4.0" [ref=e426]
+          - cell "20–35 m³" [ref=e427]
+          - cell "24–36 saat" [ref=e428]
+        - row "14 kW 3.2 kW COP 4.4 40–60 m³ 24–30 saat" [ref=e429]:
+          - cell "14 kW" [ref=e430]
+          - cell "3.2 kW" [ref=e431]
+          - cell "COP 4.4" [ref=e432]
+          - cell "40–60 m³" [ref=e433]
+          - cell "24–30 saat" [ref=e434]
+        - row "21 kW 4.5 kW COP 4.6 60–90 m³ 20–28 saat" [ref=e435]:
+          - cell "21 kW" [ref=e436]
+          - cell "4.5 kW" [ref=e437]
+          - cell "COP 4.6" [ref=e438]
+          - cell "60–90 m³" [ref=e439]
+          - cell "20–28 saat" [ref=e440]
+        - row "28 kW (İnverter) 4.8 kW COP 5.8+ 80–120 m³ 18–24 saat" [ref=e441]:
+          - cell "28 kW (İnverter)" [ref=e442]
+          - cell "4.8 kW" [ref=e443]
+          - cell "COP 5.8+" [ref=e444]
+          - cell "80–120 m³" [ref=e445]
+          - cell "18–24 saat" [ref=e446]
+    - heading "Diğer Ekipman" [level=3] [ref=e447]
+    - generic [ref=e448]:
+      - generic [ref=e449]:
+        - img [ref=e451]
+        - heading "Otomatik Dozaj Sistemi" [level=3] [ref=e453]
+        - paragraph [ref=e454]: pH ve ORP (redoks potansiyeli) sensörleri suyu sürekli izler. Peristaltik pompalar gerektiğinde asit veya hipoklorit dozlar. Akıllı kontrol paneli ile eşikler ayarlanır. Kimyasal tüketimi %30–50 azalır.
+      - generic [ref=e455]:
+        - img [ref=e457]
+        - heading "LED Aydınlatma Sistemi" [level=3] [ref=e463]
+        - paragraph [ref=e464]: "IP68 su altı LED armatürler. RGB renk değiştirme, animasyon modları. Güç: 12–35W. Ömür: 30.000+ saat. Enerji tasarrufu: halojen'e göre %85."
+      - generic [ref=e465]:
+        - img [ref=e467]
+        - heading "Robot Havuz Temizleyici" [level=3] [ref=e470]
+        - paragraph [ref=e471]: "Zemin, duvar ve su çizgisini otomatik temizler. Akıllı navigasyon: çift fırça, ince ve kaba filtre. Haftalık 2–3 saat çalışmayla mükemmel hijyen. Pompa filtresi üzerindeki yükü azaltır."
+      - generic [ref=e472]:
+        - img [ref=e474]
+        - heading "Akıllı Otomasyon Paneli" [level=3] [ref=e476]
+        - paragraph [ref=e477]: Pompa, filtre, ısıtma, aydınlatma ve su özelliklerini tek panelden veya akıllı telefon uygulamasından kontrol edin. Program ayarlama, uzaktan erişim, arıza bildirimi.
+      - generic [ref=e478]:
+        - img [ref=e480]
+        - heading "Skimmer ve Süzgeçler" [level=3] [ref=e482]
+        - paragraph [ref=e483]: Su yüzeyindeki pislikleri sürekli toplayan skimmer sistemi. Havuz boyutuna göre 1–4 adet skimmer hesaplanır. Dip süzgeçler (main drain) ile komple sirkülasyon sağlanır.
+      - generic [ref=e484]:
+        - img [ref=e486]
+        - heading "UV ve Tuzlu Su Jeneratörü" [level=3] [ref=e489]
+        - paragraph [ref=e490]: UV sterilizatörler klorsuz alternatif dezenfeksiyon sağlar. Tuz elektroliz (SWG) sistemleri kloru otomatik üretir; su yumuşak ve göze yakıcı olmaz. Uzun vadede kimyasal maliyeti azalır.
+  - generic [ref=e493]:
+    - generic [ref=e494]: Teknik Destek
+    - heading "Hangi Ekipman Size Uygun?" [level=2] [ref=e495]
+    - paragraph [ref=e496]: Havuz büyüklüğünüze, kullanım şeklinize ve bütçenize göre en uygun ekipman setini birlikte belirleyelim.
+    - generic [ref=e497]:
+      - link "Ücretsiz Danışmanlık" [ref=e498] [cursor=pointer]:
+        - /url: iletisim.html
+      - link "Yapım Sürecini İncele" [ref=e499] [cursor=pointer]:
+        - /url: yapim-sureci.html
+  - contentinfo [ref=e500]:
+    - generic [ref=e501]:
+      - generic [ref=e502]:
+        - paragraph [ref=e503]: "{{FIRMA_ADI}}"
+        - paragraph [ref=e504]: Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.
+      - generic [ref=e505]:
+        - heading "Sayfalar" [level=4] [ref=e506]
+        - list [ref=e507]:
+          - listitem [ref=e508]:
+            - link "Havuz Tipleri" [ref=e509] [cursor=pointer]:
+              - /url: havuz-tipleri.html
+          - listitem [ref=e510]:
+            - link "Yapım Süreci" [ref=e511] [cursor=pointer]:
+              - /url: yapim-sureci.html
+          - listitem [ref=e512]:
+            - link "Teknik" [ref=e513] [cursor=pointer]:
+              - /url: teknik-materyaller.html
+          - listitem [ref=e514]:
+            - link "Galeri" [ref=e515] [cursor=pointer]:
+              - /url: galeri.html
+          - listitem [ref=e516]:
+            - link "Blog" [ref=e517] [cursor=pointer]:
+              - /url: blog.html
+      - generic [ref=e518]:
+        - heading "Kaynaklar" [level=4] [ref=e519]
+        - list [ref=e520]:
+          - listitem [ref=e521]:
+            - link "Bakım Rehberi" [ref=e522] [cursor=pointer]:
+              - /url: blog/havuz-bakim-rehberi.html
+          - listitem [ref=e523]:
+            - link "Kış Koruması" [ref=e524] [cursor=pointer]:
+              - /url: blog/kis-korumasi.html
+          - listitem [ref=e525]:
+            - link "Kimyasal Rehber" [ref=e526] [cursor=pointer]:
+              - /url: blog/kimyasal-dengeleme.html
+      - generic [ref=e527]:
+        - heading "İletişim" [level=4] [ref=e528]
+        - paragraph [ref=e529]:
+          - 'link "{{TELEFON}}" [ref=e530] [cursor=pointer]':
+            - /url: "tel:{{TELEFON}}"
+        - paragraph [ref=e531]:
+          - 'link "{{EMAIL}}" [ref=e532] [cursor=pointer]':
+            - /url: "mailto:{{EMAIL}}"
+    - generic [ref=e533]:
+      - paragraph [ref=e534]: "© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır."
+      - paragraph [ref=e535]:
+        - link "Ana Sayfa" [ref=e536] [cursor=pointer]:
+          - /url: index.html

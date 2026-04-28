@@ -1,0 +1,283 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - 'link "{{FIRMA_ADI}}" [ref=e4] [cursor=pointer]':
+        - /url: index.html
+      - navigation [ref=e284]:
+        - link "Ana Sayfa" [ref=e285] [cursor=pointer]:
+          - /url: index.html
+        - link "Havuz Tipleri" [ref=e286] [cursor=pointer]:
+          - /url: havuz-tipleri.html
+        - link "Yapım Süreci" [ref=e287] [cursor=pointer]:
+          - /url: yapim-sureci.html
+        - link "Teknik" [ref=e288] [cursor=pointer]:
+          - /url: teknik-materyaller.html
+        - link "Galeri" [ref=e289] [cursor=pointer]:
+          - /url: galeri.html
+        - link "Blog" [ref=e290] [cursor=pointer]:
+          - /url: blog.html
+        - link "İletişim" [ref=e291] [cursor=pointer]:
+          - /url: iletisim.html
+      - button "Menüyü aç/kapat" [expanded] [active] [ref=e5] [cursor=pointer]
+  - generic [ref=e13]:
+    - generic [ref=e14]: Türkiye'nin Lüks Havuz Uzmanı
+    - heading "Lüks Yüzme Havuzları, Sanatla Yapılır" [level=1] [ref=e15]:
+      - text: Lüks Yüzme Havuzları,
+      - text: Sanatla Yapılır
+    - paragraph [ref=e16]: Backyard ve Beach Pool tasarımından anahtar teslime kadar her adımda yanınızdayız. Hayalinizdeki havuz, mükemmel işçilik ve uluslararası ekipmanlarla hayat bulur.
+    - generic [ref=e17]:
+      - link "Ücretsiz Keşif Talebi" [ref=e18] [cursor=pointer]:
+        - /url: iletisim.html
+      - link "Havuz Tiplerini İncele" [ref=e19] [cursor=pointer]:
+        - /url: havuz-tipleri.html
+  - generic [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]: Fark Yaratan Detaylar
+      - heading "Neden Bizi Tercih Etmelisiniz?" [level=2] [ref=e24]
+      - paragraph [ref=e25]: Yılların deneyimi, uluslararası kalite standartları ve müşteri memnuniyeti odaklı yaklaşımımızla sektörde fark yaratıyoruz.
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - img [ref=e29]
+        - heading "Anahtar Teslim" [level=3] [ref=e32]
+        - paragraph [ref=e33]: Projelendirme, inşaat, ekipman montajı ve su dengesi — hepsi tek elden, tam zamanında.
+      - generic [ref=e34]:
+        - img [ref=e36]
+        - heading "Uluslararası Ekipman" [level=3] [ref=e39]
+        - paragraph [ref=e40]: Hayward, Pentair, Astral ve diğer dünya markası pompa, filtre ve aydınlatma sistemleri.
+      - generic [ref=e41]:
+        - img [ref=e43]
+        - heading "10 Yıl Garanti" [level=3] [ref=e45]
+        - paragraph [ref=e46]: Yapısal garanti, ekipman bakım sözleşmesi ve 7/24 teknik destek ile güvende hissedebilirsiniz.
+      - generic [ref=e47]:
+        - img [ref=e49]
+        - heading "3D Tasarım Ekibi" [level=3] [ref=e51]
+        - paragraph [ref=e52]: Projenizi onaylamadan önce 3D render ile tamamlanmış havuzunuzu görün, değişiklik talep edin.
+  - generic [ref=e54]:
+    - generic [ref=e55]:
+      - generic [ref=e56]: Uzmanlık Alanlarımız
+      - heading "Havuz Tiplerini Keşfedin" [level=2] [ref=e57]
+      - paragraph [ref=e58]: Her bahçeye, her yaşam tarzına uygun havuz tasarımı geliştiriyoruz.
+    - generic [ref=e59]:
+      - article [ref=e60]:
+        - img "Backyard Pool — Bahçe Yüzme Havuzu" [ref=e62]
+        - generic [ref=e63]:
+          - heading "Backyard Pool" [level=2] [ref=e64]
+          - paragraph [ref=e65]: Evinizin bahçesine özel tasarlanan klasik ve modern yüzme havuzları. Seramik kaplamadan liner sistemine, sonsuzluk havuzundan şelale detayına kadar tüm seçenekler.
+          - generic [ref=e66]:
+            - generic [ref=e67]: Sonsuzluk Havuzu
+            - generic [ref=e68]: Şelale Duvarı
+            - generic [ref=e69]: Gece Aydınlatması
+            - generic [ref=e70]: Isıtmalı Sistem
+          - link "Detaylı İncele" [ref=e71] [cursor=pointer]:
+            - /url: havuz-tipleri.html#backyard
+      - article [ref=e72]:
+        - img "Beach Pool — Plaj Etkili Havuz" [ref=e74]
+        - generic [ref=e75]:
+          - heading "Beach Pool" [level=2] [ref=e76]
+          - paragraph [ref=e77]: Giriş sahası kademeli derinleşen, doğal plaj hissiyatı yaratan havuz sistemi. Çocuklar ve aileler için ideal; tropikal görünümüyle evinizi tatil cennetine dönüştürür.
+          - generic [ref=e78]:
+            - generic [ref=e79]: Kademeli Giriş
+            - generic [ref=e80]: Plaj Sahası
+            - generic [ref=e81]: Tropikal Tasarım
+            - generic [ref=e82]: Çocuk Güvenli
+          - link "Detaylı İncele" [ref=e83] [cursor=pointer]:
+            - /url: havuz-tipleri.html#beach
+  - generic [ref=e85]:
+    - generic [ref=e86]:
+      - generic [ref=e87]: Nasıl Çalışırız?
+      - heading "Projeden Teslimine 4 Adım" [level=2] [ref=e88]
+      - paragraph [ref=e89]: Şeffaf iletişim ve belirli zaman çizelgesiyle projenizi yönetiyoruz.
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - generic [ref=e92]: "01"
+        - heading "Keşif & Proje" [level=4] [ref=e93]
+        - paragraph [ref=e94]: Arazi ölçümü, zemin etüdü, 3D render ve maliyet planlaması.
+      - generic [ref=e95]:
+        - generic [ref=e96]: "02"
+        - heading "Tasarım Onayı" [level=4] [ref=e97]
+        - paragraph [ref=e98]: Render üzerinde istediğiniz değişiklikler onaylandıktan sonra imzalara geçilir.
+      - generic [ref=e99]:
+        - generic [ref=e100]: "03"
+        - heading "İnşaat" [level=4] [ref=e101]
+        - paragraph [ref=e102]: Kazı, beton, izolasyon, kaplama ve ekipman montajı. Haftalık ilerleme raporu.
+      - generic [ref=e103]:
+        - generic [ref=e104]: "04"
+        - heading "Teslim & Bakım" [level=4] [ref=e105]
+        - paragraph [ref=e106]: Su dolumu, kimyasal denge ve ekipman eğitimi. Bakım sözleşmesi seçeneği.
+    - link "Tüm Yapım Sürecini Gör" [ref=e108] [cursor=pointer]:
+      - /url: yapim-sureci.html
+  - generic [ref=e110]:
+    - generic [ref=e111]:
+      - generic [ref=e112]: Tamamlanan Projeler
+      - heading "Havuzlarımızdan Kareler" [level=2] [ref=e113]
+    - generic [ref=e114]:
+      - generic [ref=e115] [cursor=pointer]:
+        - img "Lüks Villa Havuzu" [ref=e116]
+        - img [ref=e118]
+      - generic [ref=e121] [cursor=pointer]:
+        - img "Backyard Havuz" [ref=e122]
+        - img [ref=e124]
+      - generic [ref=e127] [cursor=pointer]:
+        - img "Beach Pool" [ref=e128]
+        - img [ref=e130]
+      - generic [ref=e133] [cursor=pointer]:
+        - img "Gece Havuzu Aydınlatması" [ref=e134]
+        - img [ref=e136]
+      - generic [ref=e139] [cursor=pointer]:
+        - img "Havuz Manzara" [ref=e140]
+        - img [ref=e142]
+      - generic [ref=e145] [cursor=pointer]:
+        - img "Modern Sonsuzluk Havuzu" [ref=e146]
+        - img [ref=e148]
+    - link "Tüm Galeriyi Gör" [ref=e152] [cursor=pointer]:
+      - /url: galeri.html
+  - generic [ref=e154]:
+    - generic [ref=e155]:
+      - generic [ref=e156]: Müşterilerimiz Ne Diyor?
+      - heading "Memnuniyet Hikayeleri" [level=2] [ref=e157]
+    - generic [ref=e158]:
+      - generic [ref=e159]:
+        - generic [ref=e160]: ★★★★★
+        - blockquote [ref=e161]: "\"Beach Pool projemiz tahmin ettiğimizden çok daha güzel çıktı. 3D render aşamasında her detayı görerek onayladık. Teslim süresi konusunda söz verdikleri gibi 10 haftada bitti.\""
+        - generic [ref=e162]:
+          - generic [ref=e163]: AY
+          - generic [ref=e164]:
+            - generic [ref=e165]: Ahmet Y.
+            - generic [ref=e166]: Beach Pool, İstanbul
+      - generic [ref=e167]:
+        - generic [ref=e168]: ★★★★★
+        - blockquote [ref=e169]: "\"Sonsuzluk havuzumuzun kenar detayları ve LED aydınlatma sistemi muhteşem. Gece görüntüsü adeta bir sanat eseri. Hayward ekipmanları ile elektrik tüketimi beklentimin çok altında.\""
+        - generic [ref=e170]:
+          - generic [ref=e171]: SÇ
+          - generic [ref=e172]:
+            - generic [ref=e173]: Selin Ç.
+            - generic [ref=e174]: Backyard Sonsuzluk Havuzu, Bodrum
+      - generic [ref=e175]:
+        - generic [ref=e176]: ★★★★★
+        - blockquote [ref=e177]: "\"Otele özel büyük ölçekli bir proje tamamladılar. Kimyasal denge sistemi tam otomatik, personelimiz müdahale etmek zorunda kalmıyor. Bakım anlaşması ile de düzenli kontrol yapıyorlar.\""
+        - generic [ref=e178]:
+          - generic [ref=e179]: MK
+          - generic [ref=e180]:
+            - generic [ref=e181]: Mehmet K.
+            - generic [ref=e182]: Butik Otel, Antalya
+  - generic [ref=e185]:
+    - generic [ref=e186]:
+      - generic [ref=e187]: Sıkça Sorulan Sorular
+      - heading "Merak Ettikleriniz" [level=2] [ref=e188]
+    - generic [ref=e189]:
+      - generic [ref=e190]:
+        - button "Bir havuz yapımı ne kadar sürer? +" [ref=e191] [cursor=pointer]:
+          - text: Bir havuz yapımı ne kadar sürer?
+          - generic [ref=e192]: +
+        - paragraph [ref=e193]:
+          - text: Standart bir Backyard Pool (40–60 m²) genellikle
+          - strong [ref=e194]: 8–12 hafta
+          - text: içinde tamamlanır. Beach Pool ve büyük ölçekli projeler 14–20 haftaya kadar uzayabilir. Ruhsat süreçleri ve mevsim koşulları zaman çizelgesini etkileyebilir. Keşif aşamasında size özel bir takvim sunulur.
+      - generic [ref=e195]:
+        - button "Havuz yapım maliyeti nasıl hesaplanır? +" [ref=e196] [cursor=pointer]:
+          - text: Havuz yapım maliyeti nasıl hesaplanır?
+          - generic [ref=e197]: +
+        - paragraph [ref=e198]:
+          - text: Maliyet; havuz boyutu (m²), derinlik, kaplama malzemesi (seramik, mozaik, liner), ekipman sınıfı ve ek özellikler (şelale, aydınlatma, ısıtma) baz alınarak hesaplanır. Standart Backyard Pool için
+          - strong [ref=e199]: m² başına yaklaşık 1.500–3.500 USD
+          - text: aralığında teklif oluşmaktadır. Kesin teklif için ücretsiz keşif gereklidir.
+      - generic [ref=e200]:
+        - button "Havuz bakımını kendiniz mi yapmanız gerekiyor? +" [ref=e201] [cursor=pointer]:
+          - text: Havuz bakımını kendiniz mi yapmanız gerekiyor?
+          - generic [ref=e202]: +
+        - paragraph [ref=e203]:
+          - text: Teslim sırasında sizi tüm sistemler hakkında bilgilendiriyoruz. Otomatik dozaj sistemi tercih ederseniz pH ve klor dengesi büyük ölçüde otomatik yönetilir. İsteğe bağlı
+          - strong [ref=e204]: aylık bakım sözleşmesi
+          - text: ile her şeyi bize bırakabilirsiniz; teknik ekibimiz düzenli ziyaret ederek su kalitesini kontrol eder.
+      - generic [ref=e205]:
+        - button "Kış aylarında havuzu kapatmam gerekiyor mu? +" [ref=e206] [cursor=pointer]:
+          - text: Kış aylarında havuzu kapatmam gerekiyor mu?
+          - generic [ref=e207]: +
+        - paragraph [ref=e208]:
+          - text: "Isı pompası sistemi olan havuzlar kışın da kullanılabilir. Kullanılmayacaksa doğru kışlık kapama işlemleri uygulanmalıdır: su seviyesini düşürme, boru hattı boşaltma, kimyasal şok, örtü montajı. Yanlış kışlık kapama borularda donmaya ve kaplama hasarına yol açabilir. Detaylar için"
+          - link "kış koruması rehberimizi" [ref=e209] [cursor=pointer]:
+            - /url: blog/kis-korumasi.html
+          - text: okuyabilirsiniz.
+      - generic [ref=e210]:
+        - button "Ruhsat ve izin sürecini siz mi yönetiyorsunuz? +" [ref=e211] [cursor=pointer]:
+          - text: Ruhsat ve izin sürecini siz mi yönetiyorsunuz?
+          - generic [ref=e212]: +
+        - paragraph [ref=e213]: Evet. Proje danışmanlık hizmetimiz kapsamında belediye yapı ruhsatı ve gerekli diğer izin süreçlerini sizin adınıza takip ediyoruz. Müşterimizin belediyeyle ayrıca ilgilenmesine gerek kalmıyor.
+  - generic [ref=e216]:
+    - generic [ref=e217]: Ücretsiz Hizmet
+    - heading "Hayalinizdeki Havuzu Konuşalım" [level=2] [ref=e218]
+    - paragraph [ref=e219]: Uzman ekibimiz arazi keşfi, ölçüm ve 3D tasarım için ücretsiz bir görüşme ayarlasın.
+    - generic [ref=e220]:
+      - link "Teklif Talep Et" [ref=e221] [cursor=pointer]:
+        - /url: iletisim.html
+      - link "Bizi Arayın" [ref=e222] [cursor=pointer]:
+        - /url: "tel:{{TELEFON}}"
+  - contentinfo [ref=e223]:
+    - generic [ref=e224]:
+      - generic [ref=e225]:
+        - paragraph [ref=e226]: "{{FIRMA_ADI}}"
+        - paragraph [ref=e227]: Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması. Backyard'dan Beach Pool'a, sıradan bahçeleri hayalinizdeki yaşam alanına dönüştürüyoruz.
+        - generic [ref=e228]:
+          - link "Instagram" [ref=e229] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e230]
+          - link "Facebook" [ref=e233] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e234]
+          - link "YouTube" [ref=e236] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e237]
+      - generic [ref=e240]:
+        - heading "Sayfalar" [level=4] [ref=e241]
+        - list [ref=e242]:
+          - listitem [ref=e243]:
+            - link "Havuz Tipleri" [ref=e244] [cursor=pointer]:
+              - /url: havuz-tipleri.html
+          - listitem [ref=e245]:
+            - link "Yapım Süreci" [ref=e246] [cursor=pointer]:
+              - /url: yapim-sureci.html
+          - listitem [ref=e247]:
+            - link "Teknik Materyaller" [ref=e248] [cursor=pointer]:
+              - /url: teknik-materyaller.html
+          - listitem [ref=e249]:
+            - link "Galeri" [ref=e250] [cursor=pointer]:
+              - /url: galeri.html
+          - listitem [ref=e251]:
+            - link "Blog" [ref=e252] [cursor=pointer]:
+              - /url: blog.html
+      - generic [ref=e253]:
+        - heading "Kaynaklar" [level=4] [ref=e254]
+        - list [ref=e255]:
+          - listitem [ref=e256]:
+            - link "Bakım Rehberi" [ref=e257] [cursor=pointer]:
+              - /url: blog/havuz-bakim-rehberi.html
+          - listitem [ref=e258]:
+            - link "Kış Koruması" [ref=e259] [cursor=pointer]:
+              - /url: blog/kis-korumasi.html
+          - listitem [ref=e260]:
+            - link "Kimyasal Dengeleme" [ref=e261] [cursor=pointer]:
+              - /url: blog/kimyasal-dengeleme.html
+          - listitem [ref=e262]:
+            - link "İletişim" [ref=e263] [cursor=pointer]:
+              - /url: iletisim.html
+      - generic [ref=e264]:
+        - heading "İletişim" [level=4] [ref=e265]
+        - paragraph [ref=e266]:
+          - img [ref=e267]
+          - text: "{{ADRES}}"
+        - paragraph [ref=e270]:
+          - img [ref=e271]
+          - 'link "{{TELEFON}}" [ref=e273] [cursor=pointer]':
+            - /url: "tel:{{TELEFON}}"
+        - paragraph [ref=e274]:
+          - img [ref=e275]
+          - 'link "{{EMAIL}}" [ref=e278] [cursor=pointer]':
+            - /url: "mailto:{{EMAIL}}"
+    - generic [ref=e279]:
+      - paragraph [ref=e280]: "© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır."
+      - paragraph [ref=e281]:
+        - link "Gizlilik Politikası" [ref=e282] [cursor=pointer]:
+          - /url: "#"
+        - text: ·
+        - link "Kullanım Koşulları" [ref=e283] [cursor=pointer]:
+          - /url: "#"
