@@ -15,7 +15,9 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8765/test-photos.html)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git rm *)",
+      "Bash(rm -rf .playwright-mcp test-*.png test-*.jpg photo-test-grid.jpg)"
     ]
   }
 }
