@@ -1,21 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{FIRMA_ADI}} — Lüks Yüzme Havuzu Yapım Firması</title>
   <meta name="description" content="Backyard ve Beach Pool tasarım ve yapımında Türkiye'nin önde gelen firması. Anahtar teslim havuz projeleri, kimyasal bakım ve ekipman çözümleri.">
-  <meta name="keywords" content="yüzme havuzu yapımı, backyard pool, beach pool, havuz inşaatı, havuz kimyasalları, havuz motoru">
   <meta property="og:title" content="{{FIRMA_ADI}} — Lüks Yüzme Havuzu Yapım Firması">
   <meta property="og:description" content="Backyard ve Beach Pool tasarım ve yapımında uzman. Anahtar teslim projeler.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1200&q=80">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:url" content="https://gokhanaltinoluk.github.io/havuz-sitesi/">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="index.html">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gokhanaltinoluk.github.io/havuz-sitesi/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
   {
@@ -31,19 +33,50 @@
 </head>
 <body>
 
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00
+      </span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {{ŞEHİR}}
+      </span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:{{TELEFON}}" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        {{TELEFON}}
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- NAVBAR -->
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </span>
+      <span>
+        <span class="navbar__logo-text">{{FIRMA_ADI}}</span>
+        <span class="navbar__logo-sub">Havuz Atölyesi · Est.</span>
+      </span>
+    </a>
     <nav class="navbar__nav" id="nav-menu">
-      <a href="index.html" class="nav-link">Ana Sayfa</a>
+      <a href="index.html" class="nav-link active">Ana Sayfa</a>
       <a href="havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
       <a href="yapim-sureci.html" class="nav-link">Yapım Süreci</a>
       <a href="teknik-materyaller.html" class="nav-link">Teknik</a>
       <a href="galeri.html" class="nav-link">Galeri</a>
       <a href="blog.html" class="nav-link">Blog</a>
-      <a href="iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+      <a href="iletisim.html" class="btn btn--teal navbar__cta-mobile" style="margin-top:0">Teklif Al →</a>
     </nav>
+    <a href="iletisim.html" class="btn btn--teal" style="font-size:0.75rem; padding:0.65rem 1.35rem;">Teklif Al →</a>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -52,232 +85,343 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1920&q=85&fit=crop')"></div>
-  <div class="hero__overlay"></div>
   <div class="container">
-    <div class="hero__content">
-      <span class="overline">Türkiye'nin Lüks Havuz Uzmanı</span>
-      <h1>Lüks Yüzme Havuzları,<br><span>Sanatla Yapılır</span></h1>
-      <p>Backyard ve Beach Pool tasarımından anahtar teslime kadar her adımda yanınızdayız. Hayalinizdeki havuz, mükemmel işçilik ve uluslararası ekipmanlarla hayat bulur.</p>
-      <div class="hero__ctas">
-        <a href="iletisim.html" class="btn btn--gold btn--lg">Ücretsiz Keşif Talebi</a>
-        <a href="havuz-tipleri.html" class="btn btn--outline btn--lg">Havuz Tiplerini İncele</a>
+    <div class="hero__inner">
+      <div class="fade-in">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Türkiye'nin Lüks Havuz Uzmanı · Est.
+        </div>
+        <h1 class="hero__title">
+          Hayalinizdeki<br><em>lüks</em> havuzu<br>birlikte inşa<br>ediyoruz.
+        </h1>
+        <p class="hero__desc">Backyard ve Beach Pool tasarımından anahtar teslime kadar her adımda yanınızdayız. Uluslararası ekipmanlar, 3D tasarım ve 10 yıl garanti.</p>
+        <div class="hero__ctas">
+          <a href="iletisim.html" class="btn btn--teal">Ücretsiz Keşif Al →</a>
+          <a href="galeri.html" class="btn btn--outline">✓ 250+ proje gör</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div class="hero__stat-num">250+</div>
+            <div class="hero__stat-label">Tamamlanan Proje</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="hero__stat-num">10 Yıl</div>
+            <div class="hero__stat-label">Yapısal Garanti</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="hero__stat-num">3D</div>
+            <div class="hero__stat-label">Tasarım Ekibi</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual fade-in">
+        <div class="hero__img">
+          <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800&q=85&fit=crop" alt="Lüks villa havuzu">
+        </div>
+        <div class="hero__float hero__float--rating">
+          <div class="hero__float-stars">★★★★★</div>
+          <div class="hero__float-score">4.9 / 5.0</div>
+          <div class="hero__float-label">120+ Müşteri Yorumu</div>
+        </div>
+        <div class="hero__float hero__float--notify">
+          <div class="hero__float-dot"></div>
+          <div>
+            <div class="hero__float-tag">Bugün</div>
+            <div class="hero__float-msg">3 yeni keşif randevusu</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- NEDEN BİZ -->
-<section class="section--dark">
+<!-- PARTNERS -->
+<div class="partners">
   <div class="container">
-    <div class="section-header center fade-in">
-      <span class="overline">Fark Yaratan Detaylar</span>
-      <h2>Neden Bizi Tercih Etmelisiniz?</h2>
-      <p>Yılların deneyimi, uluslararası kalite standartları ve müşteri memnuniyeti odaklı yaklaşımımızla sektörde fark yaratıyoruz.</p>
+    <div class="partners__inner">
+      <span class="partners__label">Yetkili Bayi · Marka Ortaklarımız</span>
+      <span class="partners__separator"></span>
+      <div class="partners__list">
+        <span class="partners__name">HAYWARD</span>
+        <span class="partners__name">PENTAIR</span>
+        <span class="partners__name">ZODIAC</span>
+        <span class="partners__name">BWT</span>
+        <span class="partners__name">DOLPHIN</span>
+        <span class="partners__name">ASTRAL</span>
+        <span class="partners__name">CERTIKIN</span>
+        <span class="partners__name">KRIPSOL</span>
+      </div>
     </div>
-    <div class="grid-4">
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Anahtar Teslim</h3>
-        <p>Projelendirme, inşaat, ekipman montajı ve su dengesi — hepsi tek elden, tam zamanında.</p>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header section-header--split fade-in">
+      <div>
+        <span class="overline">Hizmetlerimiz</span>
+        <h2>Havuzunuzun <em>her</em> şeyindeyiz.</h2>
+        <p>Tasarımdan teslime, bakımdan kimyasal tedarike — tek muhatabınız biziz.</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      <a href="teknik-materyaller.html" class="btn btn--outline">Tüm Hizmetler →</a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-card__top">
+          <div class="service-card__icon">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="service-card__num">01</span>
         </div>
-        <h3>Uluslararası Ekipman</h3>
-        <p>Hayward, Pentair, Astral ve diğer dünya markası pompa, filtre ve aydınlatma sistemleri.</p>
+        <h3 class="service-card__title">Anahtar Teslim İnşaat</h3>
+        <p class="service-card__desc">Projelendirme, kazı, beton donatısı, kaplama ve ekipman montajı — hepsi tek elden, belirlenen zaman çizelgesinde.</p>
+        <div class="service-card__tags">
+          <span class="tag">Beton</span>
+          <span class="tag">Fiber</span>
+          <span class="tag">Taşma Kanallı</span>
+        </div>
+        <div class="service-card__footer">
+          <a href="yapim-sureci.html" class="service-card__link">Detayları Gör →</a>
+          <span class="service-card__price">başlangıç fiyatı talep edin</span>
+        </div>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="service-card fade-in">
+        <div class="service-card__top">
+          <div class="service-card__icon">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <span class="service-card__num">02</span>
         </div>
-        <h3>10 Yıl Garanti</h3>
-        <p>Yapısal garanti, ekipman bakım sözleşmesi ve 7/24 teknik destek ile güvende hissedebilirsiniz.</p>
+        <h3 class="service-card__title">Bakım & Servis</h3>
+        <p class="service-card__desc">Aylık abonelik veya tek seferlik. Su analizi, ekipman bakımı, sezon açılış-kapanış hizmetleri.</p>
+        <div class="service-card__tags">
+          <span class="tag">Abonelik</span>
+          <span class="tag">Acil Servis</span>
+          <span class="tag">Kış Bakımı</span>
+        </div>
+        <div class="service-card__footer">
+          <a href="blog/havuz-bakim-rehberi.html" class="service-card__link">Detayları Gör →</a>
+          <span class="service-card__price">başlangıç fiyatı talep edin</span>
+        </div>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <div class="service-card fade-in">
+        <div class="service-card__top">
+          <div class="service-card__icon">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <span class="service-card__num">03</span>
         </div>
-        <h3>3D Tasarım Ekibi</h3>
-        <p>Projenizi onaylamadan önce 3D render ile tamamlanmış havuzunuzu görün, değişiklik talep edin.</p>
+        <h3 class="service-card__title">Kimyasal Tedarik</h3>
+        <p class="service-card__desc">Klor, pH dengeleyici, alg önleyici. Toptan ve perakende, aynı gün teslim seçeneğiyle.</p>
+        <div class="service-card__tags">
+          <span class="tag">Klor</span>
+          <span class="tag">Anti-Alg</span>
+          <span class="tag">Floklant</span>
+        </div>
+        <div class="service-card__footer">
+          <a href="teknik-materyaller.html" class="service-card__link">Detayları Gör →</a>
+          <span class="service-card__price">başlangıç fiyatı talep edin</span>
+        </div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-card__top">
+          <div class="service-card__icon">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+          </div>
+          <span class="service-card__num">04</span>
+        </div>
+        <h3 class="service-card__title">Ekipman & Yedek Parça</h3>
+        <p class="service-card__desc">Pompa, filtre, ısıtıcı, LED aydınlatma. Hayward, Pentair ve Astral gibi dünya markalarının yetkili bayisi.</p>
+        <div class="service-card__tags">
+          <span class="tag">Pompa</span>
+          <span class="tag">Isıtıcı</span>
+          <span class="tag">LED</span>
+        </div>
+        <div class="service-card__footer">
+          <a href="teknik-materyaller.html" class="service-card__link">Detayları Gör →</a>
+          <span class="service-card__price">başlangıç fiyatı talep edin</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HAVUZ TİPLERİ -->
-<section>
+<!-- POOL TYPES -->
+<section class="section section--alt">
   <div class="container">
     <div class="section-header fade-in">
       <span class="overline">Uzmanlık Alanlarımız</span>
-      <h2>Havuz Tiplerini Keşfedin</h2>
+      <h2>Havuz <em>tiplerini</em> keşfedin.</h2>
       <p>Her bahçeye, her yaşam tarzına uygun havuz tasarımı geliştiriyoruz.</p>
     </div>
-    <div class="grid-2">
+    <div class="pool-types-grid">
       <article class="pool-card fade-in">
-        <div class="pool-card__img-wrap">
-          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80&fit=crop" alt="Backyard Pool — Bahçe Yüzme Havuzu" loading="lazy">
-        </div>
-        <div class="pool-card__body">
-          <h2>Backyard Pool</h2>
-          <p>Evinizin bahçesine özel tasarlanan klasik ve modern yüzme havuzları. Seramik kaplamadan liner sistemine, sonsuzluk havuzundan şelale detayına kadar tüm seçenekler.</p>
-          <div class="pool-card__features">
+        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80&fit=crop" alt="Backyard Pool — Bahçe Yüzme Havuzu" loading="lazy">
+        <div class="pool-card__overlay">
+          <h3 class="pool-card__title">Backyard Pool</h3>
+          <p class="pool-card__desc">Evinizin bahçesine özel tasarlanan klasik ve modern yüzme havuzları. Sonsuzluk havuzundan şelale detayına tüm seçenekler.</p>
+          <div class="pool-card__tags">
             <span class="pool-card__tag">Sonsuzluk Havuzu</span>
             <span class="pool-card__tag">Şelale Duvarı</span>
-            <span class="pool-card__tag">Gece Aydınlatması</span>
-            <span class="pool-card__tag">Isıtmalı Sistem</span>
+            <span class="pool-card__tag">LED Aydınlatma</span>
           </div>
-          <a href="havuz-tipleri.html#backyard" class="btn btn--outline">Detaylı İncele</a>
+          <a href="havuz-tipleri.html#backyard" class="pool-card__cta">Detaylı İncele →</a>
         </div>
       </article>
       <article class="pool-card fade-in">
-        <div class="pool-card__img-wrap">
-          <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80&fit=crop" alt="Beach Pool — Plaj Etkili Havuz" loading="lazy">
-        </div>
-        <div class="pool-card__body">
-          <h2>Beach Pool</h2>
-          <p>Giriş sahası kademeli derinleşen, doğal plaj hissiyatı yaratan havuz sistemi. Çocuklar ve aileler için ideal; tropikal görünümüyle evinizi tatil cennetine dönüştürür.</p>
-          <div class="pool-card__features">
+        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80&fit=crop" alt="Beach Pool — Plaj Etkili Havuz" loading="lazy">
+        <div class="pool-card__overlay">
+          <h3 class="pool-card__title">Beach Pool</h3>
+          <p class="pool-card__desc">Kademeli derinleşen giriş sahası ile doğal plaj hissiyatı. Çocuklar ve aileler için ideal tropikal tasarım.</p>
+          <div class="pool-card__tags">
             <span class="pool-card__tag">Kademeli Giriş</span>
             <span class="pool-card__tag">Plaj Sahası</span>
-            <span class="pool-card__tag">Tropikal Tasarım</span>
             <span class="pool-card__tag">Çocuk Güvenli</span>
           </div>
-          <a href="havuz-tipleri.html#beach" class="btn btn--outline">Detaylı İncele</a>
+          <a href="havuz-tipleri.html#beach" class="pool-card__cta">Detaylı İncele →</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- SÜREÇ ÖZETİ -->
-<section class="section--dark">
+<!-- PROCESS -->
+<section class="section section--teal process">
+  <div class="process__watermark">süreç</div>
   <div class="container">
-    <div class="section-header center fade-in">
-      <span class="overline">Nasıl Çalışırız?</span>
-      <h2>Projeden Teslimine 4 Adım</h2>
-      <p>Şeffaf iletişim ve belirli zaman çizelgesiyle projenizi yönetiyoruz.</p>
+    <div class="section-header fade-in">
+      <span class="overline">Süreç</span>
+      <h2>Dört adımda <em>havuzunuz.</em></h2>
+      <p>İlk telefondan teslime kadar şeffaf; her aşamada size raporluyoruz.</p>
     </div>
-    <div class="steps-grid">
-      <div class="step-card fade-in">
-        <div class="step-num">01</div>
-        <h4>Keşif & Proje</h4>
-        <p>Arazi ölçümü, zemin etüdü, 3D render ve maliyet planlaması.</p>
+    <div class="process__steps">
+      <div class="step-item fade-in">
+        <div class="step-circle">01</div>
+        <div class="step-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4 class="step-title">Keşif</h4>
+        <p class="step-desc">Sahada ücretsiz keşif, ihtiyaç ve zemin analizi.</p>
       </div>
-      <div class="step-card fade-in">
-        <div class="step-num">02</div>
-        <h4>Tasarım Onayı</h4>
-        <p>Render üzerinde istediğiniz değişiklikler onaylandıktan sonra imzalara geçilir.</p>
+      <div class="step-item fade-in">
+        <div class="step-circle">02</div>
+        <div class="step-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h4 class="step-title">Tasarım</h4>
+        <p class="step-desc">Boyut, form, malzeme ve 3D render ile ekipman önerileri.</p>
       </div>
-      <div class="step-card fade-in">
-        <div class="step-num">03</div>
-        <h4>İnşaat</h4>
-        <p>Kazı, beton, izolasyon, kaplama ve ekipman montajı. Haftalık ilerleme raporu.</p>
+      <div class="step-item fade-in">
+        <div class="step-circle">03</div>
+        <div class="step-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h4 class="step-title">İnşaat</h4>
+        <p class="step-desc">Mühendislik onaylı uygulama, 8–12 hafta, haftalık rapor.</p>
       </div>
-      <div class="step-card fade-in">
-        <div class="step-num">04</div>
-        <h4>Teslim & Bakım</h4>
-        <p>Su dolumu, kimyasal denge ve ekipman eğitimi. Bakım sözleşmesi seçeneği.</p>
+      <div class="step-item fade-in">
+        <div class="step-circle">04</div>
+        <div class="step-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4 class="step-title">Servis</h4>
+        <p class="step-desc">5 yıl garantili düzenli bakım, kimyasal denge ve destek.</p>
       </div>
     </div>
-    <div style="text-align:center; margin-top:2.5rem;">
-      <a href="yapim-sureci.html" class="btn btn--outline">Tüm Yapım Sürecini Gör</a>
+    <div style="margin-top:3rem">
+      <a href="yapim-sureci.html" class="btn btn--outline-cream">Tüm Yapım Sürecini Gör →</a>
     </div>
   </div>
 </section>
 
-<!-- MİNİ GALERİ -->
-<section>
+<!-- GALLERY -->
+<section class="section">
   <div class="container">
-    <div class="section-header fade-in">
-      <span class="overline">Tamamlanan Projeler</span>
-      <h2>Havuzlarımızdan Kareler</h2>
+    <div class="section-header section-header--split fade-in">
+      <div>
+        <span class="overline">Tamamlanan Projeler</span>
+        <h2>Havuzlarımızdan <em>kareler.</em></h2>
+      </div>
+      <a href="galeri.html" class="btn btn--outline">Tüm Galeri →</a>
     </div>
     <div class="gallery-grid">
       <div class="gallery-item fade-in">
         <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600&q=80&fit=crop" alt="Lüks Villa Havuzu" loading="lazy">
-        <div class="gallery-zoom">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
+        <div class="gallery-item__overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div class="gallery-item fade-in">
         <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80&fit=crop" alt="Backyard Havuz" loading="lazy">
-        <div class="gallery-zoom">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
+        <div class="gallery-item__overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div class="gallery-item fade-in">
         <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80&fit=crop" alt="Beach Pool" loading="lazy">
-        <div class="gallery-zoom">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
+        <div class="gallery-item__overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div class="gallery-item fade-in">
-        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80&fit=crop" alt="Gece Havuzu Aydınlatması" loading="lazy">
-        <div class="gallery-zoom">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80&fit=crop" alt="Gece Aydınlatmalı Havuz" loading="lazy">
+        <div class="gallery-item__overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div class="gallery-item fade-in">
         <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=600&q=80&fit=crop" alt="Havuz Manzara" loading="lazy">
-        <div class="gallery-zoom">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
+        <div class="gallery-item__overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div class="gallery-item fade-in">
-        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80&fit=crop" alt="Modern Sonsuzluk Havuzu" loading="lazy">
-        <div class="gallery-zoom">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
+        <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80&fit=crop" alt="Sonsuzluk Havuzu" loading="lazy">
+        <div class="gallery-item__overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
-    </div>
-    <div style="text-align:center; margin-top:2rem;">
-      <a href="galeri.html" class="btn btn--outline">Tüm Galeriyi Gör</a>
     </div>
   </div>
 </section>
 
-<!-- MÜŞTERİ YORUMLARI -->
-<section class="section--dark">
+<!-- TESTIMONIALS -->
+<section class="section section--alt">
   <div class="container">
-    <div class="section-header center fade-in">
-      <span class="overline">Müşterilerimiz Ne Diyor?</span>
-      <h2>Memnuniyet Hikayeleri</h2>
+    <div class="section-header section-header--center fade-in">
+      <span class="overline">Müşteri Yorumları</span>
+      <h2>Mutlu <em>havuz</em> sahipleri.</h2>
     </div>
-    <div class="grid-3">
+    <div class="testimonials-grid">
       <div class="testimonial-card fade-in">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Beach Pool projemiz tahmin ettiğimizden çok daha güzel çıktı. 3D render aşamasında her detayı görerek onayladık. Teslim süresi konusunda söz verdikleri gibi 10 haftada bitti."</blockquote>
-        <div class="author">
-          <div class="author-avatar">AY</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote class="testimonial-quote">"Beach Pool projemiz hayal ettiğimizden çok daha güzel çıktı. 3D render aşamasında her detayı onayladık. Söz verdikleri gibi 10 haftada teslim edildi."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AY</div>
           <div>
-            <div class="author-name">Ahmet Y.</div>
-            <div class="author-desc">Beach Pool, İstanbul</div>
+            <div class="testimonial-name">Ahmet Y.</div>
+            <div class="testimonial-role">Beach Pool, İstanbul</div>
           </div>
         </div>
       </div>
       <div class="testimonial-card fade-in">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Sonsuzluk havuzumuzun kenar detayları ve LED aydınlatma sistemi muhteşem. Gece görüntüsü adeta bir sanat eseri. Hayward ekipmanları ile elektrik tüketimi beklentimin çok altında."</blockquote>
-        <div class="author">
-          <div class="author-avatar">SÇ</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote class="testimonial-quote">"Sonsuzluk havuzumuzun kenar detayları ve LED aydınlatma sistemi muhteşem. Hayward ekipmanlarıyla elektrik tüketimi beklentimin çok altında kaldı."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SÇ</div>
           <div>
-            <div class="author-name">Selin Ç.</div>
-            <div class="author-desc">Backyard Sonsuzluk Havuzu, Bodrum</div>
+            <div class="testimonial-name">Selin Ç.</div>
+            <div class="testimonial-role">Backyard Sonsuzluk Havuzu, Bodrum</div>
           </div>
         </div>
       </div>
       <div class="testimonial-card fade-in">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Otele özel büyük ölçekli bir proje tamamladılar. Kimyasal denge sistemi tam otomatik, personelimiz müdahale etmek zorunda kalmıyor. Bakım anlaşması ile de düzenli kontrol yapıyorlar."</blockquote>
-        <div class="author">
-          <div class="author-avatar">MK</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote class="testimonial-quote">"Otelimize özel büyük ölçekli projeyi tamamladılar. Kimyasal denge sistemi tam otomatik, bakım anlaşması ile düzenli kontrol yapıyorlar."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MK</div>
           <div>
-            <div class="author-name">Mehmet K.</div>
-            <div class="author-desc">Butik Otel, Antalya</div>
+            <div class="testimonial-name">Mehmet K.</div>
+            <div class="testimonial-role">Butik Otel, Antalya</div>
           </div>
         </div>
       </div>
@@ -286,138 +430,152 @@
 </section>
 
 <!-- SSS -->
-<section>
-  <div class="container">
-    <div style="max-width: 760px; margin-inline: auto;">
-      <div class="section-header center fade-in">
-        <span class="overline">Sıkça Sorulan Sorular</span>
-        <h2>Merak Ettikleriniz</h2>
+<section class="section">
+  <div class="container" style="max-width:760px">
+    <div class="section-header section-header--center fade-in">
+      <span class="overline">Sıkça Sorulan Sorular</span>
+      <h2>Merak <em>ettikleriniz.</em></h2>
+    </div>
+    <div class="accordion fade-in">
+      <div class="accordion-item">
+        <button class="accordion-btn">Bir havuz yapımı ne kadar sürer?<span class="accordion-icon">+</span></button>
+        <div class="accordion-content"><p>Standart bir Backyard Pool (40–60 m²) genellikle <strong>8–12 hafta</strong> içinde tamamlanır. Beach Pool ve büyük ölçekli projeler 14–20 haftaya uzayabilir. Ruhsat süreçleri ve mevsim koşulları zaman çizelgesini etkileyebilir.</p></div>
       </div>
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-btn">
-            Bir havuz yapımı ne kadar sürer?
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>Standart bir Backyard Pool (40–60 m²) genellikle <strong>8–12 hafta</strong> içinde tamamlanır. Beach Pool ve büyük ölçekli projeler 14–20 haftaya kadar uzayabilir. Ruhsat süreçleri ve mevsim koşulları zaman çizelgesini etkileyebilir. Keşif aşamasında size özel bir takvim sunulur.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-btn">
-            Havuz yapım maliyeti nasıl hesaplanır?
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>Maliyet; havuz boyutu (m²), derinlik, kaplama malzemesi (seramik, mozaik, liner), ekipman sınıfı ve ek özellikler (şelale, aydınlatma, ısıtma) baz alınarak hesaplanır. Standart Backyard Pool için <strong>m² başına yaklaşık 1.500–3.500 USD</strong> aralığında teklif oluşmaktadır. Kesin teklif için ücretsiz keşif gereklidir.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-btn">
-            Havuz bakımını kendiniz mi yapmanız gerekiyor?
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>Teslim sırasında sizi tüm sistemler hakkında bilgilendiriyoruz. Otomatik dozaj sistemi tercih ederseniz pH ve klor dengesi büyük ölçüde otomatik yönetilir. İsteğe bağlı <strong>aylık bakım sözleşmesi</strong> ile her şeyi bize bırakabilirsiniz; teknik ekibimiz düzenli ziyaret ederek su kalitesini kontrol eder.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-btn">
-            Kış aylarında havuzu kapatmam gerekiyor mu?
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>Isı pompası sistemi olan havuzlar kışın da kullanılabilir. Kullanılmayacaksa doğru kışlık kapama işlemleri uygulanmalıdır: su seviyesini düşürme, boru hattı boşaltma, kimyasal şok, örtü montajı. Yanlış kışlık kapama borularda donmaya ve kaplama hasarına yol açabilir. Detaylar için <a href="blog/kis-korumasi.html">kış koruması rehberimizi</a> okuyabilirsiniz.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-btn">
-            Ruhsat ve izin sürecini siz mi yönetiyorsunuz?
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <p>Evet. Proje danışmanlık hizmetimiz kapsamında belediye yapı ruhsatı ve gerekli diğer izin süreçlerini sizin adınıza takip ediyoruz. Müşterimizin belediyeyle ayrıca ilgilenmesine gerek kalmıyor.</p>
-          </div>
-        </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">Havuz yapım maliyeti nasıl hesaplanır?<span class="accordion-icon">+</span></button>
+        <div class="accordion-content"><p>Boyut, derinlik, kaplama malzemesi ve ekipman sınıfına göre hesaplanır. Standart Backyard Pool için <strong>m² başına yaklaşık 1.500–3.500 USD</strong> aralığında teklif oluşmaktadır. Kesin teklif için ücretsiz keşif gereklidir.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">Havuz bakımını kendiniz mi yapmanız gerekiyor?<span class="accordion-icon">+</span></button>
+        <div class="accordion-content"><p>Otomatik dozaj sisteminde pH ve klor büyük ölçüde otomatik yönetilir. İsteğe bağlı <strong>aylık bakım sözleşmesi</strong> ile her şeyi bize bırakabilirsiniz; teknik ekibimiz düzenli ziyaret ederek su kalitesini kontrol eder.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">Kış aylarında havuzu kapatmam gerekiyor mu?<span class="accordion-icon">+</span></button>
+        <div class="accordion-content"><p>Isı pompası sistemi olan havuzlar kışın da kullanılabilir. Kullanılmayacaksa doğru kışlık kapama işlemleri uygulanmalıdır. Detaylar için <a href="blog/kis-korumasi.html">kış koruması rehberimizi</a> okuyabilirsiniz.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">Ruhsat sürecini siz mi yönetiyorsunuz?<span class="accordion-icon">+</span></button>
+        <div class="accordion-content"><p>Evet. Proje danışmanlık hizmetimiz kapsamında belediye yapı ruhsatı ve gerekli izin süreçlerini sizin adınıza takip ediyoruz. Müşterimizin belediyeyle ayrıca ilgilenmesine gerek kalmıyor.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA BANNER -->
-<section class="section--dark">
+<!-- CTA -->
+<section class="section section--gold cta-section">
   <div class="container">
-    <div class="cta-banner fade-in">
-      <span class="overline">Ücretsiz Hizmet</span>
-      <h2>Hayalinizdeki Havuzu Konuşalım</h2>
-      <p>Uzman ekibimiz arazi keşfi, ölçüm ve 3D tasarım için ücretsiz bir görüşme ayarlasın.</p>
-      <div class="btns">
-        <a href="iletisim.html" class="btn btn--gold btn--lg">Teklif Talep Et</a>
-        <a href="tel:{{TELEFON}}" class="btn btn--outline btn--lg">Bizi Arayın</a>
+    <div class="cta-section__inner">
+      <div class="fade-in">
+        <span class="overline" style="color:var(--teal)">Ücretsiz Hizmet</span>
+        <h2>Hayalinizdeki havuzu<br><em>birlikte</em> konuşalım.</h2>
+        <p>Uzman ekibimiz arazi keşfi, ölçüm ve 3D tasarım için ücretsiz bir görüşme ayarlasın.</p>
       </div>
+      <form class="cta-form fade-in" action="https://formspree.io/f/{{FORMSPREE_ID}}" method="POST">
+        <div class="cta-form__row">
+          <input type="text" name="ad" placeholder="Adınız Soyadınız" required>
+          <input type="tel" name="telefon" placeholder="Telefon Numaranız" required>
+        </div>
+        <div class="cta-form__row">
+          <input type="email" name="email" placeholder="E-posta Adresiniz">
+          <select name="havuz-tipi">
+            <option value="" disabled selected>Havuz Tipi</option>
+            <option>Backyard Pool</option>
+            <option>Beach Pool</option>
+            <option>Sonsuzluk Havuzu</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--teal">Teklif Talep Et →</button>
+      </form>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <p class="footer__logo">{{FIRMA_ADI}}</p>
-      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması. Backyard'dan Beach Pool'a, sıradan bahçeleri hayalinizdeki yaşam alanına dönüştürüyoruz.</p>
-      <div class="footer__social">
-        <a href="#" aria-label="Instagram">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="#" aria-label="Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-        </a>
-        <a href="#" aria-label="YouTube">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42A2.78 2.78 0 0020.83 4.7C19.38 4.32 12 4.32 12 4.32s-7.38 0-8.83.38A2.78 2.78 0 001.46 6.42 29 29 0 001.07 12a29 29 0 00.39 5.58A2.78 2.78 0 003.17 19.3C4.62 19.68 12 19.68 12 19.68s7.38 0 8.83-.38a2.78 2.78 0 001.71-1.72A29 29 0 0022.93 12a29 29 0 00-.39-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-        </a>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <span>
+            <span class="footer__logo-text">{{FIRMA_ADI}}</span>
+            <span class="footer__logo-sub">Havuz Atölyesi · Est.</span>
+          </span>
+        </div>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması. Backyard'dan Beach Pool'a, sıradan bahçeleri hayalinizdeki yaşam alanına dönüştürüyoruz.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42A2.78 2.78 0 0020.83 4.7C19.38 4.32 12 4.32 12 4.32s-7.38 0-8.83.38A2.78 2.78 0 001.46 6.42 29 29 0 001.07 12a29 29 0 00.39 5.58A2.78 2.78 0 003.17 19.3C4.62 19.68 12 19.68 12 19.68s7.38 0 8.83-.38a2.78 2.78 0 001.71-1.72A29 29 0 0022.93 12a29 29 0 00-.39-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Hizmetler</div>
+        <ul class="footer__links">
+          <li><a href="yapim-sureci.html">Havuz İnşaatı</a></li>
+          <li><a href="blog/havuz-bakim-rehberi.html">Bakım & Servis</a></li>
+          <li><a href="teknik-materyaller.html">Kimyasal Tedarik</a></li>
+          <li><a href="teknik-materyaller.html">Ekipman Satışı</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Şirket</div>
+        <ul class="footer__links">
+          <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
+          <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
+          <li><a href="galeri.html">Projeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Kaynaklar</div>
+        <ul class="footer__links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
+          <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
+          <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Denge</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          <a href="tel:{{TELEFON}}">{{TELEFON}}</a>
+        </div>
+        <div class="footer__contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+        </div>
+        <div class="footer__contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          {{ADRES}}
+        </div>
+        <div class="footer__contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          08:00 – 19:00
+        </div>
       </div>
     </div>
-    <div>
-      <h4>Sayfalar</h4>
-      <ul>
-        <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
-        <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
-        <li><a href="teknik-materyaller.html">Teknik Materyaller</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Kaynaklar</h4>
-      <ul>
-        <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
-        <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
-        <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Dengeleme</a></li>
-        <li><a href="iletisim.html">İletişim</a></li>
-      </ul>
-    </div>
-    <div class="footer__contact">
-      <h4>İletişim</h4>
-      <p>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        {{ADRES}}
-      </p>
-      <p>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        <a href="tel:{{TELEFON}}">{{TELEFON}}</a>
-      </p>
-      <p>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
-      </p>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
     </div>
   </div>
-  <div class="footer__bottom container">
-    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
-    <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
-  </div>
+  <div class="footer__watermark">{{FIRMA_ADI}}<em>pool</em></div>
 </footer>
 
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
