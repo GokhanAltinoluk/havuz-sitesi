@@ -12,286 +12,277 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00
+      </span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {{ŞEHİR}}
+      </span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:{{TELEFON}}" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        {{TELEFON}}
+      </a>
+    </div>
+  </div>
+</div>
+
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </span>
+      <span>
+        <span class="navbar__logo-text">{{FIRMA_ADI}}</span>
+        <span class="navbar__logo-sub">Havuz Atölyesi · Est.</span>
+      </span>
+    </a>
     <nav class="navbar__nav" id="nav-menu">
       <a href="index.html" class="nav-link">Ana Sayfa</a>
       <a href="havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
-      <a href="yapim-sureci.html" class="nav-link">Yapım Süreci</a>
+      <a href="yapim-sureci.html" class="nav-link active">Yapım Süreci</a>
       <a href="teknik-materyaller.html" class="nav-link">Teknik</a>
       <a href="galeri.html" class="nav-link">Galeri</a>
       <a href="blog.html" class="nav-link">Blog</a>
-      <a href="iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+      <a href="iletisim.html" class="btn btn--teal navbar__cta-mobile">Teklif Al →</a>
     </nav>
+    <a href="iletisim.html" class="btn btn--teal" style="font-size:0.75rem;padding:0.65rem 1.35rem;">Teklif Al →</a>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero hero--inner">
-  <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1535827841776-24afc1e255ac?w=1920&q=85&fit=crop')"></div>
-  <div class="hero__overlay"></div>
+<!-- PAGE HERO -->
+<section class="page-hero">
   <div class="container">
-    <div class="hero__content">
-      <nav class="breadcrumb">
-        <a href="index.html">Ana Sayfa</a>
-        <span>›</span>
-        <span class="current">Yapım Süreci</span>
-      </nav>
-      <h1>Havuz Yapım Süreci:<br><span style="color:var(--gold)">Kazıdan Teslimine</span></h1>
-      <p>8 aşamalı yapım sürecimizle hayalinizdeki havuzun nasıl gerçeğe dönüştüğünü adım adım keşfedin.</p>
-    </div>
-  </div>
-</section>
-
-<!-- GİRİŞ -->
-<section class="section--dark">
-  <div class="container">
-    <div class="section-header center fade-in">
-      <span class="overline">Şeffaf Süreç Yönetimi</span>
-      <h2>Her Aşamayı Birlikte İzliyoruz</h2>
-      <p>Projenizdeki her gelişmeyi size haftalık raporlarla bildiriyoruz. Hiçbir sürpriz yoktur — sadece sözümüzü tutuyoruz.</p>
-    </div>
-    <div class="grid-4" style="margin-bottom:0;">
-      <div class="feature-card fade-in" style="text-align:center;">
-        <div class="feature-card__icon" style="margin-inline:auto;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <h3>Haftalık Rapor</h3>
-        <p>Her pazartesi ilerleme fotoğrafları ve durum bildirimi.</p>
-      </div>
-      <div class="feature-card fade-in" style="text-align:center;">
-        <div class="feature-card__icon" style="margin-inline:auto;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        </div>
-        <h3>Yazılı Sözleşme</h3>
-        <p>Tüm taahhütler, süreler ve malzeme listesi sözleşmede.</p>
-      </div>
-      <div class="feature-card fade-in" style="text-align:center;">
-        <div class="feature-card__icon" style="margin-inline:auto;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <h3>Aşama Onayları</h3>
-        <p>Her kritik aşama sizin onayınızla ilerler.</p>
-      </div>
-      <div class="feature-card fade-in" style="text-align:center;">
-        <div class="feature-card__icon" style="margin-inline:auto;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Garanti Belgesi</h3>
-        <p>Teslimde yapısal ve ekipman garanti sertifikası.</p>
-      </div>
-    </div>
+    <nav class="breadcrumb">
+      <a href="index.html">Ana Sayfa</a> <span>›</span>
+      <span class="current">Yapım Süreci</span>
+    </nav>
+    <span class="overline">Yapım Süreci</span>
+    <h1 class="page-hero__title">8 Aşamada <em>Mükemmel Havuz</em></h1>
+    <p class="page-hero__desc">Keşiften teslime kadar her adımı şeffaf biçimde yönetiyoruz. Projenizin hangi aşamada olduğunu her an bilirsiniz.</p>
   </div>
 </section>
 
 <!-- TIMELINE -->
-<section>
-  <div class="container" style="max-width:900px;">
-    <div class="section-header fade-in">
-      <span class="overline">Adım Adım</span>
-      <h2>8 Aşamalı Yapım Süreci</h2>
-    </div>
-    <div class="timeline">
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start;">
 
-      <!-- 1 -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-icon">1</div>
-        <div class="timeline-body">
-          <span class="badge">1–2 Hafta</span>
-          <h3>Keşif, Projelendirme ve Ruhsat</h3>
-          <p>Uzman ekibimiz arazinizi ziyaret eder; zemin etüdü, ölçüm ve fotoğrafe dayalı ön değerlendirme yapılır. Ardından 3D render ile projenizin görsel tasarımı oluşturulur. Belediye yapı ruhsatı için gerekli belgeler hazırlanarak yetkili makamlara sunulur. Bu aşamada her türlü değişiklik ücret doğurmadan yapılabilir.</p>
+      <!-- Sol: Özet kartları -->
+      <div class="fade-in" style="position:sticky;top:5rem;">
+        <div class="section-header">
+          <span class="overline">Genel Bakış</span>
+          <h2>Toplam Süre &amp; <em>Kilometre Taşları</em></h2>
         </div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <div style="background:var(--cream-alt);border:1px solid var(--teal-border);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.85rem;color:var(--text-muted);">Toplam Yapım Süresi</span>
+            <span style="font-family:var(--font-serif);font-weight:700;color:var(--teal);">8–18 Hafta</span>
+          </div>
+          <div style="background:var(--cream-alt);border:1px solid var(--teal-border);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.85rem;color:var(--text-muted);">Aşama Sayısı</span>
+            <span style="font-family:var(--font-serif);font-weight:700;color:var(--teal);">8 Adım</span>
+          </div>
+          <div style="background:var(--cream-alt);border:1px solid var(--teal-border);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.85rem;color:var(--text-muted);">Garanti</span>
+            <span style="font-family:var(--font-serif);font-weight:700;color:var(--gold);">10 Yıl</span>
+          </div>
+          <div style="background:var(--cream-alt);border:1px solid var(--teal-border);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.85rem;color:var(--text-muted);">Yerinde Denetim</span>
+            <span style="font-family:var(--font-serif);font-weight:700;color:var(--teal);">Her Aşamada</span>
+          </div>
+        </div>
+        <a href="iletisim.html" class="btn btn--teal" style="margin-top:1.5rem;width:100%;justify-content:center;">Ücretsiz Keşif →</a>
       </div>
 
-      <!-- 2 -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-icon">2</div>
-        <div class="timeline-body">
-          <span class="badge">1–1.5 Hafta</span>
-          <h3>Kazı ve Hafriyat</h3>
-          <p>Ruhsat onayının ardından iş makineleri sahaya girer. Zemin sertliğine göre kırma-kazı planı uygulanır. Havuz çukuru belirlenen boyutlara göre açılır, hafriyat alanı dışına taşınır. Tabanın düzgünlüğü lazer düzenleyiciyle kontrol edilir. Zemin sıkıştırma testleri uygulanır.</p>
+      <!-- Sağ: Timeline -->
+      <div>
+        <div class="timeline fade-in">
+          <div class="timeline__track"></div>
+
+          <div class="timeline-item">
+            <div class="timeline-num">i</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Keşif ve Projelendirme</div>
+              <p class="timeline-desc">Teknik ekibimiz bahçenizi yerinde inceler, zemin etüdü yapar. Ölçüler alınır, 3D render hazırlanır, ruhsat süreçleri başlatılır. Havuz tipi, boyut ve kaplama seçimleri müşteriyle birlikte belirlenir.</p>
+              <span class="timeline-duration">1–2 Hafta</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-num">ii</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Kazı ve Hafriyat</div>
+              <p class="timeline-desc">Onaylı projeye göre zemin kazılır, hafriyat toprağı taşınır. Zemin dengeleme ve sıkıştırma yapılır. Drenaj hattı yerleştirilir. Zemin türüne göre ek stabilizasyon uygulanabilir.</p>
+              <span class="timeline-duration">3–5 Gün</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-num">iii</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Demir-Beton Donatısı</div>
+              <p class="timeline-desc">Havuz gövdesi için çift fileli çelik donatı örülür. Boru, kablo ve fitting boşlukları donatıya entegre edilir. Kalıplar kurulup günümüz standartlarında (min. C25 beton) beton dökümü gerçekleştirilir.</p>
+              <span class="timeline-duration">1–2 Hafta</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-num">iv</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Su Yalıtımı</div>
+              <p class="timeline-desc">Kristalize yalıtım veya bitümöz membran uygulamasıyla havuz gövdesi su geçirmez hale getirilir. Bağlantı noktaları özel detaylarla güçlendirilir. Dış yüzeye de yalıtım aplikasyonu yapılır.</p>
+              <span class="timeline-duration">3–5 Gün</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-num">v</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Şap ve Tesviye</div>
+              <p class="timeline-desc">Havuz tabanı ve duvarları kaplama için hazırlanır. Eğim hesaplamalarına uygun şap atılır, yüzey tesviyesi yapılır. Zemin drenaj sistemi ve skimmer konumları bu aşamada kesinleşir.</p>
+              <span class="timeline-duration">3–4 Gün</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-num">vi</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Kaplama</div>
+              <p class="timeline-desc">Seçilen kaplama malzemesi (seramik, mozaik, liner, porselen veya doğaltaş) havuz yüzeyine uygulanır. Derz dolgusu yapılır, su çizgisi kaplaması tamamlanır. Kaplama sonrası 48 saat kuruma beklenir.</p>
+              <span class="timeline-duration">1–2 Hafta</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-num">vii</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Ekipman Montajı</div>
+              <p class="timeline-desc">Pompa, filtre, ısıtma sistemi, LED aydınlatma ve varsa otomatik dozaj ünitesi monte edilir. Boru hattı bağlantıları yapılır, sirkülasyon sistemi test edilir. Elektrik paneli ve otomasyon kurulur.</p>
+              <span class="timeline-duration">3–5 Gün</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-num">viii</div>
+            <div class="timeline-body">
+              <div class="timeline-title">Su Dolumu ve Kimyasal Denge</div>
+              <p class="timeline-desc">Havuz suyla doldurulur. pH, klor, alkalinite ve kalsiyum sertliği değerleri ayarlanır. 24 saat filtrasyon testinin ardından ekipman performansı doğrulanır. Müşteriye bakım eğitimi verilir ve proje teslim edilir.</p>
+              <span class="timeline-duration">2–3 Gün</span>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- 3 -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-icon">3</div>
-        <div class="timeline-body">
-          <span class="badge">1–1.5 Hafta</span>
-          <h3>Demir-Beton Donatısı (Arme)</h3>
-          <p>Havuzun iskelet sistemi oluşturulur. TS500 standardında S420 inşaat çeliği donatı hesaplarına uygun aralık ve çapta yerleştirilir. Çelik hasır ve yatay-düşey donatılar birbirine bağlanır. Statik hesaplar dahilindeki beton sınıfı (genellikle C30/C35) kalıplar dökülerek uygulanır; vibrasyon ile hava kabarcığı giderilir.</p>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-icon">4</div>
-        <div class="timeline-body">
-          <span class="badge">3–5 Gün</span>
-          <h3>Su Yalıtımı (Hidroizolasyon)</h3>
-          <p>Betonun kürü tamamlandıktan sonra su yalıtımı uygulanır. İki katmanlı elastomerik membran veya kristal yalıtım malzemeleri kullanılır. Tüm köşe ve geçiş noktaları özel bantlama ile takviye edilir. Yalıtım testi: havuz su ile doldurularak 48 saat beklenir, seviye düşüşü kontrol edilir.</p>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-icon">5</div>
-        <div class="timeline-body">
-          <span class="badge">3–5 Gün</span>
-          <h3>Şap ve Tesviye</h3>
-          <p>Yalıtım üzerine kaplama altlığı olarak şap dökülerek pürüzsüz bir zemin oluşturulur. Eğim noktaları (su çekme, drenaj) dikkate alınarak milimetre hassasiyetinde tesviye yapılır. Özellikle Beach Pool projelerinde kademeli eğim bu aşamada lazer kontrollü olarak oluşturulur.</p>
-        </div>
-      </div>
-
-      <!-- 6 -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-icon">6</div>
-        <div class="timeline-body">
-          <span class="badge">1–2 Hafta</span>
-          <h3>Kaplama (Seramik / Mozaik / Liner / Taş)</h3>
-          <p>Müşteri tarafından seçilen kaplama malzemesi uygulanır. Seramik ve mozaik için havuz yapıştırıcı ve özel derz dolgu kullanılır; tüm eklemler esnek dolgu ile su geçirmez hale getirilir. Liner uygulamalarında özel ısıl ekipmanla tam geçirimsiz montaj yapılır. Kenarlarda skimmer niş kaplamaları ve havuz çerçevesi kaplamaları tamamlanır.</p>
-        </div>
-      </div>
-
-      <!-- 7 -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-icon">7</div>
-        <div class="timeline-body">
-          <span class="badge">3–5 Gün</span>
-          <h3>Ekipman Montajı</h3>
-          <p>Pompa, filtre, ısıtma sistemi, otomasyon, LED aydınlatma ve otomatik dozaj üniteleri monte edilir. Borulama paslanmaz çelik veya UPVC malzemeyle yapılır; tüm bağlantılar sızdırmazlık testinden geçirilir. Elektrik tesisatı TS/IEC standartlarına uygun çekilir, kaçak akım koruma (RCCB/RCD) zorunlu olarak kurulur. Sistem çalışma testleri yapılır.</p>
-        </div>
-      </div>
-
-      <!-- 8 -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-icon">8</div>
-        <div class="timeline-body">
-          <span class="badge">2–3 Gün</span>
-          <h3>Su Dolumu ve Kimyasal Denge</h3>
-          <p>Havuz içme suyu kalitesinde su ile doldurulur. İlk dolum sonrası pH, klor, toplam sertlik (TH), total alkalinite (TA) ve TDS (toplam çözünmüş madde) ölçümleri yapılır. Gerekli kimyasallar dozlanarak denge kurulur. pH: 7.2–7.6, serbest klor: 1–3 ppm, TA: 80–120 ppm hedeflenir. Müşteriye sistemin kullanımı ve bakımı hakkında tam eğitim verilir. Garanti belgeleri teslim edilir.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- EKİPMAN ÖZETİ -->
-<section class="section--dark">
+<!-- MARKALAR -->
+<section class="section section--alt">
   <div class="container">
-    <div class="section-header center fade-in">
+    <div class="section-header section-header--center fade-in">
       <span class="overline">Kullandığımız Markalar</span>
-      <h2>Uluslararası Ekipman Standartları</h2>
-      <p>Her projede yalnızca sertifikalı, dünya markası ekipmanlar kullanıyoruz.</p>
+      <h2>Uluslararası <em>Sertifikalı Ekipman</em></h2>
+      <p>Yalnızca küresel standartlarda test edilmiş, garantili ekipmanlar kullanıyoruz.</p>
     </div>
-    <div class="grid-3">
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+    <div class="grid-4 fade-in">
+      <div class="feature-card" style="text-align:center;">
+        <div class="feature-card__icon" style="margin:0 auto 1rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
         </div>
-        <h3>Pompa & Filtre</h3>
-        <p><strong>Hayward, Pentair, Astral</strong> — değişken hızlı pompalar, kum/cam filtreler. Enerji verimliliği A+ sınıfı.</p>
+        <h3>Pompa &amp; Filtre</h3>
+        <p>Hayward, Pentair, Emaux — değişken hız teknolojisi</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>
-        </div>
-        <h3>LED Aydınlatma</h3>
-        <p><strong>Pentair IntelliBrite, Hayward ColorLogic</strong> — RGB tam renkli LED, 30.000+ saat ömür, IP68 koruması.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      <div class="feature-card" style="text-align:center;">
+        <div class="feature-card__icon" style="margin:0 auto 1rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
         </div>
         <h3>Isı Pompası</h3>
-        <p><strong>Zodiac, Fairland, Elecro</strong> — inverter teknoloji, COP 12+, Türkiye ikliminde 9–10 ay kullanım.</p>
+        <p>Zodiac, Elecro, AquaForte — inverter COP 5.8+</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <div class="feature-card" style="text-align:center;">
+        <div class="feature-card__icon" style="margin:0 auto 1rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
         </div>
-        <h3>Otomasyon</h3>
-        <p><strong>Hayward OmniLogic, Pentair IntelliCenter</strong> — telefon uygulamasından tam kontrol, program ayarlama.</p>
+        <h3>LED Aydınlatma</h3>
+        <p>Astralpool, Pahlén — IP68 su altı RGB</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <div class="feature-card" style="text-align:center;">
+        <div class="feature-card__icon" style="margin:0 auto 1rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
         <h3>Otomatik Dozaj</h3>
-        <p><strong>Seko, Bayrol, Bayrolite</strong> — pH ve ORP sensörleri, peristaltik pompalar, 24/7 su kalitesi takibi.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <h3>Robot Temizleyici</h3>
-        <p><strong>Dolphin, Polaris, Maytronics</strong> — zemin, duvar ve su çizgisi tam temizlik, akıllı navigasyon.</p>
+        <p>Bayrol, ProMinent — pH &amp; ORP kontrolü</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section>
+<section class="section">
   <div class="container">
     <div class="cta-banner fade-in">
-      <span class="overline">Projenizi Başlatın</span>
-      <h2>İlk Adımı Birlikte Atalım</h2>
-      <p>Ücretsiz keşif ve proje danışmanlığı için formumuzu doldurun, 24 saat içinde sizi arayalım.</p>
+      <span class="overline">Projenizi Başlatalım</span>
+      <h2>Hayalinizdeki Havuz <em style="font-style:italic;font-weight:400;color:var(--gold);">8 Adımda</em></h2>
+      <p>İlk adım ücretsiz keşif. Ekibimiz projenizi değerlendirip size özel teklif hazırlar.</p>
       <div class="btns">
-        <a href="iletisim.html" class="btn btn--gold btn--lg">Teklif Al</a>
-        <a href="teknik-materyaller.html" class="btn btn--outline btn--lg">Teknik Detaylar</a>
+        <a href="iletisim.html" class="btn btn--gold btn--lg">Ücretsiz Keşif Talebi →</a>
+        <a href="teknik-materyaller.html" class="btn btn--outline-cream btn--lg">Ekipmanları İncele</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <p class="footer__logo">{{FIRMA_ADI}}</p>
-      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span><span class="footer__logo-text">{{FIRMA_ADI}}</span><span class="footer__logo-sub">Havuz Atölyesi · Est.</span></span>
+        </div>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması. Backyard Pool ve Beach Pool projelerinde anahtar teslim çözümler.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div><div class="footer__col-title">Hizmetler</div><ul class="footer__links"><li><a href="havuz-tipleri.html">Backyard Pool</a></li><li><a href="havuz-tipleri.html">Beach Pool</a></li><li><a href="yapim-sureci.html">Anahtar Teslim Yapım</a></li><li><a href="teknik-materyaller.html">Ekipman &amp; Bakım</a></li></ul></div>
+      <div><div class="footer__col-title">Şirket</div><ul class="footer__links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="yapim-sureci.html">Yapım Süreci</a></li><li><a href="galeri.html">Galeri</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><div class="footer__col-title">Kaynaklar</div><ul class="footer__links"><li><a href="blog.html">Blog</a></li><li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li><li><a href="blog/kis-korumasi.html">Kış Koruması</a></li><li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehberi</a></li></ul></div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:{{TELEFON}}">{{TELEFON}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>{{ADRES}}, {{ŞEHİR}}</div>
+      </div>
     </div>
-    <div>
-      <h4>Sayfalar</h4>
-      <ul>
-        <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
-        <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
-        <li><a href="teknik-materyaller.html">Teknik</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Kaynaklar</h4>
-      <ul>
-        <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
-        <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
-        <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehber</a></li>
-      </ul>
-    </div>
-    <div class="footer__contact">
-      <h4>İletişim</h4>
-      <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
-      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
     </div>
   </div>
-  <div class="footer__bottom container">
-    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
-    <p><a href="index.html">Ana Sayfa</a></p>
-  </div>
+  <div class="footer__watermark">{{FIRMA_ADI}}<em>pool</em></div>
 </footer>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

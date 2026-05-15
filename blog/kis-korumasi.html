@@ -12,23 +12,53 @@
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00
+      </span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {{ŞEHİR}}
+      </span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:{{TELEFON}}" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        {{TELEFON}}
+      </a>
+    </div>
+  </div>
+</div>
+
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="../index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <a href="../index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </span>
+      <span>
+        <span class="navbar__logo-text">{{FIRMA_ADI}}</span>
+        <span class="navbar__logo-sub">Havuz Atölyesi · Est.</span>
+      </span>
+    </a>
     <nav class="navbar__nav" id="nav-menu">
       <a href="../index.html" class="nav-link">Ana Sayfa</a>
       <a href="../havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
       <a href="../yapim-sureci.html" class="nav-link">Yapım Süreci</a>
       <a href="../teknik-materyaller.html" class="nav-link">Teknik</a>
       <a href="../galeri.html" class="nav-link">Galeri</a>
-      <a href="../blog.html" class="nav-link">Blog</a>
-      <a href="../iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+      <a href="../blog.html" class="nav-link active">Blog</a>
+      <a href="../iletisim.html" class="btn btn--teal navbar__cta-mobile">Teklif Al →</a>
     </nav>
+    <a href="../iletisim.html" class="btn btn--teal" style="font-size:0.75rem;padding:0.65rem 1.35rem;">Teklif Al →</a>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -36,26 +66,24 @@
 </header>
 
 <div class="page-main">
-  <section style="padding-top:3rem; padding-bottom:0;">
+  <section style="padding-top:3rem;padding-bottom:0;">
     <div class="container" style="max-width:800px;">
       <nav class="breadcrumb">
-        <a href="../index.html">Ana Sayfa</a>
-        <span>›</span>
-        <a href="../blog.html">Blog</a>
-        <span>›</span>
+        <a href="../index.html">Ana Sayfa</a> <span>›</span>
+        <a href="../blog.html">Blog</a> <span>›</span>
         <span class="current">Kış Koruması</span>
       </nav>
       <div style="margin-top:1.5rem;">
         <span class="tag">Mevsimsel</span>
-        <h1 style="margin-top:1rem; font-size:clamp(1.8rem,4vw,2.8rem);">Havuzu Kışa Kapatma Rehberi: Boru Donması ve Kaplama Hasarını Önleyin</h1>
-        <div style="display:flex; gap:1rem; margin-top:1.25rem; margin-bottom:2rem; flex-wrap:wrap; font-size:0.85rem; color:var(--text-dim);">
+        <h1 style="margin-top:1rem;font-size:clamp(1.8rem,4vw,2.8rem);font-family:var(--font-serif);color:var(--teal);">Havuzu Kışa Kapatma Rehberi: Boru Donması ve Kaplama Hasarını Önleyin</h1>
+        <div style="display:flex;gap:1rem;margin-top:1.25rem;margin-bottom:2rem;flex-wrap:wrap;font-size:0.85rem;color:var(--text-muted);">
           <span>28 Ekim 2024</span>
-          <span>·</span>
+          <span style="color:var(--teal-border);">·</span>
           <span>6 dakika okuma</span>
-          <span>·</span>
-          <span style="color:var(--text-muted);">{{FIRMA_ADI}} Teknik Ekibi</span>
+          <span style="color:var(--teal-border);">·</span>
+          <span>{{FIRMA_ADI}} Teknik Ekibi</span>
         </div>
-        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1200&q=80&fit=crop" alt="Havuz kış koruması" style="width:100%; height:380px; object-fit:cover; border-radius:var(--radius-lg); margin-bottom:3rem;">
+        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1200&q=80&fit=crop" alt="Havuz kış koruması" style="width:100%;height:380px;object-fit:cover;border-radius:var(--radius-lg);margin-bottom:3rem;">
       </div>
     </div>
   </section>
@@ -66,10 +94,10 @@
 
         <p>Kış aylarında havuzunu doğru kapatmayan pek çok havuz sahibi ilkbaharda ciddi hasarlarla karşılaşır: patlayan borular, çatlayan kaplama, arızalanan pompalar. Bu hasarların büyük çoğunluğu birkaç saatlik doğru bir kışlık kapama işlemiyle tamamen önlenebilir.</p>
 
-        <div class="note"><p>⚠️ <strong>Dikkat:</strong> Havuzu tamamen boşaltmak genellikle yanlış bir yaklaşımdır. Zemin suyu basıncı boş havuzu yukarı kaldırabilir (hidrostatik basınç), kaplama çatlayabilir. Su seviyesini belirli bir noktaya çekmek yeterlidir.</p></div>
+        <div class="note"><p><strong>Dikkat:</strong> Havuzu tamamen boşaltmak genellikle yanlış bir yaklaşımdır. Zemin suyu basıncı boş havuzu yukarı kaldırabilir (hidrostatik basınç), kaplama çatlayabilir. Su seviyesini belirli bir noktaya çekmek yeterlidir.</p></div>
 
         <h2>Ne Zaman Kışlık Kapama Yapılır?</h2>
-        <p>Su sıcaklığı sürekli olarak <strong>15°C'nin altında kaldığında</strong> kışlık kapamaya başlayabilirsiniz. Türkiye geneli için bu genellikle <strong>Kasım başı – Aralık başı</strong> arasıdır. Akdeniz kıyılarında (Antalya, Bodrum, Marmaris) ılıman kışlar nedeniyle havuz uzun süre kullanılabilir; kapatma kararını su sıcaklığına göre alın.</p>
+        <p>Su sıcaklığı sürekli olarak <strong>15°C'nin altında kaldığında</strong> kışlık kapamaya başlayabilirsiniz. Türkiye geneli için bu genellikle <strong>Kasım başı – Aralık başı</strong> arasıdır. Akdeniz kıyılarında ılıman kışlar nedeniyle havuz uzun süre kullanılabilir; kapatma kararını su sıcaklığına göre alın.</p>
 
         <h2>Kışlık Kapama Adımları</h2>
 
@@ -81,10 +109,10 @@
         <p>Kapama sırasında pH'ı <strong>7.2–7.4</strong> aralığına getirin. Kış boyunca test yapamayacağınız için dengeli bir pH ile kapatmak seramik ve metal parçaların korunmasını sağlar.</p>
 
         <h3>3. Su Seviyesini Düşürün</h3>
-        <p>Su seviyesini skimmer'ın <strong>10–15 cm altına</strong> çekin. Bunun nedeni: donma sırasında buz genişler ve su çizgisindeki seramikleri çatlatabilir. Düşürülmüş su seviyesi bu riski ortadan kaldırır.</p>
+        <p>Su seviyesini skimmer'ın <strong>10–15 cm altına</strong> çekin. Bunun nedeni: donma sırasında buz genişler ve su çizgisindeki seramikleri çatlatabilir.</p>
         <ul>
           <li>Yeraltı boşaltma vanasından veya pompayla su çekin</li>
-          <li>Boşaltılan suyu bahçe sulamasına kullanabilirsiniz (dezenfektanlı olduğu için toprağa çok fazla dökmekten kaçının)</li>
+          <li>Boşaltılan suyu bahçe sulamasında kullanabilirsiniz</li>
         </ul>
 
         <h3>4. Boru Hatlarını Boşaltın ve Üfleyin</h3>
@@ -92,23 +120,22 @@
         <ol>
           <li>Tüm geri yıkama ve drenaj vanalarını açın</li>
           <li>Taşkın borusu (overflow) ve su doldurma hattını boşaltın</li>
-          <li>Kompresörle (veya özel havuz üfleyici) her hat üflenip su çıkışı kesilene kadar hava basın</li>
+          <li>Kompresörle her hat üflenip su çıkışı kesilene kadar hava basın</li>
           <li>Skimmer drenaj tapasını takın</li>
         </ol>
 
-        <div class="note"><p>💡 <strong>Kompresör basıncı:</strong> 1.5–2 bar yeterlidir; fazlası bağlantılara zarar verebilir. Her boruyu ayrı ayrı üfleyin.</p></div>
+        <div class="note"><p><strong>Kompresör basıncı:</strong> 1.5–2 bar yeterlidir; fazlası bağlantılara zarar verebilir. Her boruyu ayrı ayrı üfleyin.</p></div>
 
         <h3>5. Pompa ve Filtreyi Kapatın ve Depolayın</h3>
         <ul>
           <li>Pompa ön sepetini ve içindeki suyu boşaltın</li>
           <li>O-ring'leri çıkarıp silikonlu gres ile yağlayın, kuru ortamda saklayın</li>
           <li>Filtre manometresi kapağını sökün, filtre kapak O-ring'ini yağlayın</li>
-          <li>Kum filtresini KIŞLIK (winter) pozisyonuna alın (bazı filtrelerde bu seçenek vardır)</li>
+          <li>Kum filtresini KIŞLIK (winter) pozisyonuna alın</li>
           <li>Pompa ve filtre kasasındaki su boşaltma tapalarını açık bırakın</li>
         </ul>
 
         <h3>6. Isı Pompasını Kışlık Moda Alın</h3>
-        <p>Isı pompası bulunan havuzlarda:</p>
         <ul>
           <li>Tüm bağlantı borularını boşaltın</li>
           <li>Drenaj tapalarını açık bırakın</li>
@@ -125,12 +152,11 @@
         <h3>8. Kış Örtüsü Takın</h3>
         <p>İyi bir kış örtüsü:</p>
         <ul>
-          <li>Yaprak ve kaba pislik girişini engeller (bahar açılış işçiliğini azaltır)</li>
+          <li>Yaprak ve kaba pislik girişini engeller</li>
           <li>Su buharlaşmasını yavaşlatır</li>
-          <li>UV ışınlarına karşı kaplama korur</li>
+          <li>UV ışınlarına karşı kaplamayı korur</li>
           <li>Güvenlik açısından çocuk ve hayvanların havuza düşmesini önler</li>
         </ul>
-        <p>Örtünün havuza hava sirkülasyonu sağlayan tipi tercih edilmelidir; tamamen hava geçirmez örtüler yosun üremesine yol açabilir.</p>
 
         <h3>9. Skimmer'ı Donmaya Karşı Koruyun</h3>
         <p>Skimmer içine plastik bir buz bloğu emici ("skimmer winterizer") veya sıkıştırılmış bir plastik şişe koyun. Bu nesne buz genişlemesini absorbe ederek skimmer gövdesinin çatlamasını önler.</p>
@@ -139,7 +165,7 @@
         <ul>
           <li>Şiddetli yağış veya fırtına sonrası örtüyü kontrol edin</li>
           <li>Ağır kar yağışında örtü üzerindeki birikintileri temizleyin</li>
-          <li>Su seviyesini zaman zaman kontrol edin (yağmur suyuyla dolmamış olmasına dikkat)</li>
+          <li>Su seviyesini zaman zaman kontrol edin</li>
           <li>Kış boyunca havuzu tamamen terk etmeyin; aylık kontrol yapın</li>
         </ul>
 
@@ -154,42 +180,45 @@
           <li>Su berraklaştıktan sonra yüzme başlayabilir</li>
         </ol>
 
-        <div class="note"><p>🔧 <strong>Profesyonel kışlık kapama hizmeti:</strong> Ekibimiz kışlık kapama ve ilkbahar açış hizmetleri sunmaktadır. Tüm adımları doğru yapıldığından emin olmak için <a href="../iletisim.html" style="color:var(--gold);">bizimle iletişime geçin.</a></p></div>
+        <div class="note"><p><strong>Profesyonel kışlık kapama hizmeti:</strong> Ekibimiz kışlık kapama ve ilkbahar açış hizmetleri sunmaktadır. Tüm adımları doğru yapıldığından emin olmak için <a href="../iletisim.html">bizimle iletişime geçin.</a></p></div>
 
       </div>
     </div>
   </section>
 </div>
 
-<section class="section--dark">
+<section class="section" style="background:var(--cream-alt);">
   <div class="container">
-    <div class="section-header center">
+    <div style="text-align:center;margin-bottom:2.5rem;">
       <span class="overline">Daha Fazla Oku</span>
-      <h2>İlgili Yazılar</h2>
+      <h2 style="font-family:var(--font-serif);color:var(--teal);font-size:1.8rem;margin:0.4rem 0 0;">İlgili <em style="font-style:italic;font-weight:400;color:var(--gold);">Yazılar</em></h2>
     </div>
-    <div class="grid-3">
-      <a href="havuz-bakim-rehberi.html" class="blog-card" style="text-decoration:none;">
-        <img class="blog-card__img" src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80&fit=crop" alt="Bakım Rehberi">
+    <div class="grid-3 fade-in">
+      <a href="havuz-bakim-rehberi.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80&fit=crop" alt="Bakım Rehberi" loading="lazy">
         <div class="blog-card__body">
-          <div class="blog-card__meta"><span>Bakım</span> · 14 Mart 2024</div>
+          <div class="blog-card__meta"><span>Bakım</span> 14 Mart 2024</div>
           <h3>Haftalık Bakım Rehberi</h3>
           <p>Tüm yıl boyunca kristal berraklık için kontrol listesi.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
         </div>
       </a>
-      <a href="kimyasal-dengeleme.html" class="blog-card" style="text-decoration:none;">
-        <img class="blog-card__img" src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=600&q=80&fit=crop" alt="Kimyasal Dengeleme">
+      <a href="kimyasal-dengeleme.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=600&q=80&fit=crop" alt="Kimyasal Dengeleme" loading="lazy">
         <div class="blog-card__body">
-          <div class="blog-card__meta"><span>Kimyasallar</span> · 5 Mayıs 2024</div>
+          <div class="blog-card__meta"><span>Kimyasallar</span> 5 Mayıs 2024</div>
           <h3>Kimyasal Denge Rehberi</h3>
           <p>pH, klor ve alkaliniteyi nasıl optimize edersiniz?</p>
+          <span class="blog-card__read">Devamını Oku →</span>
         </div>
       </a>
-      <a href="../teknik-materyaller.html" class="blog-card" style="text-decoration:none;">
-        <img class="blog-card__img" src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80&fit=crop" alt="Ekipman Rehberi">
+      <a href="havuz-kapatma-acma.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&q=80&fit=crop" alt="Havuz Açma Kapama" loading="lazy">
         <div class="blog-card__body">
-          <div class="blog-card__meta"><span>Teknik</span> · Kaynak</div>
-          <h3>Ekipman & Kimyasal Rehberi</h3>
-          <p>Tüm teknik detaylar tek sayfada.</p>
+          <div class="blog-card__meta"><span>Mevsimsel</span> 15 Nisan 2024</div>
+          <h3>Yıllık Havuz Açma ve Kapama Protokolü</h3>
+          <p>Her iki sezonda yapılması gereken tüm adımlar.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
         </div>
       </a>
     </div>
@@ -197,41 +226,36 @@
 </section>
 
 <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <p class="footer__logo">{{FIRMA_ADI}}</p>
-      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span><span class="navbar__logo-text">{{FIRMA_ADI}}</span><span class="navbar__logo-sub">Havuz Atölyesi · Est.</span></span>
+        </div>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div><div class="footer__col-title">Hizmetler</div><ul class="footer__links"><li><a href="../havuz-tipleri.html">Backyard Pool</a></li><li><a href="../havuz-tipleri.html">Beach Pool</a></li><li><a href="../yapim-sureci.html">Anahtar Teslim Yapım</a></li><li><a href="../teknik-materyaller.html">Ekipman &amp; Bakım</a></li></ul></div>
+      <div><div class="footer__col-title">Şirket</div><ul class="footer__links"><li><a href="../index.html">Ana Sayfa</a></li><li><a href="../galeri.html">Galeri</a></li><li><a href="../iletisim.html">İletişim</a></li></ul></div>
+      <div><div class="footer__col-title">Blog</div><ul class="footer__links"><li><a href="havuz-bakim-rehberi.html">Bakım Rehberi</a></li><li><a href="kis-korumasi.html">Kış Koruması</a></li><li><a href="kimyasal-dengeleme.html">Kimyasal Rehberi</a></li><li><a href="../blog.html">Tüm Yazılar →</a></li></ul></div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:{{TELEFON}}">{{TELEFON}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      </div>
     </div>
-    <div>
-      <h4>Sayfalar</h4>
-      <ul>
-        <li><a href="../havuz-tipleri.html">Havuz Tipleri</a></li>
-        <li><a href="../yapim-sureci.html">Yapım Süreci</a></li>
-        <li><a href="../teknik-materyaller.html">Teknik</a></li>
-        <li><a href="../galeri.html">Galeri</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Blog</h4>
-      <ul>
-        <li><a href="havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
-        <li><a href="kis-korumasi.html">Kış Koruması</a></li>
-        <li><a href="kimyasal-dengeleme.html">Kimyasal Rehber</a></li>
-      </ul>
-    </div>
-    <div class="footer__contact">
-      <h4>İletişim</h4>
-      <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
-      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
     </div>
   </div>
-  <div class="footer__bottom container">
-    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
-    <p><a href="../index.html">Ana Sayfa</a></p>
-  </div>
+  <div class="footer__watermark">{{FIRMA_ADI}}<em>pool</em></div>
 </footer>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

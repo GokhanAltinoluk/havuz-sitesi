@@ -12,80 +12,95 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .tab-nav { display: flex; gap: 0.5rem; margin-bottom: 3rem; flex-wrap: wrap; }
-    .tab-btn {
-      padding: 0.65rem 1.4rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.9rem;
-      font-weight: 600;
-      background: var(--surface-2);
-      color: var(--text-muted);
-      border: 1px solid var(--border-subtle);
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-    .tab-btn.active, .tab-btn:hover { background: var(--gold-dim); color: var(--gold); border-color: var(--gold-ring); }
     .chem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+    .section-h3 { color: var(--gold); font-size: 1.2rem; font-weight: 600; margin: 2.5rem 0 1.25rem; letter-spacing: -0.01em; }
   </style>
 </head>
 <body>
 
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00
+      </span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {{ŞEHİR}}
+      </span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:{{TELEFON}}" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        {{TELEFON}}
+      </a>
+    </div>
+  </div>
+</div>
+
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </span>
+      <span>
+        <span class="navbar__logo-text">{{FIRMA_ADI}}</span>
+        <span class="navbar__logo-sub">Havuz Atölyesi · Est.</span>
+      </span>
+    </a>
     <nav class="navbar__nav" id="nav-menu">
       <a href="index.html" class="nav-link">Ana Sayfa</a>
       <a href="havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
       <a href="yapim-sureci.html" class="nav-link">Yapım Süreci</a>
-      <a href="teknik-materyaller.html" class="nav-link">Teknik</a>
+      <a href="teknik-materyaller.html" class="nav-link active">Teknik</a>
       <a href="galeri.html" class="nav-link">Galeri</a>
       <a href="blog.html" class="nav-link">Blog</a>
-      <a href="iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+      <a href="iletisim.html" class="btn btn--teal navbar__cta-mobile">Teklif Al →</a>
     </nav>
+    <a href="iletisim.html" class="btn btn--teal" style="font-size:0.75rem;padding:0.65rem 1.35rem;">Teklif Al →</a>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<section class="hero hero--inner">
-  <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=1920&q=85&fit=crop')"></div>
-  <div class="hero__overlay"></div>
+<!-- PAGE HERO -->
+<section class="page-hero">
   <div class="container">
-    <div class="hero__content">
-      <nav class="breadcrumb">
-        <a href="index.html">Ana Sayfa</a>
-        <span>›</span>
-        <span class="current">Teknik Materyaller</span>
-      </nav>
-      <h1>Kimyasallar &amp;<br><span style="color:var(--gold)">Ekipman Rehberi</span></h1>
-      <p>Havuzunuzun kristal berraklığını koruyan kimyasallar, güvenilir pompalar ve filtreleme sistemleri hakkında teknik bilgiler.</p>
-    </div>
+    <nav class="breadcrumb">
+      <a href="index.html">Ana Sayfa</a> <span>›</span>
+      <span class="current">Teknik Materyaller</span>
+    </nav>
+    <span class="overline">Teknik Rehber</span>
+    <h1 class="page-hero__title">Kimyasallar &amp; <em>Ekipman</em></h1>
+    <p class="page-hero__desc">Havuzunuzun kristal berraklığını koruyan kimyasallar, güvenilir pompalar ve filtreleme sistemleri hakkında kapsamlı teknik rehber.</p>
   </div>
 </section>
 
-<!-- ÖNEMLİ NOT -->
-<section class="section--dark" style="padding-block:2.5rem;">
+<!-- GÜVENLİK UYARISI -->
+<section class="section" style="padding-bottom:0;">
   <div class="container">
-    <div style="background:var(--surface-2); border:1px solid var(--gold-ring); border-radius:var(--radius); padding:1.5rem; max-width:800px; margin-inline:auto; display:flex; gap:1rem; align-items:flex-start;">
-      <span style="color:var(--gold); font-size:1.4rem; flex-shrink:0;">⚠</span>
+    <div style="background:rgba(200,147,42,0.08);border:1px solid rgba(200,147,42,0.3);border-radius:var(--radius);padding:1.5rem;max-width:800px;margin-inline:auto;display:flex;gap:1rem;align-items:flex-start;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
       <div>
-        <strong style="color:var(--text);">Güvenlik Uyarısı:</strong>
-        <p style="margin:0; font-size:0.9rem;">Havuz kimyasalları; deri, göz ve solunum yolu tahriş edici olabilir. Kişisel koruyucu ekipman (gözlük, eldiven) kullanın, kimyasalları asla doğrudan birbirine karıştırmayın, serinlikte kuru yerde saklayın. Çocukların erişiminden uzak tutun.</p>
+        <strong style="color:var(--teal);display:block;margin-bottom:0.3rem;">Güvenlik Uyarısı</strong>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">Havuz kimyasalları; deri, göz ve solunum yolu tahriş edici olabilir. Kişisel koruyucu ekipman (gözlük, eldiven) kullanın, kimyasalları asla doğrudan birbirine karıştırmayın, serinlikte kuru yerde saklayın. Çocukların erişiminden uzak tutun.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- KİMYASALLAR -->
-<section id="kimyasallar">
+<section class="section" id="kimyasallar">
   <div class="container">
     <div class="section-header fade-in">
       <span class="overline">Bölüm A</span>
-      <h2>Havuz Kimyasalları</h2>
+      <h2>Havuz <em>Kimyasalları</em></h2>
       <p>Sağlıklı ve güvenli bir yüzme suyu için gerekli kimyasal bileşenler, kullanım dozajları ve dikkat edilmesi gereken noktalar.</p>
     </div>
 
@@ -181,7 +196,7 @@
         <div class="chem-card__row"><span>Başlangıç dozu</span><span>500 ml / 50 m³</span></div>
         <div class="chem-card__row"><span>Bakım dozu</span><span>Haftalık 100–150 ml / 50 m³</span></div>
         <div class="chem-card__row"><span>Dikkat</span><span>Klorsuz uygulamak köpük yapar</span></div>
-        <div class="chem-warn">Köpük yapan algisite dikkat — havuzda kullanımcı varken uygulama.</div>
+        <div class="chem-warn">Köpük yapan algisite dikkat — havuzda kullanıcı varken uygulamayın.</div>
       </div>
 
       <div class="chem-card fade-in">
@@ -236,16 +251,16 @@
 </section>
 
 <!-- MOTORLAR & EKİPMAN -->
-<section class="section--dark" id="ekipman">
+<section class="section" style="background:var(--cream-alt);" id="ekipman">
   <div class="container">
     <div class="section-header fade-in">
       <span class="overline">Bölüm B</span>
-      <h2>Motorlar ve Ekipman</h2>
+      <h2>Motorlar ve <em>Ekipman</em></h2>
       <p>Havuzun kalbi: pompa, filtre, ısıtıcı ve otomasyon sistemleri hakkında teknik karşılaştırma rehberi.</p>
     </div>
 
     <!-- POMPALAR -->
-    <h3 class="fade-in" style="color:var(--gold-soft); margin-bottom:1.5rem; font-size:1.3rem;">Pompa Tipleri</h3>
+    <h3 class="section-h3 fade-in">Pompa Tipleri</h3>
     <div class="table-wrap fade-in" style="margin-bottom:3rem;">
       <table class="styled-table">
         <thead>
@@ -292,7 +307,7 @@
     </div>
 
     <!-- FİLTRE TİPLERİ -->
-    <h3 class="fade-in" style="color:var(--gold-soft); margin-bottom:1.5rem; font-size:1.3rem;">Filtre Tipleri</h3>
+    <h3 class="section-h3 fade-in">Filtre Tipleri</h3>
     <div class="grid-4" style="margin-bottom:3rem;">
 
       <div class="spec-card fade-in">
@@ -353,7 +368,7 @@
     </div>
 
     <!-- ISI POMPASI -->
-    <h3 class="fade-in" style="color:var(--gold-soft); margin-bottom:1.5rem; font-size:1.3rem;">Isı Pompası</h3>
+    <h3 class="section-h3 fade-in">Isı Pompası</h3>
     <div class="table-wrap fade-in" style="margin-bottom:3rem;">
       <table class="styled-table">
         <thead>
@@ -366,47 +381,23 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>8 kW</td>
-            <td>2.0 kW</td>
-            <td>COP 4.0</td>
-            <td>20–35 m³</td>
-            <td>24–36 saat</td>
-          </tr>
-          <tr>
-            <td>14 kW</td>
-            <td>3.2 kW</td>
-            <td>COP 4.4</td>
-            <td>40–60 m³</td>
-            <td>24–30 saat</td>
-          </tr>
-          <tr>
-            <td>21 kW</td>
-            <td>4.5 kW</td>
-            <td>COP 4.6</td>
-            <td>60–90 m³</td>
-            <td>20–28 saat</td>
-          </tr>
-          <tr>
-            <td>28 kW (İnverter)</td>
-            <td>4.8 kW</td>
-            <td>COP 5.8+</td>
-            <td>80–120 m³</td>
-            <td>18–24 saat</td>
-          </tr>
+          <tr><td>8 kW</td><td>2.0 kW</td><td>COP 4.0</td><td>20–35 m³</td><td>24–36 saat</td></tr>
+          <tr><td>14 kW</td><td>3.2 kW</td><td>COP 4.4</td><td>40–60 m³</td><td>24–30 saat</td></tr>
+          <tr><td>21 kW</td><td>4.5 kW</td><td>COP 4.6</td><td>60–90 m³</td><td>20–28 saat</td></tr>
+          <tr><td>28 kW (İnverter)</td><td>4.8 kW</td><td>COP 5.8+</td><td>80–120 m³</td><td>18–24 saat</td></tr>
         </tbody>
       </table>
     </div>
 
     <!-- DİĞER EKİPMAN -->
-    <h3 class="fade-in" style="color:var(--gold-soft); margin-bottom:1.5rem; font-size:1.3rem;">Diğer Ekipman</h3>
+    <h3 class="section-h3 fade-in">Diğer Ekipman</h3>
     <div class="grid-3">
       <div class="feature-card fade-in">
         <div class="feature-card__icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
         <h3>Otomatik Dozaj Sistemi</h3>
-        <p>pH ve ORP (redoks potansiyeli) sensörleri suyu sürekli izler. Peristaltik pompalar gerektiğinde asit veya hipoklorit dozlar. Akıllı kontrol paneli ile eşikler ayarlanır. Kimyasal tüketimi %30–50 azalır.</p>
+        <p>pH ve ORP sensörleri suyu sürekli izler. Peristaltik pompalar gerektiğinde asit veya hipoklorit dozlar. Kimyasal tüketimi %30–50 azalır.</p>
       </div>
       <div class="feature-card fade-in">
         <div class="feature-card__icon">
@@ -420,84 +411,80 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
         <h3>Robot Havuz Temizleyici</h3>
-        <p>Zemin, duvar ve su çizgisini otomatik temizler. Akıllı navigasyon: çift fırça, ince ve kaba filtre. Haftalık 2–3 saat çalışmayla mükemmel hijyen. Pompa filtresi üzerindeki yükü azaltır.</p>
+        <p>Zemin, duvar ve su çizgisini otomatik temizler. Haftalık 2–3 saat çalışmayla mükemmel hijyen. Pompa filtresi üzerindeki yükü azaltır.</p>
       </div>
       <div class="feature-card fade-in">
         <div class="feature-card__icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
         <h3>Akıllı Otomasyon Paneli</h3>
-        <p>Pompa, filtre, ısıtma, aydınlatma ve su özelliklerini tek panelden veya akıllı telefon uygulamasından kontrol edin. Program ayarlama, uzaktan erişim, arıza bildirimi.</p>
+        <p>Pompa, filtre, ısıtma, aydınlatma ve su özelliklerini tek panelden veya akıllı telefon uygulamasından kontrol edin.</p>
       </div>
       <div class="feature-card fade-in">
         <div class="feature-card__icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
         </div>
         <h3>Skimmer ve Süzgeçler</h3>
-        <p>Su yüzeyindeki pislikleri sürekli toplayan skimmer sistemi. Havuz boyutuna göre 1–4 adet skimmer hesaplanır. Dip süzgeçler (main drain) ile komple sirkülasyon sağlanır.</p>
+        <p>Su yüzeyindeki pislikleri sürekli toplayan skimmer sistemi. Havuz boyutuna göre 1–4 adet skimmer hesaplanır. Dip süzgeçler ile komple sirkülasyon sağlanır.</p>
       </div>
       <div class="feature-card fade-in">
         <div class="feature-card__icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         </div>
         <h3>UV ve Tuzlu Su Jeneratörü</h3>
-        <p>UV sterilizatörler klorsuz alternatif dezenfeksiyon sağlar. Tuz elektroliz (SWG) sistemleri kloru otomatik üretir; su yumuşak ve göze yakıcı olmaz. Uzun vadede kimyasal maliyeti azalır.</p>
+        <p>UV sterilizatörler klorsuz alternatif dezenfeksiyon sağlar. Tuz elektroliz (SWG) sistemleri kloru otomatik üretir; su yumuşak ve göze yakıcı olmaz.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section>
+<section class="section">
   <div class="container">
     <div class="cta-banner fade-in">
       <span class="overline">Teknik Destek</span>
-      <h2>Hangi Ekipman Size Uygun?</h2>
+      <h2>Hangi Ekipman <em>Size Uygun?</em></h2>
       <p>Havuz büyüklüğünüze, kullanım şeklinize ve bütçenize göre en uygun ekipman setini birlikte belirleyelim.</p>
       <div class="btns">
-        <a href="iletisim.html" class="btn btn--gold btn--lg">Ücretsiz Danışmanlık</a>
+        <a href="iletisim.html" class="btn btn--teal btn--lg">Ücretsiz Danışmanlık →</a>
         <a href="yapim-sureci.html" class="btn btn--outline btn--lg">Yapım Sürecini İncele</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <p class="footer__logo">{{FIRMA_ADI}}</p>
-      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span><span class="navbar__logo-text">{{FIRMA_ADI}}</span><span class="navbar__logo-sub">Havuz Atölyesi · Est.</span></span>
+        </div>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div><div class="footer__col-title">Hizmetler</div><ul class="footer__links"><li><a href="havuz-tipleri.html">Backyard Pool</a></li><li><a href="havuz-tipleri.html">Beach Pool</a></li><li><a href="yapim-sureci.html">Anahtar Teslim Yapım</a></li><li><a href="teknik-materyaller.html">Ekipman &amp; Bakım</a></li></ul></div>
+      <div><div class="footer__col-title">Şirket</div><ul class="footer__links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="galeri.html">Galeri</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><div class="footer__col-title">Blog</div><ul class="footer__links"><li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li><li><a href="blog/kis-korumasi.html">Kış Koruması</a></li><li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehberi</a></li><li><a href="blog.html">Tüm Yazılar →</a></li></ul></div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:{{TELEFON}}">{{TELEFON}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      </div>
     </div>
-    <div>
-      <h4>Sayfalar</h4>
-      <ul>
-        <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
-        <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
-        <li><a href="teknik-materyaller.html">Teknik</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Kaynaklar</h4>
-      <ul>
-        <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
-        <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
-        <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehber</a></li>
-      </ul>
-    </div>
-    <div class="footer__contact">
-      <h4>İletişim</h4>
-      <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
-      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
     </div>
   </div>
-  <div class="footer__bottom container">
-    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
-    <p><a href="index.html">Ana Sayfa</a></p>
-  </div>
+  <div class="footer__watermark">{{FIRMA_ADI}}<em>pool</em></div>
 </footer>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

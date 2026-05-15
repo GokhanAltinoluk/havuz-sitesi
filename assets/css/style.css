@@ -115,6 +115,11 @@ ul { list-style: none; }
 .hero__visual { position: relative; }
 .hero__img { width: 100%; aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; }
 .hero__img img { width: 100%; height: 100%; object-fit: cover; }
+.hero__img-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 0.55rem; }
+.hero__img-grid > .hero__img { aspect-ratio: 3/4; }
+.hero__img-col { display: flex; flex-direction: column; gap: 0.55rem; }
+.hero__img-col .hero__img { aspect-ratio: 4/3; flex: 1; }
+.hero__float--project { bottom: 2rem; right: -1.2rem; }
 .hero__float { position: absolute; background: rgba(251,246,233,0.96); backdrop-filter: blur(8px); border: 1px solid var(--teal-border); border-radius: 12px; padding: 0.7rem 1rem; }
 .hero__float--rating { top: 1.5rem; right: -1.2rem; text-align: center; min-width: 110px; }
 .hero__float-stars { color: var(--gold); font-size: 0.72rem; letter-spacing: 1.5px; }

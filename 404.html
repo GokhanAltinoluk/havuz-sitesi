@@ -6,12 +6,14 @@
   <title>Sayfa Bulunamadı (404) | {{FIRMA_ADI}}</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .error-page { min-height: 100svh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
-    .error-num { font-family: var(--font-serif); font-size: clamp(6rem, 20vw, 12rem); font-weight: 700; color: var(--gold); opacity: 0.15; line-height: 1; }
+    .error-page { min-height: 100svh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; background: var(--cream); }
+    .error-num { font-family: var(--font-serif); font-size: clamp(6rem, 20vw, 12rem); font-weight: 700; color: var(--teal); opacity: 0.08; line-height: 1; }
     .error-content { margin-top: -2rem; }
+    .error-content h1 { font-family: var(--font-serif); color: var(--teal); font-size: 1.8rem; margin-bottom: 0.75rem; }
+    .error-content p { color: var(--text-muted); max-width: 400px; margin-inline: auto; margin-bottom: 2rem; }
   </style>
 </head>
 <body>
@@ -19,9 +21,9 @@
   <div>
     <div class="error-num">404</div>
     <div class="error-content">
-      <h1 style="font-size:1.8rem; margin-bottom:0.75rem;">Sayfa Bulunamadı</h1>
-      <p style="max-width:400px; margin-inline:auto; margin-bottom:2rem;">Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir.</p>
-      <a href="index.html" class="btn btn--gold btn--lg">Ana Sayfaya Dön</a>
+      <h1>Sayfa Bulunamadı</h1>
+      <p>Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir.</p>
+      <a href="index.html" class="btn btn--teal btn--lg">Ana Sayfaya Dön</a>
     </div>
   </div>
 </div>

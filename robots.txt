@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://{{GITHUB_USER}}.github.io/{{REPO_NAME}}/sitemap.xml
+Sitemap: https://gokhanaltinoluk.github.io/havuz-sitesi/sitemap.xml

@@ -12,14 +12,43 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00
+      </span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {{ŞEHİR}}
+      </span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:{{TELEFON}}" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        {{TELEFON}}
+      </a>
+    </div>
+  </div>
+</div>
+
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </span>
+      <span>
+        <span class="navbar__logo-text">{{FIRMA_ADI}}</span>
+        <span class="navbar__logo-sub">Havuz Atölyesi · Est.</span>
+      </span>
+    </a>
     <nav class="navbar__nav" id="nav-menu">
       <a href="index.html" class="nav-link">Ana Sayfa</a>
       <a href="havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
@@ -27,49 +56,48 @@
       <a href="teknik-materyaller.html" class="nav-link">Teknik</a>
       <a href="galeri.html" class="nav-link">Galeri</a>
       <a href="blog.html" class="nav-link">Blog</a>
-      <a href="iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+      <a href="iletisim.html" class="btn btn--teal navbar__cta-mobile">Teklif Al →</a>
     </nav>
+    <a href="iletisim.html" class="btn btn--teal" style="font-size:0.75rem;padding:0.65rem 1.35rem;">Teklif Al →</a>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<section class="hero hero--inner">
-  <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1920&q=85&fit=crop')"></div>
-  <div class="hero__overlay"></div>
+<!-- PAGE HERO -->
+<section class="page-hero">
   <div class="container">
-    <div class="hero__content">
-      <nav class="breadcrumb">
-        <a href="index.html">Ana Sayfa</a>
-        <span>›</span>
-        <span class="current">İletişim</span>
-      </nav>
-      <h1>Projenizi <span style="color:var(--gold)">Başlatalım</span></h1>
-      <p>Formu doldurun, 24 saat içinde sizi arayalım. Keşif ve ilk danışmanlık tamamen ücretsizdir.</p>
-    </div>
+    <nav class="breadcrumb">
+      <a href="index.html">Ana Sayfa</a> <span>›</span>
+      <span class="current">İletişim</span>
+    </nav>
+    <span class="overline">Ücretsiz Keşif</span>
+    <h1 class="page-hero__title">Projenizi <em>Başlatalım</em></h1>
+    <p class="page-hero__desc">Formu doldurun, 24 saat içinde sizi arayalım. Keşif ve ilk danışmanlık tamamen ücretsizdir.</p>
   </div>
 </section>
 
-<section>
+<!-- CONTACT GRID -->
+<section class="section">
   <div class="container">
     <div class="contact-grid">
 
       <!-- İletişim Bilgileri -->
       <div>
-        <div class="section-header fade-in">
+        <div class="fade-in" style="margin-bottom:2rem;">
           <span class="overline">Bize Ulaşın</span>
-          <h2>Her Kanaldan<br>Yanınızdayız</h2>
+          <h2 style="font-family:var(--font-serif);font-size:1.9rem;color:var(--teal);margin:0.4rem 0 0;">Her Kanaldan <em style="font-style:italic;font-weight:400;color:var(--gold);">Yanınızdayız</em></h2>
         </div>
 
         <div class="contact-info__item fade-in">
           <div class="contact-info__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           </div>
           <div class="contact-info__text">
             <h4>Telefon</h4>
             <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
-            <p style="font-size:0.8rem;">Hafta içi 08:00–18:00</p>
+            <p style="font-size:0.8rem;color:var(--text-muted);">Hafta içi 08:00–18:00</p>
           </div>
         </div>
 
@@ -80,7 +108,7 @@
           <div class="contact-info__text">
             <h4>E-posta</h4>
             <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
-            <p style="font-size:0.8rem;">24 saat içinde yanıt</p>
+            <p style="font-size:0.8rem;color:var(--text-muted);">24 saat içinde yanıt</p>
           </div>
         </div>
 
@@ -94,7 +122,7 @@
           </div>
         </div>
 
-        <div class="fade-in">
+        <div class="fade-in" style="margin-top:1.5rem;">
           <a href="https://wa.me/{{WHATSAPP}}" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp ile Yazın
@@ -110,16 +138,35 @@
             title="Ofis konumu">
           </iframe>
         </div>
+
+        <!-- Çalışma Saatleri -->
+        <div class="fade-in" style="margin-top:2rem;">
+          <div style="font-size:0.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Çalışma Saatlerimiz</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;">
+            <div style="background:var(--cream-alt);border:1px solid var(--teal-border);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
+              <div style="font-weight:600;color:var(--teal);font-size:0.85rem;margin-bottom:0.3rem;">Hafta İçi</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">08:00–18:00</div>
+            </div>
+            <div style="background:var(--cream-alt);border:1px solid var(--teal-border);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
+              <div style="font-weight:600;color:var(--teal);font-size:0.85rem;margin-bottom:0.3rem;">Cumartesi</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">09:00–15:00</div>
+            </div>
+            <div style="background:var(--cream-alt);border:1px solid var(--teal-border);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
+              <div style="font-weight:600;color:var(--teal);font-size:0.85rem;margin-bottom:0.3rem;">Pazar</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">Kapalı</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Form -->
       <div class="fade-in">
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2.5rem;">
-          <h3 style="color:var(--text); margin-bottom:0.4rem;">Ücretsiz Keşif Talebi</h3>
-          <p style="margin-bottom:2rem; font-size:0.9rem;">Formu doldurun, ekibimiz sizi 24 saat içinde arar.</p>
+        <div style="background:white;border:1px solid var(--teal-border);border-radius:var(--radius);padding:2.5rem;box-shadow:0 4px 24px rgba(15,61,62,0.06);">
+          <h3 style="font-family:var(--font-serif);color:var(--teal);margin-bottom:0.4rem;">Ücretsiz Keşif Talebi</h3>
+          <p style="margin-bottom:2rem;font-size:0.9rem;color:var(--text-muted);">Formu doldurun, ekibimiz sizi 24 saat içinde arar.</p>
 
           <div id="form-success" class="form-success">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-bottom:0.4rem;"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;vertical-align:middle;margin-bottom:0.4rem;"><polyline points="20 6 9 17 4 12"/></svg>
             <strong>Mesajınız iletildi!</strong><br>
             <span style="font-size:0.9rem;">24 saat içinde sizi arayacağız. Teşekkürler.</span>
           </div>
@@ -170,10 +217,10 @@
               <textarea class="form-control" id="message" name="message" placeholder="Projeniz, arazi konumu, beklentileriniz hakkında kısaca bilgi verebilirsiniz..."></textarea>
             </div>
             <input type="hidden" name="_subject" value="Yeni Havuz Proje Talebi — {{FIRMA_ADI}}">
-            <button type="submit" class="btn btn--gold btn--lg" style="width:100%;">
-              Talebi Gönder
+            <button type="submit" class="btn btn--teal btn--lg" style="width:100%;">
+              Talebi Gönder →
             </button>
-            <p style="font-size:0.8rem; text-align:center; margin-top:0.75rem;">
+            <p style="font-size:0.8rem;text-align:center;margin-top:0.75rem;color:var(--text-muted);">
               Bilgileriniz yalnızca sizinle iletişim kurmak için kullanılır.
             </p>
           </form>
@@ -184,66 +231,38 @@
   </div>
 </section>
 
-<!-- Çalışma Saatleri -->
-<section class="section--dark" style="padding-block:3rem;">
+<!-- FOOTER -->
+<footer class="footer">
   <div class="container">
-    <div style="max-width:640px; margin-inline:auto; text-align:center;">
-      <span class="overline">Çalışma Saatlerimiz</span>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:1.5rem;">
-        <div class="feature-card" style="text-align:center;">
-          <h4 style="color:var(--gold); margin-bottom:0.4rem;">Hafta İçi</h4>
-          <p style="font-size:0.9rem;">08:00 – 18:00</p>
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span><span class="navbar__logo-text">{{FIRMA_ADI}}</span><span class="navbar__logo-sub">Havuz Atölyesi · Est.</span></span>
         </div>
-        <div class="feature-card" style="text-align:center;">
-          <h4 style="color:var(--gold); margin-bottom:0.4rem;">Cumartesi</h4>
-          <p style="font-size:0.9rem;">09:00 – 15:00</p>
-        </div>
-        <div class="feature-card" style="text-align:center;">
-          <h4 style="color:var(--gold); margin-bottom:0.4rem;">Pazar</h4>
-          <p style="font-size:0.9rem;">Kapalı<br><small style="color:var(--text-dim);">(Acil: WhatsApp)</small></p>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
         </div>
       </div>
+      <div><div class="footer__col-title">Hizmetler</div><ul class="footer__links"><li><a href="havuz-tipleri.html">Backyard Pool</a></li><li><a href="havuz-tipleri.html">Beach Pool</a></li><li><a href="yapim-sureci.html">Anahtar Teslim Yapım</a></li><li><a href="teknik-materyaller.html">Ekipman &amp; Bakım</a></li></ul></div>
+      <div><div class="footer__col-title">Şirket</div><ul class="footer__links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="galeri.html">Galeri</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><div class="footer__col-title">Blog</div><ul class="footer__links"><li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li><li><a href="blog/kis-korumasi.html">Kış Koruması</a></li><li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehberi</a></li><li><a href="blog.html">Tüm Yazılar →</a></li></ul></div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:{{TELEFON}}">{{TELEFON}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
     </div>
   </div>
-</section>
-
-<footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <p class="footer__logo">{{FIRMA_ADI}}</p>
-      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
-    </div>
-    <div>
-      <h4>Sayfalar</h4>
-      <ul>
-        <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
-        <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
-        <li><a href="teknik-materyaller.html">Teknik</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Kaynaklar</h4>
-      <ul>
-        <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
-        <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
-        <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehber</a></li>
-      </ul>
-    </div>
-    <div class="footer__contact">
-      <h4>İletişim</h4>
-      <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
-      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
-      <p>{{ADRES}}</p>
-    </div>
-  </div>
-  <div class="footer__bottom container">
-    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
-    <p><a href="index.html">Ana Sayfa</a></p>
-  </div>
+  <div class="footer__watermark">{{FIRMA_ADI}}<em>pool</em></div>
 </footer>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/form.js"></script>
 </body>

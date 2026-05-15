@@ -12,23 +12,53 @@
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00
+      </span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {{ŞEHİR}}
+      </span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:{{TELEFON}}" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        {{TELEFON}}
+      </a>
+    </div>
+  </div>
+</div>
+
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="../index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <a href="../index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </span>
+      <span>
+        <span class="navbar__logo-text">{{FIRMA_ADI}}</span>
+        <span class="navbar__logo-sub">Havuz Atölyesi · Est.</span>
+      </span>
+    </a>
     <nav class="navbar__nav" id="nav-menu">
       <a href="../index.html" class="nav-link">Ana Sayfa</a>
       <a href="../havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
       <a href="../yapim-sureci.html" class="nav-link">Yapım Süreci</a>
       <a href="../teknik-materyaller.html" class="nav-link">Teknik</a>
       <a href="../galeri.html" class="nav-link">Galeri</a>
-      <a href="../blog.html" class="nav-link">Blog</a>
-      <a href="../iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+      <a href="../blog.html" class="nav-link active">Blog</a>
+      <a href="../iletisim.html" class="btn btn--teal navbar__cta-mobile">Teklif Al →</a>
     </nav>
+    <a href="../iletisim.html" class="btn btn--teal" style="font-size:0.75rem;padding:0.65rem 1.35rem;">Teklif Al →</a>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -36,32 +66,28 @@
 </header>
 
 <div class="page-main">
-  <!-- Article Header -->
-  <section style="padding-top:3rem; padding-bottom:0;">
+  <section style="padding-top:3rem;padding-bottom:0;">
     <div class="container" style="max-width:800px;">
       <nav class="breadcrumb">
-        <a href="../index.html">Ana Sayfa</a>
-        <span>›</span>
-        <a href="../blog.html">Blog</a>
-        <span>›</span>
+        <a href="../index.html">Ana Sayfa</a> <span>›</span>
+        <a href="../blog.html">Blog</a> <span>›</span>
         <span class="current">Bakım Rehberi</span>
       </nav>
       <div style="margin-top:1.5rem;">
         <span class="tag">Bakım</span>
-        <h1 style="margin-top:1rem; font-size:clamp(1.8rem,4vw,2.8rem);">Yüzme Havuzu Bakım Rehberi:<br>Haftalık ve Aylık Kontrol Listesi</h1>
-        <div style="display:flex; align-items:center; gap:1rem; margin-top:1.25rem; margin-bottom:2rem; flex-wrap:wrap;">
-          <span style="font-size:0.85rem; color:var(--text-dim);">14 Mart 2024</span>
-          <span style="color:var(--border);">·</span>
-          <span style="font-size:0.85rem; color:var(--text-dim);">8 dakika okuma</span>
-          <span style="color:var(--border);">·</span>
-          <span style="font-size:0.85rem; color:var(--text-muted);">{{FIRMA_ADI}} Teknik Ekibi</span>
+        <h1 style="margin-top:1rem;font-size:clamp(1.8rem,4vw,2.8rem);font-family:var(--font-serif);color:var(--teal);">Yüzme Havuzu Bakım Rehberi:<br>Haftalık ve Aylık Kontrol Listesi</h1>
+        <div style="display:flex;align-items:center;gap:1rem;margin-top:1.25rem;margin-bottom:2rem;flex-wrap:wrap;">
+          <span style="font-size:0.85rem;color:var(--text-muted);">14 Mart 2024</span>
+          <span style="color:var(--teal-border);">·</span>
+          <span style="font-size:0.85rem;color:var(--text-muted);">8 dakika okuma</span>
+          <span style="color:var(--teal-border);">·</span>
+          <span style="font-size:0.85rem;color:var(--text-muted);">{{FIRMA_ADI}} Teknik Ekibi</span>
         </div>
-        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1200&q=80&fit=crop" alt="Havuz bakım rehberi" style="width:100%; height:380px; object-fit:cover; border-radius:var(--radius-lg); margin-bottom:3rem;">
+        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1200&q=80&fit=crop" alt="Havuz bakım rehberi" style="width:100%;height:380px;object-fit:cover;border-radius:var(--radius-lg);margin-bottom:3rem;">
       </div>
     </div>
   </section>
 
-  <!-- Article Content -->
   <section style="padding-top:0;">
     <div class="container">
       <div class="article">
@@ -91,7 +117,7 @@
         <h3>3. Pompa Çalışıyor mu?</h3>
         <p>Pompanın sessiz çalıştığını ve su akışının normal olduğunu kontrol edin. Olağandışı ses veya düşük basınç filtre ya da boru tıkanıklığına işaret edebilir.</p>
 
-        <div class="note"><p>💡 <strong>İpucu:</strong> Değişken hız (VSP) pompalar için gündüz 2.500 RPM, gece 1.500 RPM gibi programlı çalışma saatleri hem enerji hem de filtreleme açısından idealdir.</p></div>
+        <div class="note"><p><strong>İpucu:</strong> Değişken hız (VSP) pompalar için gündüz 2.500 RPM, gece 1.500 RPM gibi programlı çalışma saatleri hem enerji hem de filtreleme açısından idealdir.</p></div>
 
         <h2>Haftalık Bakım Kontrol Listesi</h2>
 
@@ -113,32 +139,32 @@
         <p>Su çizgisi (su yüzeyi ile havuz duvarının birleşim noktası) ve köşeler, biyofilm ve yosunun yerleşmeye meylettiği alanlardır. Haftalık fırçalama bu oluşumları önler.</p>
 
         <h3>✓ Filtreyi Geri Yıkayın</h3>
-        <p>Filtre basınç göstergesi normalde 0.8–1.2 bar gösterir. Basınç 0.3–0.4 bar yükseldiğinde (örn. 1.5 bar'a ulaştığında) geri yıkama zamanı gelmiştir. Geri yıkama: 2–3 dakika "Backwash" modunda, ardından 30 saniye "Rinse" modunda çalıştırın. Haftada bir rutin geri yıkama iyi uygulamadır.</p>
+        <p>Filtre basınç göstergesi normalde 0.8–1.2 bar gösterir. Basınç 0.3–0.4 bar yükseldiğinde geri yıkama zamanı gelmiştir. Geri yıkama: 2–3 dakika "Backwash" modunda, ardından 30 saniye "Rinse" modunda çalıştırın.</p>
 
         <h3>✓ Robotu veya Elektrik Süpürgesini Kullanın</h3>
-        <p>Havuz tabanındaki kumu, yaprakları ve ince pislikleri toplamak için haftalık temizleyici kullanımı zorunludur. Robot temizleyiciler bunu otomatik yapar; manuel varsa yerden süpürge aparatıyla yapabilirsiniz.</p>
+        <p>Havuz tabanındaki kumu, yaprakları ve ince pislikleri toplamak için haftalık temizleyici kullanımı zorunludur. Robot temizleyiciler bunu otomatik yapar.</p>
 
         <h2>Aylık Bakım Kontrol Listesi</h2>
 
         <h3>✓ Tam Kimyasal Analiz</h3>
         <p>Ayda bir kez kalsiyum sertliği, TDS (toplam çözünmüş madde) ve siyanürik asit değerlerini ölçün:</p>
         <ul>
-          <li><strong>Kalsiyum Sertliği:</strong> 200–400 ppm (düşükse kalsiyum klorür ekle)</li>
-          <li><strong>TDS:</strong> 1500 ppm altında tutun (yüksekse kısmi su değişimi)</li>
-          <li><strong>Siyanürik Asit:</strong> 30–50 ppm (100 ppm'i geçerse su değişimi zorunlu)</li>
+          <li><strong>Kalsiyum Sertliği:</strong> 200–400 ppm</li>
+          <li><strong>TDS:</strong> 1500 ppm altında tutun</li>
+          <li><strong>Siyanürik Asit:</strong> 30–50 ppm</li>
         </ul>
 
         <h3>✓ Filtre Kumu/Dolguyu Kontrol Edin</h3>
-        <p>Kum filtreler 5–7 yılda bir değiştirilir; cam filtreler 10 yıl üzeri dayanır. Aylık temizlik kapsamında filtrenin içine enzim temizleyici (aylık filtre temizleyici) ekleyerek organik yükü giderin.</p>
+        <p>Kum filtreler 5–7 yılda bir değiştirilir. Aylık temizlik kapsamında filtrenin içine enzim temizleyici ekleyerek organik yükü giderin.</p>
 
         <h3>✓ Pompa Sepetini ve O-Ring'leri Kontrol Edin</h3>
         <p>Pompa ön sepetini temizleyin ve şeffaf kapaktaki O-ring'i kontrol edin. Kuru veya çatlak O-ring hava emilmesine neden olur, pompa kavitiasyonu başlar.</p>
 
         <h3>✓ Skimmer ve Dip Kapakları İnceleyin</h3>
-        <p>Skimmer kapakları ve dip süzgeç (main drain) ızgaraları hasarlı veya gevşek mi? Güvenlik açısından dip kapak çift girdap koruma standardını (VGB compliant) karşılamalıdır.</p>
+        <p>Skimmer kapakları ve dip süzgeç ızgaraları hasarlı veya gevşek mi? Güvenlik açısından dip kapak çift girdap koruma standardını karşılamalıdır.</p>
 
         <h3>✓ LED Armatürleri Kontrol Edin</h3>
-        <p>Su altı armatürler sızdırıyor mu? Korozyonlu veya kırık lens var mı? Bakım sırasında elektriği kesin ve armatürü çıkartarak IP68 conta bütünlüğünü kontrol edin.</p>
+        <p>Su altı armatürler sızdırıyor mu? Bakım sırasında elektriği kesin ve armatürü çıkartarak IP68 conta bütünlüğünü kontrol edin.</p>
 
         <h2>Mevsimsel İpuçları</h2>
 
@@ -157,12 +183,12 @@
           <li>Ekim sonu kış kapama planlamasına başlayın</li>
         </ul>
 
-        <div class="note"><p>🔔 <strong>Profesyonel bakım anlaşması:</strong> Tüm bu adımları kendiniz yapmak istemiyorsanız, aylık bakım sözleşmemiz kapsamında teknik ekibimiz düzenli ziyaret ederek tüm kontrolleri gerçekleştirir. <a href="../iletisim.html" style="color:var(--gold);">Detaylar için iletişime geçin.</a></p></div>
+        <div class="note"><p><strong>Profesyonel bakım anlaşması:</strong> Tüm bu adımları kendiniz yapmak istemiyorsanız, aylık bakım sözleşmemiz kapsamında teknik ekibimiz düzenli ziyaret ederek tüm kontrolleri gerçekleştirir. <a href="../iletisim.html">Detaylar için iletişime geçin.</a></p></div>
 
         <h2>Özet: Hızlı Referans Tablosu</h2>
       </div>
 
-      <div class="table-wrap" style="max-width:760px; margin-inline:auto; margin-bottom:2rem;">
+      <div class="table-wrap" style="max-width:760px;margin-inline:auto;margin-bottom:2rem;">
         <table class="styled-table">
           <thead>
             <tr><th>Görev</th><th>Sıklık</th><th>Süre</th></tr>
@@ -182,44 +208,46 @@
         </table>
       </div>
 
-      <div class="article" style="max-width:760px; margin-inline:auto;">
+      <div class="article" style="max-width:760px;margin-inline:auto;">
         <p>Düzenli bakım alışkanlığı edindikten sonra tüm bu adımlar haftada yaklaşık <strong>45–60 dakika</strong>nızı alır ve yıllar içinde büyük onarım maliyetlerini önler.</p>
-        <p>Daha fazla bilgi için <a href="../teknik-materyaller.html" style="color:var(--gold);">Teknik Materyaller</a> sayfamıza göz atabilir ya da doğrudan <a href="../iletisim.html" style="color:var(--gold);">uzmanlarımıza</a> ulaşabilirsiniz.</p>
+        <p>Daha fazla bilgi için <a href="../teknik-materyaller.html">Teknik Materyaller</a> sayfamıza göz atabilir ya da doğrudan <a href="../iletisim.html">uzmanlarımıza</a> ulaşabilirsiniz.</p>
       </div>
     </div>
   </section>
 </div>
 
-<!-- Diğer Yazılar -->
-<section class="section--dark">
+<section class="section" style="background:var(--cream-alt);">
   <div class="container">
-    <div class="section-header center">
+    <div style="text-align:center;margin-bottom:2.5rem;">
       <span class="overline">Daha Fazla Oku</span>
-      <h2>İlgili Yazılar</h2>
+      <h2 style="font-family:var(--font-serif);color:var(--teal);font-size:1.8rem;margin:0.4rem 0 0;">İlgili <em style="font-style:italic;font-weight:400;color:var(--gold);">Yazılar</em></h2>
     </div>
-    <div class="grid-3">
-      <a href="kis-korumasi.html" class="blog-card" style="text-decoration:none;">
+    <div class="grid-3 fade-in">
+      <a href="kis-korumasi.html" class="blog-card">
         <img class="blog-card__img" src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop" alt="Kış Koruması" loading="lazy">
         <div class="blog-card__body">
-          <div class="blog-card__meta"><span>Mevsimsel</span> · 28 Ekim 2024</div>
+          <div class="blog-card__meta"><span>Mevsimsel</span> 28 Ekim 2024</div>
           <h3>Havuzu Kışa Kapatma Rehberi</h3>
           <p>Soğuk aylarda yapılan hatalar havuzda ciddi hasara yol açar.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
         </div>
       </a>
-      <a href="kimyasal-dengeleme.html" class="blog-card" style="text-decoration:none;">
+      <a href="kimyasal-dengeleme.html" class="blog-card">
         <img class="blog-card__img" src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=600&q=80&fit=crop" alt="Kimyasal Dengeleme" loading="lazy">
         <div class="blog-card__body">
-          <div class="blog-card__meta"><span>Kimyasallar</span> · 5 Mayıs 2024</div>
+          <div class="blog-card__meta"><span>Kimyasallar</span> 5 Mayıs 2024</div>
           <h3>Havuz Kimyasal Dengesi Rehberi</h3>
           <p>pH, klor ve alkaliniteyi nasıl optimize edersiniz?</p>
+          <span class="blog-card__read">Devamını Oku →</span>
         </div>
       </a>
-      <a href="../teknik-materyaller.html" class="blog-card" style="text-decoration:none;">
-        <img class="blog-card__img" src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80&fit=crop" alt="Teknik Materyaller" loading="lazy">
+      <a href="yosun-sorunu.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=600&q=80&fit=crop" alt="Yosun Sorunu" loading="lazy">
         <div class="blog-card__body">
-          <div class="blog-card__meta"><span>Teknik</span> · Kaynak</div>
-          <h3>Kimyasal & Ekipman Tam Rehberi</h3>
-          <p>Tüm havuz kimyasalları ve ekipman karşılaştırmaları.</p>
+          <div class="blog-card__meta"><span>Bakım</span> 12 Haziran 2024</div>
+          <h3>Havuz Yosunu: Sebepleri ve Çözümleri</h3>
+          <p>Yeşil, sarı veya siyah yosunla başa çıkmanın yolu.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
         </div>
       </a>
     </div>
@@ -227,41 +255,36 @@
 </section>
 
 <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <p class="footer__logo">{{FIRMA_ADI}}</p>
-      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span><span class="navbar__logo-text">{{FIRMA_ADI}}</span><span class="navbar__logo-sub">Havuz Atölyesi · Est.</span></span>
+        </div>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div><div class="footer__col-title">Hizmetler</div><ul class="footer__links"><li><a href="../havuz-tipleri.html">Backyard Pool</a></li><li><a href="../havuz-tipleri.html">Beach Pool</a></li><li><a href="../yapim-sureci.html">Anahtar Teslim Yapım</a></li><li><a href="../teknik-materyaller.html">Ekipman &amp; Bakım</a></li></ul></div>
+      <div><div class="footer__col-title">Şirket</div><ul class="footer__links"><li><a href="../index.html">Ana Sayfa</a></li><li><a href="../galeri.html">Galeri</a></li><li><a href="../iletisim.html">İletişim</a></li></ul></div>
+      <div><div class="footer__col-title">Blog</div><ul class="footer__links"><li><a href="havuz-bakim-rehberi.html">Bakım Rehberi</a></li><li><a href="kis-korumasi.html">Kış Koruması</a></li><li><a href="kimyasal-dengeleme.html">Kimyasal Rehberi</a></li><li><a href="../blog.html">Tüm Yazılar →</a></li></ul></div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:{{TELEFON}}">{{TELEFON}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      </div>
     </div>
-    <div>
-      <h4>Sayfalar</h4>
-      <ul>
-        <li><a href="../havuz-tipleri.html">Havuz Tipleri</a></li>
-        <li><a href="../yapim-sureci.html">Yapım Süreci</a></li>
-        <li><a href="../teknik-materyaller.html">Teknik</a></li>
-        <li><a href="../galeri.html">Galeri</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Blog</h4>
-      <ul>
-        <li><a href="havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
-        <li><a href="kis-korumasi.html">Kış Koruması</a></li>
-        <li><a href="kimyasal-dengeleme.html">Kimyasal Rehber</a></li>
-      </ul>
-    </div>
-    <div class="footer__contact">
-      <h4>İletişim</h4>
-      <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
-      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
     </div>
   </div>
-  <div class="footer__bottom container">
-    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
-    <p><a href="../index.html">Ana Sayfa</a></p>
-  </div>
+  <div class="footer__watermark">{{FIRMA_ADI}}<em>pool</em></div>
 </footer>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -3,142 +3,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Havuz Bakım & Teknik Rehberler | {{FIRMA_ADI}}</title>
-  <meta name="description" content="Yüzme havuzu bakımı, kimyasal dengeleme, kış koruması ve teknik ipuçları hakkında uzman rehberleri.">
-  <meta property="og:title" content="Havuz Bakım Blog — Uzman Rehberleri">
+  <title>Blog — Havuz Bakım &amp; Teknik Rehberler | {{FIRMA_ADI}}</title>
+  <meta name="description" content="Yüzme havuzu bakımı, kimyasal dengeleme, tasarım ipuçları, ekipman rehberleri ve kış koruması hakkında 20 uzman yazısı.">
+  <meta property="og:title" content="Havuz Blog — Uzman Rehberleri">
   <meta property="og:image" content="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1200&q=80">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="blog.html">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .blog-filter { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2.5rem; }
+    .filter-btn { padding:0.45rem 1.1rem; border-radius:999px; border:1px solid var(--teal-border); background:transparent; color:var(--text-muted); font-size:0.82rem; font-family:var(--font-sans); cursor:pointer; transition:all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { background:var(--teal); color:var(--cream); border-color:var(--teal); }
+    .blog-section-title { font-family:var(--font-serif); font-size:1.35rem; color:var(--teal); margin:3.5rem 0 1.5rem; padding-bottom:0.75rem; border-bottom:2px solid var(--teal-border); }
+    .blog-section-title em { font-style:italic; color:var(--gold); }
+  </style>
 </head>
 <body>
 
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00</span>
+      <span class="topbar__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>{{ŞEHİR}}</span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:{{TELEFON}}" class="topbar__item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>{{TELEFON}}</a>
+    </div>
+  </div>
+</div>
+
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <span><span class="navbar__logo-text">{{FIRMA_ADI}}</span><span class="navbar__logo-sub">Havuz Atölyesi · Est.</span></span>
+    </a>
     <nav class="navbar__nav" id="nav-menu">
       <a href="index.html" class="nav-link">Ana Sayfa</a>
       <a href="havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
       <a href="yapim-sureci.html" class="nav-link">Yapım Süreci</a>
       <a href="teknik-materyaller.html" class="nav-link">Teknik</a>
       <a href="galeri.html" class="nav-link">Galeri</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="iletisim.html" class="btn btn--teal navbar__cta-mobile">Teklif Al →</a>
     </nav>
-    <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="iletisim.html" class="btn btn--teal" style="font-size:0.75rem;padding:0.65rem 1.35rem;">Teklif Al →</a>
+    <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<section class="hero hero--inner">
-  <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1920&q=85&fit=crop')"></div>
-  <div class="hero__overlay"></div>
+<section class="page-hero">
   <div class="container">
-    <div class="hero__content">
-      <nav class="breadcrumb">
-        <a href="index.html">Ana Sayfa</a>
-        <span>›</span>
-        <span class="current">Blog</span>
-      </nav>
-      <h1>Havuz <span style="color:var(--gold)">Rehberleri</span></h1>
-      <p>Havuzunuzu sağlıklı tutmak için uzman ipuçları, kimyasal rehberler ve bakım protokolleri.</p>
-    </div>
+    <nav class="breadcrumb"><a href="index.html">Ana Sayfa</a> <span>›</span><span class="current">Blog</span></nav>
+    <span class="overline">Uzman Rehberleri</span>
+    <h1 class="page-hero__title">Havuz <em>Bilgi Merkezi</em></h1>
+    <p class="page-hero__desc">Kimyasal dengeden tasarım ipuçlarına, ekipman rehberlerinden bakım protokollerine kadar 20 profesyonel rehber.</p>
   </div>
 </section>
 
-<section>
+<section class="section">
   <div class="container">
-    <div class="grid-3">
 
-      <article class="blog-card fade-in">
+    <!-- Tasarım & Planlama -->
+    <h2 class="blog-section-title">Tasarım &amp; <em>Planlama</em></h2>
+    <div class="grid-3 fade-in">
+
+      <a href="blog/infinity-havuz-tasarimi.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80&fit=crop" alt="Infinity Havuz" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Tasarım</span>3 Ocak 2025 · 9 dk</div>
+          <h3>Infinity Havuz Tasarımı: Sonsuzluk Etkisi Nasıl Yaratılır?</h3>
+          <p>Overflow sistemi, catch pool yapısı, yapısal gereksinimler ve kaplama seçimi rehberi.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/havuz-tasarimi-ipuclari.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&fit=crop" alt="Havuz Tasarım İpuçları" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Tasarım</span>10 Ocak 2025 · 9 dk</div>
+          <h3>Havuz Tasarımı İpuçları: Bahçenizle Bütünleşen Bir Havuz</h3>
+          <p>Güneş analizi, şekil seçimi, bitki uyumu, aydınlatma ve mahremiyet için 10 altın kural.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/havuz-aydinlatma.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=600&q=80&fit=crop" alt="Havuz Aydınlatma" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Tasarım</span>20 Ocak 2025 · 7 dk</div>
+          <h3>Havuz Aydınlatma Sistemleri: LED, RGB ve Fiber Optik</h3>
+          <p>IP68 standartları, LED türleri, konumlama stratejisi ve enerji hesabı.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/havuz-kaplama-cesitleri.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=600&q=80&fit=crop" alt="Havuz Kaplama" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Tasarım</span>15 Ocak 2025 · 10 dk</div>
+          <h3>Havuz Kaplama Çeşitleri: Cam Mozaikten Doğal Taşa Karşılaştırma</h3>
+          <p>Cam mozaik, seramik, vinil liner, beton sıva ve doğal taş — avantajlar, maliyetler, ömür.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/yapim-maliyeti.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&fit=crop" alt="Yapım Maliyeti" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Planlama</span>1 Mart 2025 · 10 dk</div>
+          <h3>Havuz Yapım Maliyeti: 2025 Fiyat Rehberi ve Bütçe Planlama</h3>
+          <p>m² başına fiyat aralıkları, maliyet kalemleri, gizli maliyetler ve yıllık işletme giderleri.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/havuz-insaati-hazirlik.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80&fit=crop" alt="İnşaat Hazırlığı" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Planlama</span>25 Ocak 2025 · 9 dk</div>
+          <h3>Havuz İnşaatı Öncesi Hazırlık: Arazi Analizi ve İzin Süreçleri</h3>
+          <p>Zemin etüdü, topoğrafik ölçüm, belediye izinleri, altyapı hazırlığı ve proje takvimi.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/havuz-yenileme.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=600&q=80&fit=crop" alt="Havuz Yenileme" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Restorasyon</span>22 Şubat 2025 · 9 dk</div>
+          <h3>Havuz Yenileme ve Restorasyon: Eski Havuzunuzu Hayata Döndürün</h3>
+          <p>Kaplama değişimi, su yalıtımı güncelleme, boru yenileme ve ekipman modernizasyonu.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Teknik & Ekipman -->
+    <h2 class="blog-section-title">Teknik &amp; <em>Ekipman</em></h2>
+    <div class="grid-3 fade-in">
+
+      <a href="blog/tuzlu-su-havuzu.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1563089145-599997674d42?w=600&q=80&fit=crop" alt="Tuzlu Su Havuzu" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Teknik</span>5 Mart 2025 · 8 dk</div>
+          <h3>Tuzlu Su Havuzu: Klor Sistemine Gerçek Alternatif mi?</h3>
+          <p>SWG sistemi, avantajlar, dezavantajlar, tuz hücresi bakımı ve kime uygun olduğu.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/uv-ozon-sterilizasyon.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&q=80&fit=crop" alt="UV Ozon Sterilizasyon" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Teknik</span>20 Temmuz 2024 · 8 dk</div>
+          <h3>UV ve Ozon Sterilizasyon: Kimyasal Tüketimini %80 Azaltın</h3>
+          <p>UV sterilizasyon, ozon sistemi, kombinasyon kurulumu ve doğal yüzme havuzları.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/isi-pompasi-rehberi.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80&fit=crop" alt="Isı Pompası" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Teknik</span>15 Şubat 2025 · 9 dk</div>
+          <h3>Havuz Isı Pompası Rehberi: Doğru Kapasiteyi Nasıl Seçersiniz?</h3>
+          <p>COP değeri, kapasite hesap formülü, inverter vs on/off, bölge bazlı sezon uzatma.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/robot-temizleyici-secimi.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=600&q=80&fit=crop" alt="Robot Temizleyici" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Ekipman</span>8 Şubat 2025 · 8 dk</div>
+          <h3>Robot Havuz Temizleyici Seçimi: Hangi Model Size Uygun?</h3>
+          <p>Kapasite sınıfları, filtre inceliği, yüzey uyumluluğu ve enerji tüketimi karşılaştırması.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/pompa-filtre-bakimi.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" alt="Pompa Filtre Bakımı" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Teknik</span>28 Mart 2025 · 9 dk</div>
+          <h3>Havuz Pompası ve Filtresi Bakımı: Adım Adım Rehber</h3>
+          <p>Haftalık sepet temizliği, geri yıkama protokolü, kum değişimi ve yıllık bakım takvimi.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/enerji-tasarrufu.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80&fit=crop" alt="Enerji Tasarrufu" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Teknik</span>12 Nisan 2025 · 8 dk</div>
+          <h3>Havuzda Enerji Tasarrufu: Elektrik Faturanızı %50 Düşürün</h3>
+          <p>VSP pompa, akıllı zamanlayıcı, güneş ısıtma, havuz kapağı ve LED aydınlatma.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Bakım & Kimyasallar -->
+    <h2 class="blog-section-title">Bakım &amp; <em>Kimyasallar</em></h2>
+    <div class="grid-3 fade-in">
+
+      <a href="blog/havuz-bakim-rehberi.html" class="blog-card">
         <img class="blog-card__img" src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&q=80&fit=crop" alt="Havuz Bakım Rehberi" loading="lazy">
         <div class="blog-card__body">
-          <div class="blog-card__meta">
-            <span>Bakım</span> · 14 Mart 2024 · 8 dk okuma
-          </div>
+          <div class="blog-card__meta"><span>Bakım</span>14 Mart 2024 · 8 dk</div>
           <h3>Yüzme Havuzu Bakım Rehberi: Haftalık ve Aylık Kontrol Listesi</h3>
-          <p>Havuzunuzun kristal berraklığını ve hijyenini tüm yıl boyunca korumanız için kapsamlı bakım protokolü.</p>
-          <a href="blog/havuz-bakim-rehberi.html" class="btn btn--outline btn--sm">Devamını Oku</a>
+          <p>Kristal berraklığı ve hijyeni korumak için haftalık ve aylık bakım protokolü.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
         </div>
-      </article>
+      </a>
 
-      <article class="blog-card fade-in">
-        <img class="blog-card__img" src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop" alt="Kış Koruması" loading="lazy">
-        <div class="blog-card__body">
-          <div class="blog-card__meta">
-            <span>Mevsimsel</span> · 28 Ekim 2024 · 6 dk okuma
-          </div>
-          <h3>Havuzu Kışa Kapatma Rehberi: Boru Donması ve Kaplama Hasarını Önleyin</h3>
-          <p>Soğuk aylarda yapılan hatalar havuzda ciddi hasara yol açar. Doğru kışlık kapama adımlarını öğrenin.</p>
-          <a href="blog/kis-korumasi.html" class="btn btn--outline btn--sm">Devamını Oku</a>
-        </div>
-      </article>
-
-      <article class="blog-card fade-in">
+      <a href="blog/kimyasal-dengeleme.html" class="blog-card">
         <img class="blog-card__img" src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=600&q=80&fit=crop" alt="Kimyasal Dengeleme" loading="lazy">
         <div class="blog-card__body">
-          <div class="blog-card__meta">
-            <span>Kimyasallar</span> · 5 Mayıs 2024 · 10 dk okuma
-          </div>
-          <h3>Havuz Kimyasal Dengesi: pH, Klor ve Alkaliniteyi Nasıl Optimize Edersiniz?</h3>
-          <p>Yanlış kimyasal denge hem sağlığınızı tehdit eder hem de ekipman ömrünü kısaltır. İşte bilmeniz gerekenler.</p>
-          <a href="blog/kimyasal-dengeleme.html" class="btn btn--outline btn--sm">Devamını Oku</a>
+          <div class="blog-card__meta"><span>Kimyasallar</span>5 Mayıs 2024 · 10 dk</div>
+          <h3>Havuz Kimyasal Dengesi: pH, Klor ve Alkaliniteyi Optimize Edin</h3>
+          <p>Beş temel parametre — pH, serbest klor, total alkalinite, kalsiyum ve siyanürik asit.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
         </div>
-      </article>
+      </a>
+
+      <a href="blog/yosun-sorunu.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=600&q=80&fit=crop" alt="Yosun Sorunu" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Bakım</span>12 Haziran 2024 · 8 dk</div>
+          <h3>Havuzda Yosun Sorunu: Yeşil, Sarı ve Siyah Alg Tedavisi</h3>
+          <p>Alg türleri, 8 adımlı tedavi protokolü ve yeniden oluşumu önleyen 5 kural.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/bulanik-su-cozumu.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&fit=crop" alt="Bulanık Su" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Bakım</span>18 Temmuz 2024 · 9 dk</div>
+          <h3>Havuz Suyu Neden Bulanır? 7 Neden ve Her Birine Çözüm</h3>
+          <p>Yüksek pH, yetersiz filtrasyon, düşük klor, yüksek alkalinite ve metal kaynaklı sorunlar.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/havuz-kapatma-acma.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80&fit=crop" alt="Sezon Kapatma" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Mevsimsel</span>18 Eylül 2024 · 10 dk</div>
+          <h3>Havuz Sezon Kapatma ve Açma: Adım Adım Protokol</h3>
+          <p>Kış kapatma, boru üfleme, ekipman depolama ve bahar açılış kontrol listesi.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
+      <a href="blog/kis-korumasi.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop" alt="Kış Koruması" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Mevsimsel</span>28 Ekim 2024 · 6 dk</div>
+          <h3>Havuzu Kışa Kapatma Rehberi: Boru Donması ve Hasarı Önleyin</h3>
+          <p>Soğuk aylarda yapılan hatalar, don koruma ve doğru kışlık kapama adımları.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
 
     </div>
 
-    <!-- Daha fazlası yakında -->
-    <div style="text-align:center; margin-top:4rem; padding:3rem; background:var(--surface); border:1px dashed var(--border); border-radius:var(--radius-lg);">
-      <span class="overline">Çok Yakında</span>
-      <h2 style="margin-block:0.75rem;">Yeni Yazılar Yolda</h2>
-      <p style="max-width:400px; margin-inline:auto; margin-bottom:1.5rem;">Havuz ısıtma sistemleri, robot temizleyici karşılaştırmaları, sonsuzluk havuzu tasarım rehberi ve daha fazlası...</p>
-      <a href="iletisim.html" class="btn btn--outline">Bizi Takip Edin</a>
+    <!-- Güvenlik -->
+    <h2 class="blog-section-title">Güvenlik &amp; <em>Konfor</em></h2>
+    <div class="grid-3 fade-in">
+
+      <a href="blog/cocuk-havuzu-guvenligi.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1575783970733-1aaedde1db74?w=600&q=80&fit=crop" alt="Çocuk Güvenliği" loading="lazy">
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>Güvenlik</span>5 Nisan 2025 · 8 dk</div>
+          <h3>Çocuk Havuzu Güvenliği: Boğulma Riskini Sıfıra İndiren 12 Önlem</h3>
+          <p>Çevre bariyeri, otomatik kapak, alarm sistemleri, drenaj güvenliği ve denetim kuralları.</p>
+          <span class="blog-card__read">Devamını Oku →</span>
+        </div>
+      </a>
+
     </div>
+
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="background:var(--teal);padding:4rem 0;">
+  <div class="container" style="text-align:center;">
+    <span class="overline" style="color:rgba(255,255,255,0.6);">Projenizi Başlatalım</span>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--cream);margin:0.75rem 0 1rem;">Hayalinizdeki havuz için<br><em style="font-style:italic;font-weight:400;color:var(--gold);">ücretsiz keşif</em> randevusu alın</h2>
+    <p style="color:rgba(255,255,255,0.7);max-width:480px;margin:0 auto 2rem;">Arazi analizi, tasarım önerileri ve şeffaf fiyat teklifi için ekibimiz yerinde değerlendirme yapar.</p>
+    <a href="iletisim.html" class="btn btn--gold">Ücretsiz Keşif Talep Et →</a>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <p class="footer__logo">{{FIRMA_ADI}}</p>
-      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span><span class="footer__logo-text">{{FIRMA_ADI}}</span><span class="footer__logo-sub">Havuz Atölyesi · Est.</span></span>
+        </div>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Hizmetler</div>
+        <ul class="footer__links"><li><a href="havuz-tipleri.html">Backyard Pool</a></li><li><a href="havuz-tipleri.html">Beach Pool</a></li><li><a href="yapim-sureci.html">Anahtar Teslim Yapım</a></li><li><a href="teknik-materyaller.html">Ekipman &amp; Bakım</a></li></ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Şirket</div>
+        <ul class="footer__links"><li><a href="index.html">Ana Sayfa</a></li><li><a href="galeri.html">Galeri</a></li><li><a href="iletisim.html">İletişim</a></li></ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Blog Kategorileri</div>
+        <ul class="footer__links">
+          <li><a href="blog.html#tasarim">Tasarım &amp; Planlama</a></li>
+          <li><a href="blog.html#teknik">Teknik &amp; Ekipman</a></li>
+          <li><a href="blog.html#bakim">Bakım &amp; Kimyasallar</a></li>
+          <li><a href="blog.html#guvenlik">Güvenlik</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:{{TELEFON}}">{{TELEFON}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      </div>
     </div>
-    <div>
-      <h4>Sayfalar</h4>
-      <ul>
-        <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
-        <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
-        <li><a href="teknik-materyaller.html">Teknik</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Son Yazılar</h4>
-      <ul>
-        <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
-        <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
-        <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Dengeleme</a></li>
-      </ul>
-    </div>
-    <div class="footer__contact">
-      <h4>İletişim</h4>
-      <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
-      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
     </div>
   </div>
-  <div class="footer__bottom container">
-    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
-    <p><a href="index.html">Ana Sayfa</a></p>
-  </div>
+  <div class="footer__watermark">{{FIRMA_ADI}}<em>pool</em></div>
 </footer>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

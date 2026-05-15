@@ -3,131 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Havuz Tipleri — Backyard & Beach Pool | {{FIRMA_ADI}}</title>
+  <title>Havuz Tipleri — Backyard &amp; Beach Pool | {{FIRMA_ADI}}</title>
   <meta name="description" content="Backyard Pool ve Beach Pool arasındaki farklar, teknik özellikler, avantajlar ve karşılaştırma tablosu. Size en uygun havuz tipini seçin.">
-  <meta property="og:title" content="Havuz Tipleri — Backyard & Beach Pool">
-  <meta property="og:description" content="İki popüler havuz tipini detaylı karşılaştırın, hangisinin sizin için ideal olduğunu öğrenin.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1200&q=80">
+  <meta property="og:title" content="Havuz Tipleri — Backyard &amp; Beach Pool">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1200&q=80">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="havuz-tipleri.html">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00
+      </span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {{ŞEHİR}}
+      </span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:{{TELEFON}}" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        {{TELEFON}}
+      </a>
+    </div>
+  </div>
+</div>
+
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="index.html" class="navbar__logo">{{FIRMA_ADI}}</a>
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </span>
+      <span>
+        <span class="navbar__logo-text">{{FIRMA_ADI}}</span>
+        <span class="navbar__logo-sub">Havuz Atölyesi · Est.</span>
+      </span>
+    </a>
     <nav class="navbar__nav" id="nav-menu">
       <a href="index.html" class="nav-link">Ana Sayfa</a>
-      <a href="havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
+      <a href="havuz-tipleri.html" class="nav-link active">Havuz Tipleri</a>
       <a href="yapim-sureci.html" class="nav-link">Yapım Süreci</a>
       <a href="teknik-materyaller.html" class="nav-link">Teknik</a>
       <a href="galeri.html" class="nav-link">Galeri</a>
       <a href="blog.html" class="nav-link">Blog</a>
-      <a href="iletisim.html" class="btn btn--gold btn--sm">İletişim</a>
+      <a href="iletisim.html" class="btn btn--teal navbar__cta-mobile">Teklif Al →</a>
     </nav>
+    <a href="iletisim.html" class="btn btn--teal" style="font-size:0.75rem;padding:0.65rem 1.35rem;">Teklif Al →</a>
     <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero hero--inner">
-  <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1920&q=85&fit=crop')"></div>
-  <div class="hero__overlay"></div>
+<!-- PAGE HERO -->
+<section class="page-hero">
   <div class="container">
-    <div class="hero__content">
-      <nav class="breadcrumb">
-        <a href="index.html">Ana Sayfa</a>
-        <span>›</span>
-        <span class="current">Havuz Tipleri</span>
-      </nav>
-      <h1>Backyard Pool ve<br><span style="color:var(--gold)">Beach Pool</span></h1>
-      <p>Farklı yaşam tarzlarına, aile yapılarına ve arazilere göre tasarlanmış iki ana havuz kategorisini keşfedin.</p>
-    </div>
+    <nav class="breadcrumb">
+      <a href="index.html">Ana Sayfa</a> <span>›</span>
+      <span class="current">Havuz Tipleri</span>
+    </nav>
+    <span class="overline">Havuz Tipleri</span>
+    <h1 class="page-hero__title">Backyard Pool &amp; <em>Beach Pool</em></h1>
+    <p class="page-hero__desc">İki farklı havuz tasarım felsefesi: evinizin bahçesine özel klasik konfor ile plaj hissi veren sığ-derin geçişli lüks tasarım.</p>
   </div>
 </section>
 
 <!-- BACKYARD POOL -->
-<section id="backyard">
+<section class="section">
   <div class="container">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
-      <div class="fade-in">
-        <span class="overline">Klasik & Modern</span>
-        <h2>Backyard Pool Nedir?</h2>
-        <p style="margin-bottom:1rem;">Evinizin arka bahçesine entegre edilen, betonarme veya çelik iskelet üzerine inşa edilen geleneksel yüzme havuzlarıdır. Dikdörtgen, L şekli, organik form ve sonsuzluk (infinity) tasarımları dahil pek çok geometri mümkündür.</p>
-        <p style="margin-bottom:1.5rem;">Seramik, mozaik, doğal taş veya liner kaplama seçenekleriyle evinizin mimarisine tam uyum sağlar.</p>
-        <div class="pool-card__features" style="margin-bottom:1.5rem;">
-          <span class="pool-card__tag">Dikdörtgen Tasarım</span>
-          <span class="pool-card__tag">Organik Form</span>
-          <span class="pool-card__tag">Sonsuzluk / Infinity</span>
-          <span class="pool-card__tag">Şelale & Su Perdesi</span>
-          <span class="pool-card__tag">Gömülü Spa</span>
-          <span class="pool-card__tag">LED Aydınlatma</span>
-        </div>
-        <a href="iletisim.html" class="btn btn--gold">Backyard Proje Talebi</a>
+    <div class="pool-type-section fade-in">
+      <div class="pool-detail-img">
+        <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=900&q=85&fit=crop" alt="Backyard Pool" loading="lazy">
       </div>
-      <div class="fade-in">
-        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80&fit=crop" alt="Backyard Pool — Lüks Villa Havuzu" style="border-radius:var(--radius-lg); width:100%; height:420px; object-fit:cover; box-shadow:var(--shadow);">
-      </div>
-    </div>
-
-    <!-- Backyard Teknik -->
-    <div style="margin-top:4rem;">
-      <h3 class="fade-in" style="color:var(--text); margin-bottom:2rem;">Teknik Özellikler</h3>
-      <div class="grid-4">
-        <div class="spec-card fade-in">
-          <div class="spec-card__header">
-            <h3>Boyut Aralığı</h3>
-            <p>Tipik backyard ölçüleri</p>
-          </div>
-          <div class="spec-card__body">
-            <div class="spec-row"><span class="spec-key">Küçük</span><span class="spec-val">4×8 m</span></div>
-            <div class="spec-row"><span class="spec-key">Orta</span><span class="spec-val">5×10 m</span></div>
-            <div class="spec-row"><span class="spec-key">Büyük</span><span class="spec-val">6×12 m+</span></div>
-            <div class="spec-row"><span class="spec-key">Alan</span><span class="spec-val">30–120 m²</span></div>
-          </div>
+      <div>
+        <span class="overline">Tip 01</span>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--teal);line-height:1.15;margin:0.5rem 0 1rem;">Backyard <em style="font-style:italic;font-weight:400;color:var(--gold);">Pool</em></h2>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.25rem;">Evinizin bahçesine entegre edilen, hem estetik hem de fonksiyonel havuz çözümü. Klasik dikdörtgen veya özel geometrik formlar, seramik veya mozaik kaplama seçenekleriyle tamamen kişiselleştirilir.</p>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;">Aile kullanımına, düzenli yüzmeye ve bahçe estetiğiyle bütünleşen bir yaşam alanı yaratmaya idealdir.</p>
+        <div class="pool-spec-list">
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Boyut:</strong> Genellikle 8×4 m – 15×6 m arası; özel projeler de mümkün</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Derinlik:</strong> Tek seviye (1.4 m) veya sığ-derin geçişli (0.9–2.0 m)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Kaplama:</strong> Seramik, mozaik, porselen, liner veya doğaltaş</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Çevre düzeni:</strong> Ahşap/taş deck, peyzaj aydınlatması, termal izolasyon</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Yapım süresi:</strong> 8–14 hafta (zemin koşullarına göre değişir)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>İdeal kullanım:</strong> Aile yüzme, egzersiz, sosyal alan</span></div>
         </div>
-        <div class="spec-card fade-in">
-          <div class="spec-card__header">
-            <h3>Derinlik</h3>
-            <p>Bölgeye göre ayarlanır</p>
-          </div>
-          <div class="spec-card__body">
-            <div class="spec-row"><span class="spec-key">Sığ uç</span><span class="spec-val">1.2 m</span></div>
-            <div class="spec-row"><span class="spec-key">Derin uç</span><span class="spec-val">1.8–2.2 m</span></div>
-            <div class="spec-row"><span class="spec-key">Atlama için</span><span class="spec-val">2.5 m+</span></div>
-            <div class="spec-row"><span class="spec-key">Spa bölümü</span><span class="spec-val">0.8–1.0 m</span></div>
-          </div>
-        </div>
-        <div class="spec-card fade-in">
-          <div class="spec-card__header">
-            <h3>Kaplama Seçenekleri</h3>
-            <p>Estetik & dayanıklılık</p>
-          </div>
-          <div class="spec-card__body">
-            <div class="spec-row"><span class="spec-key">Seramik fayans</span><span class="spec-val">Uygun fiyat</span></div>
-            <div class="spec-row"><span class="spec-key">Mozaik</span><span class="spec-val">Premium</span></div>
-            <div class="spec-row"><span class="spec-key">Liner (PVC)</span><span class="spec-val">Hızlı montaj</span></div>
-            <div class="spec-row"><span class="spec-key">Doğal taş</span><span class="spec-val">Lüks</span></div>
-          </div>
-        </div>
-        <div class="spec-card fade-in">
-          <div class="spec-card__header">
-            <h3>Yapım Süresi</h3>
-            <p>Mevsim bağımsız tahmin</p>
-          </div>
-          <div class="spec-card__body">
-            <div class="spec-row"><span class="spec-key">Standart</span><span class="spec-val">8–10 hafta</span></div>
-            <div class="spec-row"><span class="spec-key">Büyük + özellik</span><span class="spec-val">12–16 hafta</span></div>
-            <div class="spec-row"><span class="spec-key">Infinity kenar</span><span class="spec-val">+2 hafta</span></div>
-            <div class="spec-row"><span class="spec-key">Ruhsat</span><span class="spec-val">2–4 hafta</span></div>
-          </div>
+        <div style="display:flex;gap:0.7rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="iletisim.html" class="btn btn--teal">Proje Talebi →</a>
+          <a href="galeri.html" class="btn btn--outline">Galeriyi İncele</a>
         </div>
       </div>
     </div>
@@ -135,79 +108,28 @@
 </section>
 
 <!-- BEACH POOL -->
-<section class="section--dark" id="beach">
+<section class="section section--alt">
   <div class="container">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
-      <div class="fade-in" style="order:2;">
-        <span class="overline">Doğal & Aile Dostu</span>
-        <h2>Beach Pool Nedir?</h2>
-        <p style="margin-bottom:1rem;">Giriş bölgesinin kademeli olarak derinleştiği, doğal plaj hissiyatı yaratan yüzme havuzu tasarımıdır. Havuz tabanı bir ucundan sıfır kotundan başlayarak yavaşça derinleşir; tıpkı deniz kıyısındaki gibi ayaklarınızı ıslatarak girebilirsiniz.</p>
-        <p style="margin-bottom:1.5rem;">Çocuklar ve yaşlılar için maksimum güvenlik, yetişkinler için tam boyutlu yüzme konforu bir arada sunar. Tropikal bitkiler, palmiye gölgelikleri ve kaba yüzey kaplamayla doğal görünüm pekiştirilebilir.</p>
-        <div class="pool-card__features" style="margin-bottom:1.5rem;">
-          <span class="pool-card__tag">Sıfır Girişli</span>
-          <span class="pool-card__tag">Kademeli Derinlik</span>
-          <span class="pool-card__tag">Çocuk Güvenli</span>
-          <span class="pool-card__tag">Tropikal Çevre</span>
-          <span class="pool-card__tag">Geniş Sığ Alan</span>
-          <span class="pool-card__tag">Kaya & Kaba Kaplama</span>
-        </div>
-        <a href="iletisim.html" class="btn btn--gold">Beach Pool Proje Talebi</a>
+    <div class="pool-type-section pool-type-section--reverse fade-in">
+      <div class="pool-detail-img">
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=900&q=85&fit=crop" alt="Beach Pool" loading="lazy">
       </div>
-      <div class="fade-in" style="order:1;">
-        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80&fit=crop" alt="Beach Pool — Plaj Etkili Havuz" style="border-radius:var(--radius-lg); width:100%; height:420px; object-fit:cover; box-shadow:var(--shadow);">
-      </div>
-    </div>
-
-    <div style="margin-top:4rem;">
-      <h3 class="fade-in" style="color:var(--text); margin-bottom:2rem;">Teknik Özellikler</h3>
-      <div class="grid-4">
-        <div class="spec-card fade-in">
-          <div class="spec-card__header">
-            <h3>Boyut Aralığı</h3>
-            <p>Plaj sahası dahil</p>
-          </div>
-          <div class="spec-card__body">
-            <div class="spec-row"><span class="spec-key">Sığ alan</span><span class="spec-val">4×5 m</span></div>
-            <div class="spec-row"><span class="spec-key">Toplam uzunluk</span><span class="spec-val">10–16 m</span></div>
-            <div class="spec-row"><span class="spec-key">Genişlik</span><span class="spec-val">5–8 m</span></div>
-            <div class="spec-row"><span class="spec-key">Toplam alan</span><span class="spec-val">50–150 m²</span></div>
-          </div>
+      <div>
+        <span class="overline">Tip 02</span>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--teal);line-height:1.15;margin:0.5rem 0 1rem;">Beach <em style="font-style:italic;font-weight:400;color:var(--gold);">Pool</em></h2>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.25rem;">Sahil plajı deneyimini evinize taşıyan yenilikçi havuz tipi. Kıyı girişinden başlayarak derine doğru yavaş inen zemin, deniz kenarında yürüme hissini tam olarak yeniden üretir.</p>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;">Çocuklar, yaşlılar ve yüzme bilmeyenler için ideal giriş konforu sunarken özel mozaik kaplamayla görsel olarak çarpıcı bir alan yaratır.</p>
+        <div class="pool-spec-list">
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Boyut:</strong> Genellikle 12×6 m – 20×8 m; kıyı bölgesi 2–4 m genişlikte</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Derinlik:</strong> 0–2.2 m kademeli artış; kıyı bölgesi 0–40 cm</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Kaplama:</strong> İnce mozaik, özel doku kumlu yüzey, turkuaz renk skalası</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Çevre düzeni:</strong> Ahşap sahil dekoru, güneşlik teras, bar kurulumu</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Yapım süresi:</strong> 12–18 hafta (karmaşık zemin profili nedeniyle)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>İdeal kullanım:</strong> Tüm yaş grupları, tatil hissi, sosyal etkinlikler</span></div>
         </div>
-        <div class="spec-card fade-in">
-          <div class="spec-card__header">
-            <h3>Derinlik Profili</h3>
-            <p>Kademeli geçiş</p>
-          </div>
-          <div class="spec-card__body">
-            <div class="spec-row"><span class="spec-key">Giriş noktası</span><span class="spec-val">0 cm</span></div>
-            <div class="spec-row"><span class="spec-key">Orta bölge</span><span class="spec-val">60–90 cm</span></div>
-            <div class="spec-row"><span class="spec-key">Derin uç</span><span class="spec-val">1.6–1.8 m</span></div>
-            <div class="spec-row"><span class="spec-key">Eğim oranı</span><span class="spec-val">%8–12</span></div>
-          </div>
-        </div>
-        <div class="spec-card fade-in">
-          <div class="spec-card__header">
-            <h3>Zemin Kaplaması</h3>
-            <p>Kaymaz öncelikli</p>
-          </div>
-          <div class="spec-card__body">
-            <div class="spec-row"><span class="spec-key">Kaba mozaik</span><span class="spec-val">Tercih 1</span></div>
-            <div class="spec-row"><span class="spec-key">Kum efektli karo</span><span class="spec-val">Tercih 2</span></div>
-            <div class="spec-row"><span class="spec-key">Agregat beton</span><span class="spec-val">Ekonomik</span></div>
-            <div class="spec-row"><span class="spec-key">Doğal çakıl</span><span class="spec-val">Organik görünüm</span></div>
-          </div>
-        </div>
-        <div class="spec-card fade-in">
-          <div class="spec-card__header">
-            <h3>Yapım Süresi</h3>
-            <p>Büyüklüğe bağlı</p>
-          </div>
-          <div class="spec-card__body">
-            <div class="spec-row"><span class="spec-key">Orta boy</span><span class="spec-val">10–14 hafta</span></div>
-            <div class="spec-row"><span class="spec-key">Büyük boy</span><span class="spec-val">16–20 hafta</span></div>
-            <div class="spec-row"><span class="spec-key">Peyzaj dahil</span><span class="spec-val">+3–4 hafta</span></div>
-            <div class="spec-row"><span class="spec-key">Ruhsat</span><span class="spec-val">2–4 hafta</span></div>
-          </div>
+        <div style="display:flex;gap:0.7rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="iletisim.html" class="btn btn--teal">Proje Talebi →</a>
+          <a href="galeri.html" class="btn btn--outline">Galeriyi İncele</a>
         </div>
       </div>
     </div>
@@ -215,11 +137,12 @@
 </section>
 
 <!-- KARŞILAŞTIRMA TABLOSU -->
-<section>
+<section class="section">
   <div class="container">
-    <div class="section-header center fade-in">
-      <span class="overline">Karar Vermenize Yardım</span>
-      <h2>Backyard vs Beach Pool Karşılaştırması</h2>
+    <div class="section-header section-header--center fade-in">
+      <span class="overline">Karşılaştırma</span>
+      <h2>Hangisi Size <em>Uygun?</em></h2>
+      <p>İki havuz tipinin temel özelliklerini yan yana inceleyin ve projenize en uygun seçimi yapın.</p>
     </div>
     <div class="table-wrap fade-in">
       <table class="styled-table compare-table">
@@ -231,103 +154,92 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Giriş şekli</strong></td>
-            <td>Merdiven veya basamak</td>
-            <td>Kademeli zemin girişi (sıfır kottan)</td>
-          </tr>
-          <tr>
-            <td><strong>Çocuk güvenliği</strong></td>
-            <td class="partial">Orta (basamak gerekli)</td>
-            <td class="yes">Yüksek (sığ giriş)</td>
-          </tr>
-          <tr>
-            <td><strong>Alan ihtiyacı</strong></td>
-            <td>Az – orta (30 m²+)</td>
-            <td>Daha geniş (60 m²+)</td>
-          </tr>
-          <tr>
-            <td><strong>Maliyet</strong></td>
-            <td>Orta</td>
-            <td>Yüksek (büyük hacim + peyzaj)</td>
-          </tr>
-          <tr>
-            <td><strong>Temizlik</strong></td>
-            <td class="yes">Kolay (düz taban)</td>
-            <td class="partial">Daha fazla zemin = daha fazla bakım</td>
-          </tr>
-          <tr>
-            <td><strong>Estetik esneklik</strong></td>
-            <td class="yes">Yüksek (form, şelale, infinity)</td>
-            <td class="partial">Sınırlı (plaj formu sabit)</td>
-          </tr>
-          <tr>
-            <td><strong>Yaşlı / engelli erişim</strong></td>
-            <td class="no">Zor (merdiven)</td>
-            <td class="yes">Mükemmel</td>
-          </tr>
-          <tr>
-            <td><strong>Yüzme performansı</strong></td>
-            <td class="yes">Yüksek (tam derinlik)</td>
-            <td class="partial">Orta (derin uç sınırlı)</td>
-          </tr>
-          <tr>
-            <td><strong>Isıtma verimliliği</strong></td>
-            <td class="yes">Daha verimli (az hacim)</td>
-            <td class="partial">Büyük yüzey = daha yüksek enerji</td>
-          </tr>
-          <tr>
-            <td><strong>Yapım süresi</strong></td>
-            <td class="yes">8–12 hafta</td>
-            <td class="partial">12–20 hafta</td>
-          </tr>
+          <tr><td><strong>Ortalama Boyut</strong></td><td>8×4 m – 15×6 m</td><td>12×6 m – 20×8 m</td></tr>
+          <tr><td><strong>Maliyet Aralığı</strong></td><td>Orta</td><td>Orta–Yüksek</td></tr>
+          <tr><td><strong>Yapım Süresi</strong></td><td>8–14 hafta</td><td>12–18 hafta</td></tr>
+          <tr><td><strong>Zemin Profili</strong></td><td>Düz veya sığ-derin</td><td>Plaj rampası (0–220 cm)</td></tr>
+          <tr><td><strong>Çocuk Uygunluğu</strong></td><td>Orta</td><td class="highlight">Mükemmel</td></tr>
+          <tr><td><strong>Alan Gereksinimi</strong></td><td>Az–Orta</td><td>Geniş</td></tr>
+          <tr><td><strong>Kaplama Seçeneği</strong></td><td>Geniş (seramik, liner…)</td><td>Mozaik ağırlıklı</td></tr>
+          <tr><td><strong>Bakım Zorluğu</strong></td><td>Düşük–Orta</td><td>Orta</td></tr>
+          <tr><td><strong>Görsel Etki</strong></td><td>Klasik lüks</td><td class="highlight">Çarpıcı / Tatil hissi</td></tr>
         </tbody>
       </table>
     </div>
-    <div style="text-align:center; margin-top:2.5rem;">
-      <p class="text-muted" style="margin-bottom:1.25rem;">Hangi tipin sizin için doğru olduğundan emin değil misiniz?</p>
-      <a href="iletisim.html" class="btn btn--gold btn--lg">Ücretsiz Danışmanlık</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--teal">
+  <div class="container" style="text-align:center;">
+    <span class="overline" style="color:rgba(200,147,42,0.9);">Ücretsiz Keşif</span>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--cream);margin:0.5rem 0 1rem;">Hangi havuz <em style="font-style:italic;font-weight:400;">size uygun?</em></h2>
+    <p style="color:rgba(251,246,233,0.72);max-width:500px;margin:0 auto 2rem;line-height:1.72;">Uzman ekibimiz bahçenizi, bütçenizi ve kullanım beklentilerinizi dinleyerek en uygun havuz tipini birlikte belirler.</p>
+    <div style="display:flex;gap:0.7rem;justify-content:center;flex-wrap:wrap;">
+      <a href="iletisim.html" class="btn btn--gold btn--lg">Ücretsiz Keşif Randevusu →</a>
+      <a href="yapim-sureci.html" class="btn btn--outline-cream btn--lg">Yapım Sürecini Gör</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <p class="footer__logo">{{FIRMA_ADI}}</p>
-      <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması.</p>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span><span class="footer__logo-text">{{FIRMA_ADI}}</span><span class="footer__logo-sub">Havuz Atölyesi · Est.</span></span>
+        </div>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması. Backyard Pool ve Beach Pool projelerinde anahtar teslim çözümler.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Hizmetler</div>
+        <ul class="footer__links">
+          <li><a href="havuz-tipleri.html">Backyard Pool</a></li>
+          <li><a href="havuz-tipleri.html">Beach Pool</a></li>
+          <li><a href="yapim-sureci.html">Anahtar Teslim Yapım</a></li>
+          <li><a href="teknik-materyaller.html">Ekipman &amp; Bakım</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Şirket</div>
+        <ul class="footer__links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Kaynaklar</div>
+        <ul class="footer__links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
+          <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
+          <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehberi</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12.5 19.79 19.79 0 01.01 3.82 2 2 0 012 1.84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:{{TELEFON}}">{{TELEFON}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+        <div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>{{ADRES}}, {{ŞEHİR}}</div>
+      </div>
     </div>
-    <div>
-      <h4>Sayfalar</h4>
-      <ul>
-        <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
-        <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
-        <li><a href="teknik-materyaller.html">Teknik</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Kaynaklar</h4>
-      <ul>
-        <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
-        <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
-        <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Rehber</a></li>
-      </ul>
-    </div>
-    <div class="footer__contact">
-      <h4>İletişim</h4>
-      <p><a href="tel:{{TELEFON}}">{{TELEFON}}</a></p>
-      <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
     </div>
   </div>
-  <div class="footer__bottom container">
-    <p>© 2024 {{FIRMA_ADI}}. Tüm hakları saklıdır.</p>
-    <p><a href="index.html">Ana Sayfa</a></p>
-  </div>
+  <div class="footer__watermark">{{FIRMA_ADI}}<em>pool</em></div>
 </footer>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
