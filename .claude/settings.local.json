@@ -28,7 +28,13 @@
       "PowerShell(Start-Process -NoNewWindow -FilePath \"python\" -ArgumentList \"-m\", \"http.server\", \"8080\" -WorkingDirectory \"C:\\\\claude\\\\gun2\")",
       "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8080/index2.html\" -Method Head -TimeoutSec 3)",
       "mcp__plugin_playwright_playwright__browser_evaluate",
-      "PowerShell($content = [System.IO.File]::ReadAllText\\('C:\\\\claude\\\\gun2\\\\BODRUMPOOL-Kartvizit.html'\\); $content.Substring\\(0, 3000\\))"
+      "PowerShell($content = [System.IO.File]::ReadAllText\\('C:\\\\claude\\\\gun2\\\\BODRUMPOOL-Kartvizit.html'\\); $content.Substring\\(0, 3000\\))",
+      "Bash(git status *)",
+      "Bash(Start-Sleep -Milliseconds 1500)",
+      "Bash(Write-Host \"ready\")",
+      "PowerShell(netstat *)",
+      "PowerShell(python --version; python3 --version 2>$null)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://gokhanaltinoluk.github.io/havuz-sitesi/hakkimizda.html)"
     ]
   }
 }
