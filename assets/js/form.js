@@ -1,4 +1,4 @@
-// Contact form validation + Formspree submit
+// Contact form — validation + mailto submit
 (function() {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -37,7 +37,7 @@
     });
   });
 
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     let allValid = true;
@@ -47,29 +47,35 @@
     if (!allValid) return;
 
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
     btn.disabled = true;
-    btn.textContent = 'Gönderiliyor…';
+    btn.textContent = 'Yönlendiriliyor…';
 
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
+    const data = new FormData(form);
+    const labelMap = {
+      name:       'Ad Soyad',
+      phone:      'Telefon',
+      email:      'E-posta',
+      pool_type:  'Havuz Tipi',
+      pool_size:  'Tahmini Büyüklük',
+      message:    'Mesaj'
+    };
 
-      if (res.ok) {
-        form.style.display = 'none';
-        if (success) success.style.display = 'block';
-      } else {
-        btn.disabled = false;
-        btn.textContent = originalText;
-        alert('Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.');
+    const lines = [];
+    data.forEach(function(val, key) {
+      if (val && val.toString().trim()) {
+        const label = labelMap[key] || key;
+        lines.push(label + ': ' + val);
       }
-    } catch {
-      btn.disabled = false;
-      btn.textContent = originalText;
-      alert('Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.');
-    }
+    });
+
+    const subject = encodeURIComponent('Yeni Havuz Proje Talebi — BODRUMPOOL');
+    const body    = encodeURIComponent(lines.join('\n') + '\n\n— bodrumpool.com iletişim formu');
+    window.location.href = 'mailto:info@bodrumpool.com?subject=' + subject + '&body=' + body;
+
+    // Kısa gecikme sonrası başarı mesajı göster
+    setTimeout(function() {
+      form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }, 800);
   });
 })();

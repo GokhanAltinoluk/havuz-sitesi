@@ -546,7 +546,7 @@
         <h2>Hayalinizdeki havuzu<br><em>birlikte</em> konuşalım.</h2>
         <p>Uzman ekibimiz arazi keşfi, ölçüm ve 3D tasarım için ücretsiz bir görüşme ayarlasın.</p>
       </div>
-      <form class="cta-form fade-in" action="https://formspree.io/f/xyzabcde" method="POST">
+      <form class="cta-form fade-in" id="cta-form" action="mailto:info@bodrumpool.com" method="POST" enctype="text/plain">
         <div class="cta-form__row">
           <input type="text" name="ad" placeholder="Adınız Soyadınız" required>
           <input type="tel" name="telefon" placeholder="Telefon Numaranız" required>
@@ -654,6 +654,23 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// CTA form — mailto submit
+(function() {
+  var ctaForm = document.getElementById('cta-form');
+  if (!ctaForm) return;
+  ctaForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var data = new FormData(ctaForm);
+    var lines = [];
+    data.forEach(function(val, key) { if (val) lines.push(key + ': ' + val); });
+    var subject = encodeURIComponent('Hızlı Teklif Talebi — BODRUMPOOL');
+    var body = encodeURIComponent(lines.join('\n') + '\n\n— bodrumpool.com');
+    window.location.href = 'mailto:info@bodrumpool.com?subject=' + subject + '&body=' + body;
+    var btn = ctaForm.querySelector('button');
+    if (btn) { btn.textContent = '✓ E-posta açılıyor…'; btn.disabled = true; }
+  });
+})();
 </script>
 <script src="assets/js/main.js"></script>
 </body>
