@@ -34,7 +34,8 @@
       "Bash(Write-Host \"ready\")",
       "PowerShell(netstat *)",
       "PowerShell(python --version; python3 --version 2>$null)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://gokhanaltinoluk.github.io/havuz-sitesi/hakkimizda.html)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://gokhanaltinoluk.github.io/havuz-sitesi/hakkimizda.html)",
+      "mcp__plugin_playwright_playwright__browser_press_key"
     ]
   }
 }
