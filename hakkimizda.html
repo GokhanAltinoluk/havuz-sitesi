@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda — BODRUMPOOL</title>
+  <meta name="description" content="BODRUMPOOL, Bodrum'un lüks yüzme havuzu tasarım ve yapım firması. Vizyon, misyon ve 250+ projelik deneyimimizle tanışın.">
+  <meta property="og:title" content="Hakkımızda — BODRUMPOOL">
+  <meta property="og:description" content="Bodrum'un lüks havuz atölyesi. Kim biz, ne yapıyoruz, nereye gidiyoruz.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1200&q=80">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:url" content="https://gokhanaltinoluk.github.io/havuz-sitesi/hakkimizda.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gokhanaltinoluk.github.io/havuz-sitesi/hakkimizda.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ---- Hakkımızda Sayfa Stilleri ---- */
+    .about-hero {
+      background: var(--teal);
+      padding: 7rem 0 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1600&q=80') center/cover no-repeat;
+      opacity: 0.12;
+    }
+    .about-hero__overline {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .about-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 900;
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 1.4rem;
+      position: relative;
+    }
+    .about-hero p {
+      font-size: 1.1rem;
+      color: rgba(251,246,233,0.75);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    /* Story */
+    .about-story {
+      padding: 6rem 0;
+      background: var(--cream);
+    }
+    .about-story__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-story__img {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 20px 60px rgba(15,61,62,0.15);
+    }
+    .about-story__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .about-story__overline {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    .about-story h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 900;
+      color: var(--teal);
+      line-height: 1.2;
+      margin-bottom: 1.4rem;
+    }
+    .about-story p {
+      font-size: 1rem;
+      color: #4a5568;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    /* Stats */
+    .about-stats {
+      background: var(--teal);
+      padding: 4rem 0;
+    }
+    .about-stats__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .about-stat__number {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .about-stat__label {
+      font-size: 0.85rem;
+      color: rgba(251,246,233,0.7);
+      letter-spacing: 0.05em;
+    }
+
+    /* Vision & Mission */
+    .about-vm {
+      padding: 6rem 0;
+      background: #f0ebe0;
+    }
+    .about-vm__header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .about-vm__overline {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    .about-vm__header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: var(--teal);
+    }
+    .about-vm__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .about-vm__card {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 2.5rem;
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 4px 24px rgba(15,61,62,0.07);
+    }
+    .about-vm__icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(200,147,42,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+      color: var(--gold);
+    }
+    .about-vm__card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+    .about-vm__card p {
+      font-size: 0.98rem;
+      color: #4a5568;
+      line-height: 1.8;
+    }
+
+    /* Values */
+    .about-values {
+      padding: 6rem 0;
+      background: var(--cream);
+    }
+    .about-values__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .about-values__overline {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    .about-values__header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: var(--teal);
+    }
+    .about-values__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .about-value-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 1px solid rgba(15,61,62,0.08);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .about-value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(15,61,62,0.1);
+    }
+    .about-value-card__icon {
+      width: 52px;
+      height: 52px;
+      background: var(--teal);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      color: var(--gold);
+    }
+    .about-value-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 0.6rem;
+    }
+    .about-value-card p {
+      font-size: 0.88rem;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    /* CTA */
+    .about-cta {
+      background: var(--teal);
+      padding: 5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1600&q=80') center/cover no-repeat;
+      opacity: 0.08;
+    }
+    .about-cta h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 900;
+      color: var(--cream);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .about-cta p {
+      font-size: 1rem;
+      color: rgba(251,246,233,0.75);
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .about-cta__btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    @media (max-width: 1024px) {
+      .about-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .about-values__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .about-story__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-vm__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .about-stats__grid { grid-template-columns: repeat(2, 1fr); }
+      .about-values__grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hafta içi 08:00–19:00 · Cumartesi 09:00–17:00
+      </span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Bodrum
+      </span>
+    </div>
+    <div class="topbar__right">
+      <a href="tel:+905458358005" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        0545 835 80 05
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </span>
+      <span>
+        <span class="navbar__logo-text">BODRUMPOOL</span>
+        <span class="navbar__logo-sub">Havuz Atölyesi · Lüks Havuz Tasarımı</span>
+      </span>
+    </a>
+    <nav class="navbar__nav" id="nav-menu">
+      <a href="index.html" class="nav-link">Ana Sayfa</a>
+      <a href="havuz-tipleri.html" class="nav-link">Havuz Tipleri</a>
+      <a href="yapim-sureci.html" class="nav-link">Yapım Süreci</a>
+      <a href="teknik-materyaller.html" class="nav-link">Teknik</a>
+      <a href="galeri.html" class="nav-link">Galeri</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="iletisim.html" class="btn btn--teal navbar__cta-mobile" style="margin-top:0">Teklif Al →</a>
+    </nav>
+    <a href="iletisim.html" class="btn btn--teal" style="font-size:0.75rem; padding:0.65rem 1.35rem;">Teklif Al →</a>
+    <button class="navbar__toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="container">
+    <div class="about-hero__overline">Biz Kimiz</div>
+    <h1>Su ile Sanatı<br>Buluşturanlar</h1>
+    <p>Bodrum'un eşsiz coğrafyasında doğan bir tutku; sıradan bir bahçeyi yaşam alanına dönüştürme sanatı. BODRUMPOOL, her proje­de mükemmeliyeti ve ustalığı bir arada sunar.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="about-story">
+  <div class="container">
+    <div class="about-story__grid">
+      <div class="about-story__img">
+        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=900&q=80" alt="BODRUMPOOL ekibi sahada" loading="lazy">
+      </div>
+      <div>
+        <div class="about-story__overline">Hikayemiz</div>
+        <h2>Bodrum'un Derinliklerinden Doğan Bir Marka</h2>
+        <p>Yıllar önce, Bodrum'un serin sularına duyulan hayranlıkla başladı her şey. Havuz yapmak bizim için sadece bir inşaat değil; bir aile için yaz akşamı anıları, bir otel için misafir deneyimi, bir evin arka bahçesi için yeniden keşfedilen bir özgürlük alanı yaratmaktır.</p>
+        <p>250'yi aşkın tamamlanmış projeyle Bodrum ve çevresinin en güvenilen havuz yapım firması konumuna yükseldiğimiz bu yolda bizi motive eden şey hep aynı kaldı: müşterilerimizin suya ilk adım attığı andaki gülümseme.</p>
+        <p>Anahtar teslim hizmet anlayışımız, uluslararası ekipman standartlarımız ve projeyi teslim ettikten sonra yanınızda olmaya devam eden servis kadromuzla biz, bir havuz yapım firmasından çok daha fazlasıyız.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="about-stats">
+  <div class="container">
+    <div class="about-stats__grid">
+      <div>
+        <div class="about-stat__number">250+</div>
+        <div class="about-stat__label">Tamamlanan Proje</div>
+      </div>
+      <div>
+        <div class="about-stat__number">15+</div>
+        <div class="about-stat__label">Yıllık Deneyim</div>
+      </div>
+      <div>
+        <div class="about-stat__number">%98</div>
+        <div class="about-stat__label">Müşteri Memnuniyeti</div>
+      </div>
+      <div>
+        <div class="about-stat__number">10</div>
+        <div class="about-stat__label">Yıl Yapı Garantisi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VİZYON & MİSYON -->
+<section class="about-vm">
+  <div class="container">
+    <div class="about-vm__header">
+      <div class="about-vm__overline">Nereye Gidiyoruz</div>
+      <h2>Vizyon &amp; Misyon</h2>
+    </div>
+    <div class="about-vm__grid">
+      <div class="about-vm__card">
+        <div class="about-vm__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Vizyonumuz</h3>
+        <p>Türkiye'nin lüks havuz sektöründe tasarım kalitesi, uygulama ustalığı ve müşteri deneyimi bakımından referans alınan firma olmak. Bodrum'un mimari dokusuna saygı göstererek, su mimarisini bir sanat formuna dönüştürmek.</p>
+      </div>
+      <div class="about-vm__card">
+        <div class="about-vm__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Misyonumuz</h3>
+        <p>Her müşterimizin bütçesine, yaşam tarzına ve hayaline en uygun havuz çözümünü; dürüst fiyatlandırma, şeffaf süreç ve sağlam mühendislik anlayışıyla hayata geçirmek. Teslim sonrası da yanlarında olmak.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEĞERLERİMİZ -->
+<section class="about-values">
+  <div class="container">
+    <div class="about-values__header">
+      <div class="about-values__overline">Bizi Biz Yapan</div>
+      <h2>Temel Değerlerimiz</h2>
+    </div>
+    <div class="about-values__grid">
+      <div class="about-value-card">
+        <div class="about-value-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Ustalık</h3>
+        <p>Her havuz, mühendislik hesapları ve ellerin emeğiyle şekillenir. Hiçbir detay küçük değildir.</p>
+      </div>
+      <div class="about-value-card">
+        <div class="about-value-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Güvenilirlik</h3>
+        <p>Söz verilen tarih ve bütçeye bağlılık. Sözleşmede ne yazıyorsa o yapılır, fazlası söylenir.</p>
+      </div>
+      <div class="about-value-card">
+        <div class="about-value-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Yenilik</h3>
+        <p>Akıllı otomasyon, enerji verimli ekipman ve çağdaş tasarım trendlerini her projede hayata taşırız.</p>
+      </div>
+      <div class="about-value-card">
+        <div class="about-value-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Müşteri Odaklılık</h3>
+        <p>İlk görüşmeden teslim gününe, teslim gününden yıllarca sonrasına kadar müşterimizin yanındayız.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <div class="container">
+    <h2>Hayalinizi Birlikte Kuralım</h2>
+    <p>Projenizi konuşmak için bize ulaşın — ilk keşif görüşmesi ücretsiz ve taahhütsüzdür.</p>
+    <div class="about-cta__btns">
+      <a href="iletisim.html" class="btn btn--gold">Ücretsiz Keşif Al →</a>
+      <a href="galeri.html" class="btn btn--outline" style="border-color:rgba(251,246,233,0.4);color:var(--cream)">Projelerimizi Gör</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <span class="footer__logo-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <span class="footer__logo-text">BODRUM<em>pool</em></span>
+        </div>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması. Backyard'dan Beach Pool'a, sıradan bahçeleri hayalinizdeki yaşam alanına dönüştürüyoruz.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42A2.78 2.78 0 0020.83 4.7C19.38 4.32 12 4.32 12 4.32s-7.38 0-8.83.38A2.78 2.78 0 001.46 6.42 29 29 0 001.07 12a29 29 0 00.39 5.58A2.78 2.78 0 003.17 19.3C4.62 19.68 12 19.68 12 19.68s7.38 0 8.83-.38a2.78 2.78 0 001.71-1.72A29 29 0 0022.93 12a29 29 0 00-.39-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Hizmetler</div>
+        <ul class="footer__links">
+          <li><a href="yapim-sureci.html">Havuz İnşaatı</a></li>
+          <li><a href="blog/havuz-bakim-rehberi.html">Bakım &amp; Servis</a></li>
+          <li><a href="teknik-materyaller.html">Kimyasal Tedarik</a></li>
+          <li><a href="teknik-materyaller.html">Ekipman Satışı</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Şirket</div>
+        <ul class="footer__links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="havuz-tipleri.html">Havuz Tipleri</a></li>
+          <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
+          <li><a href="galeri.html">Projeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Kaynaklar</div>
+        <ul class="footer__links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog/havuz-bakim-rehberi.html">Bakım Rehberi</a></li>
+          <li><a href="blog/kis-korumasi.html">Kış Koruması</a></li>
+          <li><a href="blog/kimyasal-dengeleme.html">Kimyasal Denge</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">İletişim</div>
+        <div class="footer__contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          <a href="tel:+905458358005">0545 835 80 05</a>
+        </div>
+        <div class="footer__contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@bodrumpool.com">info@bodrumpool.com</a>
+        </div>
+        <div class="footer__contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mumcular Mahallesi, Bodrum
+        </div>
+        <div class="footer__contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          08:00 – 19:00
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> BODRUMPOOL. Tüm hakları saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> · <a href="#">Kullanım Koşulları</a></p>
+    </div>
+  </div>
+  <div class="footer__watermark">BODRUM<em>pool</em></div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const toggle = document.getElementById('nav-toggle');
+const menu   = document.getElementById('nav-menu');
+if (toggle && menu) {
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+}
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+</script>
+</body>
+</html>
