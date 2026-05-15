@@ -91,7 +91,7 @@ ul { list-style: none; }
 .navbar__logo-icon { width: 36px; height: 36px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .navbar__logo-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .navbar__logo-text { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--teal); line-height: 1; }
-.navbar__logo-text em { font-style: italic; font-weight: 400; color: var(--gold); }
+.navbar__logo-text em { font-style: normal; font-weight: 700; color: var(--gold); }
 .navbar__logo-sub { font-size: 0.52rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); display: block; margin-top: 1px; }
 .navbar__nav { display: flex; align-items: center; gap: 0.2rem; }
 .nav-link { font-size: 0.85rem; font-weight: 500; color: var(--text); padding: 0.4rem 0.7rem; border-radius: 6px; transition: all 0.2s; }
