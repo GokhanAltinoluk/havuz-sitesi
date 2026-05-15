@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Havuz Tipleri — Backyard &amp; Beach Pool | {{FIRMA_ADI}}</title>
-  <meta name="description" content="Backyard Pool ve Beach Pool arasındaki farklar, teknik özellikler, avantajlar ve karşılaştırma tablosu. Size en uygun havuz tipini seçin.">
-  <meta property="og:title" content="Havuz Tipleri — Backyard &amp; Beach Pool">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1200&q=80">
+  <title>Havuz Tipleri — 6 Farklı Tasarım | {{FIRMA_ADI}}</title>
+  <meta name="description" content="Backyard Pool, Beach Pool, Infinity Havuzu, İç Mekan, Sporcu ve Spa havuzu tipleri. Teknik özellikler, avantajlar ve karşılaştırma tablosuyla size en uygun havuzu seçin.">
+  <meta property="og:title" content="Havuz Tipleri — 6 Farklı Tasarım | {{FIRMA_ADI}}">
+  <meta property="og:description" content="Backyard, Beach Pool, Infinity, İç Mekan, Sporcu ve Spa — 6 havuz tipinin detaylı karşılaştırması.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=80">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="havuz-tipleri.html">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -14,6 +15,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .pool-nav-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    @media(max-width:768px){ .pool-nav-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width:480px){ .pool-nav-grid { grid-template-columns: 1fr; } }
+    .pool-nav-card { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; cursor: pointer; display: block; text-decoration: none; }
+    .pool-nav-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s ease; }
+    .pool-nav-card:hover img { transform: scale(1.06); }
+    .pool-nav-card__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,61,62,0.82) 40%, rgba(15,61,62,0.1) 100%); }
+    .pool-nav-card__body { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem 1.1rem; }
+    .pool-nav-card__num { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+    .pool-nav-card__title { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700; color: #fff; line-height: 1.2; }
+    .pool-nav-card__tag { display: inline-block; margin-top: 0.35rem; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(200,147,42,0.25); color: var(--gold); border: 1px solid rgba(200,147,42,0.4); border-radius: 999px; padding: 0.15rem 0.55rem; }
+  </style>
 </head>
 <body>
 
@@ -72,14 +86,71 @@
       <a href="index.html">Ana Sayfa</a> <span>›</span>
       <span class="current">Havuz Tipleri</span>
     </nav>
-    <span class="overline">Havuz Tipleri</span>
-    <h1 class="page-hero__title">Backyard Pool &amp; <em>Beach Pool</em></h1>
-    <p class="page-hero__desc">İki farklı havuz tasarım felsefesi: evinizin bahçesine özel klasik konfor ile plaj hissi veren sığ-derin geçişli lüks tasarım.</p>
+    <span class="overline">6 Farklı Havuz Tipi</span>
+    <h1 class="page-hero__title">Her beklentiye <em>özel</em> havuz.</h1>
+    <p class="page-hero__desc">Klasik bahçe havuzundan infinity kenar taşmaya, sporcu havuzundan spa kombinlerine — doğru tip seçimi projenizin temelini oluşturur. Detaylı karşılaştırma ve teknik özellikler aşağıda.</p>
+    <!-- Hızlı Gezinti Kartları -->
+    <div class="pool-nav-grid">
+      <a href="#backyard" class="pool-nav-card">
+        <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80&fit=crop" alt="Backyard Pool" loading="lazy">
+        <div class="pool-nav-card__overlay"></div>
+        <div class="pool-nav-card__body">
+          <div class="pool-nav-card__num">Tip 01</div>
+          <div class="pool-nav-card__title">Backyard Pool</div>
+          <span class="pool-nav-card__tag">En Popüler</span>
+        </div>
+      </a>
+      <a href="#beach" class="pool-nav-card">
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80&fit=crop" alt="Beach Pool" loading="lazy">
+        <div class="pool-nav-card__overlay"></div>
+        <div class="pool-nav-card__body">
+          <div class="pool-nav-card__num">Tip 02</div>
+          <div class="pool-nav-card__title">Beach Pool</div>
+          <span class="pool-nav-card__tag">Aile Favorisi</span>
+        </div>
+      </a>
+      <a href="#infinity" class="pool-nav-card">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&fit=crop" alt="Infinity Havuzu" loading="lazy">
+        <div class="pool-nav-card__overlay"></div>
+        <div class="pool-nav-card__body">
+          <div class="pool-nav-card__num">Tip 03</div>
+          <div class="pool-nav-card__title">Infinity Havuzu</div>
+          <span class="pool-nav-card__tag">Prestij</span>
+        </div>
+      </a>
+      <a href="#ic-mekan" class="pool-nav-card">
+        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=600&q=80&fit=crop" alt="İç Mekan Havuzu" loading="lazy">
+        <div class="pool-nav-card__overlay"></div>
+        <div class="pool-nav-card__body">
+          <div class="pool-nav-card__num">Tip 04</div>
+          <div class="pool-nav-card__title">İç Mekan Havuzu</div>
+          <span class="pool-nav-card__tag">4 Mevsim</span>
+        </div>
+      </a>
+      <a href="#sporcu" class="pool-nav-card">
+        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&q=80&fit=crop" alt="Sporcu Havuzu" loading="lazy">
+        <div class="pool-nav-card__overlay"></div>
+        <div class="pool-nav-card__body">
+          <div class="pool-nav-card__num">Tip 05</div>
+          <div class="pool-nav-card__title">Sporcu Havuzu</div>
+          <span class="pool-nav-card__tag">Egzersiz</span>
+        </div>
+      </a>
+      <a href="#spa" class="pool-nav-card">
+        <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=600&q=80&fit=crop" alt="Spa & Jakuzi" loading="lazy">
+        <div class="pool-nav-card__overlay"></div>
+        <div class="pool-nav-card__body">
+          <div class="pool-nav-card__num">Tip 06</div>
+          <div class="pool-nav-card__title">Spa & Jakuzi</div>
+          <span class="pool-nav-card__tag">Terapi</span>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- BACKYARD POOL -->
-<section class="section">
+<!-- TIP 01 — BACKYARD POOL -->
+<section class="section" id="backyard">
   <div class="container">
     <div class="pool-type-section fade-in">
       <div class="pool-detail-img">
@@ -107,8 +178,8 @@
   </div>
 </section>
 
-<!-- BEACH POOL -->
-<section class="section section--alt">
+<!-- TIP 02 — BEACH POOL -->
+<section class="section section--alt" id="beach">
   <div class="container">
     <div class="pool-type-section pool-type-section--reverse fade-in">
       <div class="pool-detail-img">
@@ -136,35 +207,281 @@
   </div>
 </section>
 
+<!-- TIP 03 — INFINITY HAVUZU -->
+<section class="section" id="infinity">
+  <div class="container">
+    <div class="pool-type-section fade-in">
+      <div class="pool-detail-img">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=85&fit=crop" alt="Infinity Havuzu — Taşma Kenarlı" loading="lazy">
+      </div>
+      <div>
+        <span class="overline">Tip 03</span>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--teal);line-height:1.15;margin:0.5rem 0 1rem;">Infinity <em style="font-style:italic;font-weight:400;color:var(--gold);">Havuzu</em></h2>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.25rem;">Taşma kenarlı (overflow edge) tasarımıyla suyun ufka doğru uzandığı izlenimi yaratan prestijli havuz tipi. Bir veya birden fazla kenarda suyun görünmez bir eşikten aşağı aktığı bu sistem, hem optik derinlik hem de benzersiz bir sesi sunar.</p>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;">Özellikle manzaralı arazilerde, eğimli arazilerde veya yüksek zemin katında kurulduğunda dramatik etki en üst seviyeye çıkar. Toplama kanalı (surge tank), özel taşma profili ve yüksek hassasiyetli su seviye kontrolü gerektirir.</p>
+        <div class="pool-spec-list">
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Boyut:</strong> 10×4 m – 18×6 m; taşma kenarı min. 1 kenar, tercihen manzara yönünde</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Derinlik:</strong> Sabit 1.4–1.6 m (taşma hassasiyeti için düz zemin zorunlu)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Kaplama:</strong> Siyah / lacivert mozaik (yansıma etkisi için), beyaz mermer, özel cam mozaik</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Ekstra yapılar:</strong> Toplama tank odası (surge tank), taşma kanalı, yüksek akışlı sirküle pompa</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Yapım süresi:</strong> 14–20 hafta (toplama tankı ve hassas kota çalışması nedeniyle)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>İdeal kullanım:</strong> Villa, rezidans, butik otel, manzaralı arazi projeleri</span></div>
+        </div>
+        <div style="background:var(--teal-soft);border:1px solid var(--teal-border);border-radius:var(--radius-sm);padding:1rem 1.2rem;margin-top:1.2rem;margin-bottom:1.5rem;">
+          <p style="font-size:0.83rem;color:var(--teal);line-height:1.6;margin:0;"><strong>Tasarım notu:</strong> Taşma kenarının arka planı (deniz, orman, gökyüzü) mümkün olduğunca açık ve engelsiz olmalıdır. Yüksek yapı veya çit bu etkiyi bozar. İlk keşif görüşmemizde arazinizi birlikte değerlendiririz.</p>
+        </div>
+        <div style="display:flex;gap:0.7rem;flex-wrap:wrap;">
+          <a href="iletisim.html" class="btn btn--teal">Proje Talebi →</a>
+          <a href="blog/infinity-havuz-tasarimi.html" class="btn btn--outline">Detaylı Rehber →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIP 04 — İÇ MEKAN HAVUZU -->
+<section class="section section--alt" id="ic-mekan">
+  <div class="container">
+    <div class="pool-type-section pool-type-section--reverse fade-in">
+      <div class="pool-detail-img">
+        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=900&q=85&fit=crop" alt="İç Mekan Kapalı Havuz" loading="lazy">
+      </div>
+      <div>
+        <span class="overline">Tip 04</span>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--teal);line-height:1.15;margin:0.5rem 0 1rem;">İç Mekan <em style="font-style:italic;font-weight:400;color:var(--gold);">Havuzu</em></h2>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.25rem;">Yılın 365 günü kullanım sunan, kapalı veya yarı-kapalı yapı içine entegre edilen havuz sistemi. Hava koşullarından bağımsız yüzme, egzersiz ve terapi imkânı sağlar.</p>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;">Isıtma, nem kontrolü ve havalandırma sistemleriyle birlikte tasarlanır; doğru kurulmadığında yapıya ciddi nem hasarı verebileceğinden uzman mühendislik çalışması zorunludur.</p>
+        <div class="pool-spec-list">
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Boyut:</strong> Mevcutta veya yeni inşa edilecek yapı alanına bağlı; tipik villa uygulaması 6×3 m – 12×5 m</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Isıtma:</strong> Isı pompası veya doğalgaz kalorifer entegrasyonu; hedef su sıcaklığı 28–30 °C</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Nem kontrolü:</strong> Endüstriyel nem alıcı (dehumidifier), ısı geri kazanımlı havalandırma (HRV/ERV)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Kaplama:</strong> Anti-kayma porselen, mozaik; zemin ve duvar nem bariyeri ile izolasyon</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Yapım süresi:</strong> 16–24 hafta (bina-içi koordinasyon ve havalandırma dahil)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>İdeal kullanım:</strong> Kuzey ilçeler, kışlık villa, rehabilitasyon, özel yüzme okulu</span></div>
+        </div>
+        <div style="display:flex;gap:0.7rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="iletisim.html" class="btn btn--teal">Proje Talebi →</a>
+          <a href="galeri.html" class="btn btn--outline">Galeriyi İncele</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIP 05 — SPORCU HAVUZU -->
+<section class="section" id="sporcu">
+  <div class="container">
+    <div class="pool-type-section fade-in">
+      <div class="pool-detail-img">
+        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=900&q=85&fit=crop" alt="Sporcu Yarı Olimpik Havuz" loading="lazy">
+      </div>
+      <div>
+        <span class="overline">Tip 05</span>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--teal);line-height:1.15;margin:0.5rem 0 1rem;">Sporcu <em style="font-style:italic;font-weight:400;color:var(--gold);">Havuzu</em></h2>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.25rem;">Düzenli yüzme egzersizi ve yarı-olimpik antrenman için optimize edilmiş uzun ve dar form. Standart şerit çizgileri, dönüş duvarları ve akustik tasarımıyla sizi performansa odaklar.</p>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;">Özel "akıntı karşı yüzme" (swim jet / counter current) modülüyle sonsuz yüzme simülasyonu yapılabilir — büyük alan olmadan olimpik antrenman konforu sunar.</p>
+        <div class="pool-spec-list">
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Boyut:</strong> Lap pool: 10–25 m uzunluk × 2.5–3 m genişlik (2–4 şerit); swim spa: 4×2 m kompakt seçenek</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Derinlik:</strong> Sabit 1.35–1.8 m (homojen yüzme tekniği için önerilir)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Şerit çizgileri:</strong> Havuz tabanına entegre mozaik şerit veya özel vinil çizgi</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Opsiyonlar:</strong> Akıntı modülü (swim jet), başlangıç platformu, ölü su engeli (lane divider), zamanlayıcı</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Yapım süresi:</strong> 8–12 hafta (dar ve teknik form, hızlı inşaat sunar)</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>İdeal kullanım:</strong> Triatloncu, yüzücü, fizyoterapi, dar arazili villa</span></div>
+        </div>
+        <div style="display:flex;gap:0.7rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="iletisim.html" class="btn btn--teal">Proje Talebi →</a>
+          <a href="blog/enerji-tasarrufu.html" class="btn btn--outline">Enerji Verimliliği →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIP 06 — SPA & JAKUZİ -->
+<section class="section section--alt" id="spa">
+  <div class="container">
+    <div class="pool-type-section pool-type-section--reverse fade-in">
+      <div class="pool-detail-img">
+        <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=900&q=85&fit=crop" alt="Spa ve Jakuzi Havuzu" loading="lazy">
+      </div>
+      <div>
+        <span class="overline">Tip 06</span>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--teal);line-height:1.15;margin:0.5rem 0 1rem;">Spa &amp; <em style="font-style:italic;font-weight:400;color:var(--gold);">Jakuzi</em></h2>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.25rem;">Hidroterapi, kas gevşemesi ve derin rahatlamayı bir arada sunan sıcak su havuz sistemi. Ana havuzla entegre (spill-over jakuzi) veya bağımsız olarak tasarlanabilir.</p>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;">Hava jetleri, masaj başlıkları, renk terapisi aydınlatması (kromaterapi) ve aromatik sistem gibi eklentilerle tam bir wellness deneyimine dönüşür. Sıcak su sistemi (35–40 °C) ana havuzdan ayrı yönetilir.</p>
+        <div class="pool-spec-list">
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Kapasite:</strong> 2–8 kişilik (2–6 m² yüzey alanı); spill-over modelde yüksek platforma yerleştirilir</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Su sıcaklığı:</strong> 35–40 °C (terapi aralığı); ana havuzdan bağımsız ısıtma devresi</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Jet sayısı:</strong> 12–60 adet hava/su jeti; boyun, sırt, ayak bölgelerine yönelik yerleşim</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Kaplama:</strong> Sedef cam mozaik, antrasit fayans veya doğaltaş; kaymaz zemin zorunlu</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>Yapım süresi:</strong> 6–10 hafta bağımsız; ana havuz ile birlikte yapıldığında +3–4 hafta</span></div>
+          <div class="pool-spec-item"><span class="pool-spec-dot"></span><span class="pool-spec-text"><strong>İdeal kullanım:</strong> Stres yönetimi, kas ağrısı, çift kullanımı, butik otel wellness</span></div>
+        </div>
+        <div style="display:flex;gap:0.7rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="iletisim.html" class="btn btn--teal">Proje Talebi →</a>
+          <a href="galeri.html" class="btn btn--outline">Galeriyi İncele</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- KARŞILAŞTIRMA TABLOSU -->
 <section class="section">
   <div class="container">
     <div class="section-header section-header--center fade-in">
       <span class="overline">Karşılaştırma</span>
-      <h2>Hangisi Size <em>Uygun?</em></h2>
-      <p>İki havuz tipinin temel özelliklerini yan yana inceleyin ve projenize en uygun seçimi yapın.</p>
+      <h2>6 Tip Yan <em>Yana</em></h2>
+      <p>Boyut, maliyet, yapım süresi ve kullanım amacına göre tüm havuz tiplerini karşılaştırın.</p>
     </div>
-    <div class="table-wrap fade-in">
-      <table class="styled-table compare-table">
+    <div class="table-wrap fade-in" style="overflow-x:auto;">
+      <table class="styled-table compare-table" style="min-width:750px;">
         <thead>
           <tr>
             <th>Özellik</th>
-            <th>Backyard Pool</th>
+            <th>Backyard</th>
             <th>Beach Pool</th>
+            <th>Infinity</th>
+            <th>İç Mekan</th>
+            <th>Sporcu</th>
+            <th>Spa &amp; Jakuzi</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Ortalama Boyut</strong></td><td>8×4 m – 15×6 m</td><td>12×6 m – 20×8 m</td></tr>
-          <tr><td><strong>Maliyet Aralığı</strong></td><td>Orta</td><td>Orta–Yüksek</td></tr>
-          <tr><td><strong>Yapım Süresi</strong></td><td>8–14 hafta</td><td>12–18 hafta</td></tr>
-          <tr><td><strong>Zemin Profili</strong></td><td>Düz veya sığ-derin</td><td>Plaj rampası (0–220 cm)</td></tr>
-          <tr><td><strong>Çocuk Uygunluğu</strong></td><td>Orta</td><td class="highlight">Mükemmel</td></tr>
-          <tr><td><strong>Alan Gereksinimi</strong></td><td>Az–Orta</td><td>Geniş</td></tr>
-          <tr><td><strong>Kaplama Seçeneği</strong></td><td>Geniş (seramik, liner…)</td><td>Mozaik ağırlıklı</td></tr>
-          <tr><td><strong>Bakım Zorluğu</strong></td><td>Düşük–Orta</td><td>Orta</td></tr>
-          <tr><td><strong>Görsel Etki</strong></td><td>Klasik lüks</td><td class="highlight">Çarpıcı / Tatil hissi</td></tr>
+          <tr>
+            <td><strong>Tipik Boyut</strong></td>
+            <td>8×4 – 15×6 m</td>
+            <td>12×6 – 20×8 m</td>
+            <td>10×4 – 18×6 m</td>
+            <td>6×3 – 12×5 m</td>
+            <td>10–25 m (şerit)</td>
+            <td>2–6 m²</td>
+          </tr>
+          <tr>
+            <td><strong>Maliyet Seviyesi</strong></td>
+            <td>Orta</td>
+            <td>Orta–Yüksek</td>
+            <td class="highlight">Yüksek</td>
+            <td class="highlight">Yüksek</td>
+            <td>Orta</td>
+            <td>Orta</td>
+          </tr>
+          <tr>
+            <td><strong>Yapım Süresi</strong></td>
+            <td>8–14 hafta</td>
+            <td>12–18 hafta</td>
+            <td>14–20 hafta</td>
+            <td>16–24 hafta</td>
+            <td>8–12 hafta</td>
+            <td>6–10 hafta</td>
+          </tr>
+          <tr>
+            <td><strong>Zemin Profili</strong></td>
+            <td>Düz / kademeli</td>
+            <td>Plaj rampası</td>
+            <td>Kenar taşma</td>
+            <td>Bina içi</td>
+            <td>Düz, şeritli</td>
+            <td>Küçük, derin</td>
+          </tr>
+          <tr>
+            <td><strong>Çocuk Uygunluğu</strong></td>
+            <td>Orta</td>
+            <td class="highlight">Mükemmel</td>
+            <td>Orta</td>
+            <td>İyi</td>
+            <td>Düşük</td>
+            <td>Düşük</td>
+          </tr>
+          <tr>
+            <td><strong>Alan Gereksinimi</strong></td>
+            <td>Orta</td>
+            <td>Geniş</td>
+            <td>Orta–Geniş</td>
+            <td>Kapalı alan</td>
+            <td>Dar–Uzun</td>
+            <td>Az</td>
+          </tr>
+          <tr>
+            <td><strong>Isıtma Zorunluluğu</strong></td>
+            <td>Opsiyonel</td>
+            <td>Opsiyonel</td>
+            <td>Opsiyonel</td>
+            <td class="highlight">Zorunlu</td>
+            <td>Opsiyonel</td>
+            <td class="highlight">Zorunlu</td>
+          </tr>
+          <tr>
+            <td><strong>4 Mevsim Kullanım</strong></td>
+            <td>Hayır</td>
+            <td>Hayır</td>
+            <td>Hayır</td>
+            <td class="highlight">Evet</td>
+            <td>Opsiyonel</td>
+            <td class="highlight">Evet</td>
+          </tr>
+          <tr>
+            <td><strong>Görsel Etki</strong></td>
+            <td>Klasik lüks</td>
+            <td>Tatil hissi</td>
+            <td class="highlight">Dramatik</td>
+            <td>Zarif iç</td>
+            <td>Minimalist</td>
+            <td>Romantik</td>
+          </tr>
+          <tr>
+            <td><strong>Bakım Zorluğu</strong></td>
+            <td>Düşük</td>
+            <td>Orta</td>
+            <td>Orta–Yüksek</td>
+            <td>Yüksek</td>
+            <td>Düşük</td>
+            <td>Orta</td>
+          </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<!-- KARAR YARDIMCISI -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header section-header--center fade-in">
+      <span class="overline">Karar Rehberi</span>
+      <h2>Durumunuza Göre <em>Tavsiyemiz</em></h2>
+    </div>
+    <div class="grid-3 fade-in" style="gap:1.2rem;">
+      <div style="background:var(--cream);border:1px solid var(--teal-border);border-radius:var(--radius);padding:1.5rem;">
+        <div style="font-size:1.4rem;margin-bottom:0.6rem;">🏡</div>
+        <div style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--teal);margin-bottom:0.5rem;">Orta ölçekli bahçe, bütçeye duyarlı</div>
+        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;margin:0;">→ <strong>Backyard Pool</strong> en dengeli seçim. Esnek boyut seçenekleri ve geniş kaplama yelpazesiyle bütçe ve estetik ihtiyaçlarınızı karşılar.</p>
+      </div>
+      <div style="background:var(--cream);border:1px solid var(--teal-border);border-radius:var(--radius);padding:1.5rem;">
+        <div style="font-size:1.4rem;margin-bottom:0.6rem;">👨‍👩‍👧‍👦</div>
+        <div style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--teal);margin-bottom:0.5rem;">Küçük çocuk var, geniş alan mevcut</div>
+        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;margin:0;">→ <strong>Beach Pool</strong> güvenli kademeli derinliğiyle çocukların özgürce oynayabileceği, ebeveynlerin içi rahat kullanabileceği ideal seçim.</p>
+      </div>
+      <div style="background:var(--cream);border:1px solid var(--teal-border);border-radius:var(--radius);padding:1.5rem;">
+        <div style="font-size:1.4rem;margin-bottom:0.6rem;">🌄</div>
+        <div style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--teal);margin-bottom:0.5rem;">Manzaralı / eğimli arazi, prestij proje</div>
+        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;margin:0;">→ <strong>Infinity Havuzu</strong> arazinin doğal avantajını maksimize eder. Deniz, orman veya şehir manzarasıyla birleşince unutan olmaz.</p>
+      </div>
+      <div style="background:var(--cream);border:1px solid var(--teal-border);border-radius:var(--radius);padding:1.5rem;">
+        <div style="font-size:1.4rem;margin-bottom:0.6rem;">❄️</div>
+        <div style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--teal);margin-bottom:0.5rem;">Kış aylarında da kullanmak istiyorum</div>
+        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;margin:0;">→ <strong>İç Mekan Havuzu</strong> yılın 365 günü garantisi sunar. İnşaat maliyeti yüksektir ancak uzun vadede değer üretir.</p>
+      </div>
+      <div style="background:var(--cream);border:1px solid var(--teal-border);border-radius:var(--radius);padding:1.5rem;">
+        <div style="font-size:1.4rem;margin-bottom:0.6rem;">🏊</div>
+        <div style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--teal);margin-bottom:0.5rem;">Düzenli egzersiz, dar arazi</div>
+        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;margin:0;">→ <strong>Sporcu Havuzu</strong> veya swim jet modüllü kompakt lap pool. Az alan, maksimum antrenman verimi. Swim spa seçeneği 4×2 m'ye sığar.</p>
+      </div>
+      <div style="background:var(--cream);border:1px solid var(--teal-border);border-radius:var(--radius);padding:1.5rem;">
+        <div style="font-size:1.4rem;margin-bottom:0.6rem;">🧘</div>
+        <div style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--teal);margin-bottom:0.5rem;">Rahatlama ve terapi ön planda</div>
+        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;margin:0;">→ <strong>Spa & Jakuzi</strong> tek başına veya ana havuz yanına spill-over olarak mükemmel bir tamamlayıcı. Masaj jetleri ve krom terapi sistemi dahil edilebilir.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -174,7 +491,7 @@
   <div class="container" style="text-align:center;">
     <span class="overline" style="color:rgba(200,147,42,0.9);">Ücretsiz Keşif</span>
     <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--cream);margin:0.5rem 0 1rem;">Hangi havuz <em style="font-style:italic;font-weight:400;">size uygun?</em></h2>
-    <p style="color:rgba(251,246,233,0.72);max-width:500px;margin:0 auto 2rem;line-height:1.72;">Uzman ekibimiz bahçenizi, bütçenizi ve kullanım beklentilerinizi dinleyerek en uygun havuz tipini birlikte belirler.</p>
+    <p style="color:rgba(251,246,233,0.72);max-width:500px;margin:0 auto 2rem;line-height:1.72;">Uzman ekibimiz arazinizi, bütçenizi ve kullanım beklentilerinizi dinleyerek 6 tip arasından en uygun olanı birlikte belirler.</p>
     <div style="display:flex;gap:0.7rem;justify-content:center;flex-wrap:wrap;">
       <a href="iletisim.html" class="btn btn--gold btn--lg">Ücretsiz Keşif Randevusu →</a>
       <a href="yapim-sureci.html" class="btn btn--outline-cream btn--lg">Yapım Sürecini Gör</a>
@@ -191,7 +508,7 @@
           <span class="footer__logo-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
           <span><span class="footer__logo-text">{{FIRMA_ADI}}</span><span class="footer__logo-sub">Havuz Atölyesi · Est.</span></span>
         </div>
-        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması. Backyard Pool ve Beach Pool projelerinde anahtar teslim çözümler.</p>
+        <p class="footer__desc">Türkiye'nin lüks yüzme havuzu tasarım ve yapım firması. 6 farklı havuz tipinde anahtar teslim çözümler.</p>
         <div class="footer__social">
           <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
           <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -199,12 +516,14 @@
         </div>
       </div>
       <div>
-        <div class="footer__col-title">Hizmetler</div>
+        <div class="footer__col-title">Havuz Tipleri</div>
         <ul class="footer__links">
-          <li><a href="havuz-tipleri.html">Backyard Pool</a></li>
-          <li><a href="havuz-tipleri.html">Beach Pool</a></li>
-          <li><a href="yapim-sureci.html">Anahtar Teslim Yapım</a></li>
-          <li><a href="teknik-materyaller.html">Ekipman &amp; Bakım</a></li>
+          <li><a href="havuz-tipleri.html#backyard">Backyard Pool</a></li>
+          <li><a href="havuz-tipleri.html#beach">Beach Pool</a></li>
+          <li><a href="havuz-tipleri.html#infinity">Infinity Havuzu</a></li>
+          <li><a href="havuz-tipleri.html#ic-mekan">İç Mekan Havuzu</a></li>
+          <li><a href="havuz-tipleri.html#sporcu">Sporcu Havuzu</a></li>
+          <li><a href="havuz-tipleri.html#spa">Spa &amp; Jakuzi</a></li>
         </ul>
       </div>
       <div>
@@ -212,6 +531,7 @@
         <ul class="footer__links">
           <li><a href="index.html">Ana Sayfa</a></li>
           <li><a href="yapim-sureci.html">Yapım Süreci</a></li>
+          <li><a href="teknik-materyaller.html">Teknik &amp; Ekipman</a></li>
           <li><a href="galeri.html">Galeri</a></li>
           <li><a href="iletisim.html">İletişim</a></li>
         </ul>
