@@ -17,7 +17,18 @@
       "Bash(git commit *)",
       "Bash(git push *)",
       "Bash(git rm *)",
-      "Bash(rm -rf .playwright-mcp test-*.png test-*.jpg photo-test-grid.jpg)"
+      "Bash(rm -rf .playwright-mcp test-*.png test-*.jpg photo-test-grid.jpg)",
+      "Read(//c/tmp/**)",
+      "Bash(curl -sS -o homepage.html -w \"Status: %{http_code}\\\\nSize: %{size_download} bytes\\\\nTTFB: %{time_starttransfer}s\\\\nTotal: %{time_total}s\\\\n\" https://gokhanaltinoluk.github.io/havuz-sitesi/)",
+      "Bash(curl -sS https://gokhanaltinoluk.github.io/havuz-sitesi/robots.txt)",
+      "Bash(curl -sS https://gokhanaltinoluk.github.io/havuz-sitesi/sitemap.xml)",
+      "Read(//tmp/**)",
+      "Bash(/c/Users/Ryzen/AppData/Local/Microsoft/WindowsApps/python3 -m http.server 8080)",
+      "Bash(cmd.exe /c \"cd /d C:\\\\claude\\\\gun2 && start /B python -m http.server 8080\")",
+      "PowerShell(Start-Process -NoNewWindow -FilePath \"python\" -ArgumentList \"-m\", \"http.server\", \"8080\" -WorkingDirectory \"C:\\\\claude\\\\gun2\")",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8080/index2.html\" -Method Head -TimeoutSec 3)",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "PowerShell($content = [System.IO.File]::ReadAllText\\('C:\\\\claude\\\\gun2\\\\BODRUMPOOL-Kartvizit.html'\\); $content.Substring\\(0, 3000\\))"
     ]
   }
 }
